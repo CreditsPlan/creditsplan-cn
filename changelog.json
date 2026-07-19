@@ -1,0 +1,71 @@
+{
+  "last_updated": "2026-07-19",
+  "entries": [
+    {
+      "id": "changelog-20260719-zhipu",
+      "date": "2026-07-19",
+      "edition": "2026.07.19",
+      "kind": "data",
+      "title": "更新智谱 GLM Coding 个人版用量额度",
+      "summary": "依据智谱官方文档补齐个人版 Lite/Pro/Max 的每 5 小时与每周用量额度及 MCP 月度额度。",
+      "items": [
+        "Lite：每 5 小时约 80 次、每周约 400 次 prompts，MCP 合计 100 次/月。",
+        "Pro：每 5 小时约 400 次、每周约 2000 次 prompts，MCP 合计 1000 次/月。",
+        "Max：每 5 小时约 1600 次、每周约 8000 次 prompts，MCP 合计 4000 次/月。",
+        "补充 GLM-5.2/GLM-5-Turbo 高峰期 3 倍、非高峰期 2 倍额度消耗说明。"
+      ]
+    },
+    {
+      "id": "changelog-20260716-catalog",
+      "date": "2026-07-16",
+      "edition": "2026.07.16",
+      "kind": "catalog",
+      "title": "新增 TRAE、CodeBuddy、阶跃星辰与 MiniMax 套餐",
+      "summary": "集中补齐国内 AI Coding 与 Agent 套餐，让同一品牌下的免费、个人和企业方案更容易横向比较。",
+      "items": [
+        "TRAE：新增免费、速通 Pro、速通 Pro+、速通 Ultra、优速通 Express 5 档方案。",
+        "CodeBuddy：新增个人体验版、标准版、高级版、旗舰版及 2 档企业方案。",
+        "阶跃星辰：新增 Step Plan Flash Mini、Plus、Pro、Max 4 档套餐。",
+        "MiniMax：新增 M3 Token Plan Plus、Max、Ultra 3 档套餐。"
+      ]
+    },
+    {
+      "id": "changelog-20260715-qianfan",
+      "date": "2026-07-15",
+      "edition": "2026.07.15",
+      "kind": "data",
+      "title": "百度千帆个人 Token Plan 全面更新",
+      "summary": "依据千帆控制台最新页面重新核验个人套餐，并保留首购价、常规价和售卖状态。",
+      "items": [
+        "新增 Token Plan Mini、Lite、Pro、Max 4 档个人方案。",
+        "旧版个人 Coding Plan 标记为已替代，避免与新版 Token Plan 混淆。",
+        "补充首购优惠、月度 Token 配额、暂时售罄状态与控制台购买说明。"
+      ]
+    },
+    {
+      "id": "changelog-20260714-feature",
+      "date": "2026-07-14",
+      "edition": "2026.07.14",
+      "kind": "feature",
+      "title": "品牌与套餐独立页面上线",
+      "summary": "从单页比较扩展为可分享、可检索的内容体系，查找品牌和具体套餐更直接。",
+      "items": [
+        "新增品牌总览与品牌详情页，集中展示已核验套餐。",
+        "每档套餐拥有独立链接，完整呈现价格、额度、工具兼容性和风险提示。",
+        "新增数据校对方法页与价格变动 RSS，方便复核和订阅。"
+      ]
+    },
+    {
+      "id": "changelog-20260708-data",
+      "date": "2026-07-08",
+      "edition": "2026.07.08",
+      "kind": "data",
+      "title": "补齐 Qoder CN 与百度千帆套餐数据",
+      "summary": "根据官网与控制台截图更新套餐价格、额度和适用范围。",
+      "items": [
+        "更新 Qoder CN 国内个人、团队与企业方案，补充兑换卡和不同计费周期。",
+        "补充百度千帆个人及企业 Token Plan 的套餐层级和购买状态。"
+      ]
+    }
+  ]
+}
