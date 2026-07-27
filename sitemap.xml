@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://creditsplan.cn/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-27</lastmod>
   </url>
   <url>
     <loc>https://creditsplan.cn/news.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-27</lastmod>
   </url>
   <url>
     <loc>https://creditsplan.cn/changelog.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-26</lastmod>
   </url>
   <url>
     <loc>https://creditsplan.cn/methodology.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://creditsplan.cn/brands/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-27</lastmod>
   </url>
   <url>
     <loc>https://creditsplan.cn/brands/deepseek/</loc>
@@ -30,15 +30,11 @@
   </url>
   <url>
     <loc>https://creditsplan.cn/brands/benefit/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-22</lastmod>
   </url>
   <url>
     <loc>https://creditsplan.cn/brands/bigmodel/</loc>
     <lastmod>2026-07-19</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/brands/volcengine/</loc>
-    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://creditsplan.cn/brands/kimi/</loc>
@@ -57,36 +53,12 @@
     <lastmod>2026-07-16</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/brands/trae/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/brands/xiaomi-mimo/</loc>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/brands/codebuddy/</loc>
-    <lastmod>2026-07-16</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/volcengine-coding-lite/</loc>
-    <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/volcengine-coding-pro/</loc>
-    <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/volcengine-agent-small/</loc>
-    <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/volcengine-agent-medium/</loc>
-    <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/volcengine-agent-large/</loc>
-    <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/volcengine-agent-max/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <loc>https://creditsplan.cn/brands/qiniu/</loc>
+    <lastmod>2026-07-22</lastmod>
   </url>
   <url>
     <loc>https://creditsplan.cn/plans/deepseek-api-paygo/</loc>
@@ -109,26 +81,6 @@
     <lastmod>2026-07-05</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/bigmodel-coding-lite/</loc>
-    <lastmod>2026-07-19</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/bigmodel-coding-pro/</loc>
-    <lastmod>2026-07-19</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/bigmodel-coding-max/</loc>
-    <lastmod>2026-07-19</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/bigmodel-coding-team-standard/</loc>
-    <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/bigmodel-coding-team-advanced/</loc>
-    <lastmod>2026-07-07</lastmod>
-  </url>
-  <url>
     <loc>https://creditsplan.cn/plans/minimax-m3-token-plus/</loc>
     <lastmod>2026-07-16</lastmod>
   </url>
@@ -139,34 +91,6 @@
   <url>
     <loc>https://creditsplan.cn/plans/minimax-m3-token-ultra/</loc>
     <lastmod>2026-07-16</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-mini/</loc>
-    <lastmod>2026-07-15</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-lite/</loc>
-    <lastmod>2026-07-15</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-pro/</loc>
-    <lastmod>2026-07-15</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-max/</loc>
-    <lastmod>2026-07-15</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-enterprise-light/</loc>
-    <lastmod>2026-07-08</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-enterprise-professional/</loc>
-    <lastmod>2026-07-08</lastmod>
-  </url>
-  <url>
-    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-enterprise-advanced/</loc>
-    <lastmod>2026-07-08</lastmod>
   </url>
   <url>
     <loc>https://creditsplan.cn/plans/step-flash-mini/</loc>
@@ -185,40 +109,52 @@
     <lastmod>2026-07-16</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/aliyun-token-plan-standard/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://creditsplan.cn/plans/xiaomi-mimo.lite/</loc>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/aliyun-token-plan-advanced/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://creditsplan.cn/plans/xiaomi-mimo.standard/</loc>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/aliyun-token-plan-premium/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://creditsplan.cn/plans/xiaomi-mimo.pro/</loc>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/codebuddy-personal-trial/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/plans/xiaomi-mimo.max/</loc>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/codebuddy-personal-standard/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/plans/qiniu.enterprise-s/</loc>
+    <lastmod>2026-07-22</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/codebuddy-personal-advanced/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/plans/qiniu.enterprise-m/</loc>
+    <lastmod>2026-07-22</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/codebuddy-personal-flagship/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/plans/qiniu.enterprise-b/</loc>
+    <lastmod>2026-07-22</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/codebuddy-enterprise-flagship/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/plans/bigmodel-coding-lite/</loc>
+    <lastmod>2026-07-19</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/codebuddy-enterprise-dedicated/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/plans/bigmodel-coding-pro/</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/bigmodel-coding-max/</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/bigmodel-coding-team-standard/</loc>
+    <lastmod>2026-07-07</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/bigmodel-coding-team-advanced/</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://creditsplan.cn/plans/qoder-cn-community/</loc>
@@ -253,23 +189,59 @@
     <lastmod>2026-07-08</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/trae-cn-free/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-mini/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/trae-cn-speed-pro/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-lite/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/trae-cn-speed-pro-plus/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-pro/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/trae-cn-speed-ultra/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-max/</loc>
+    <lastmod>2026-07-15</lastmod>
   </url>
   <url>
-    <loc>https://creditsplan.cn/plans/trae-cn-express/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-enterprise-light/</loc>
+    <lastmod>2026-07-08</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-enterprise-professional/</loc>
+    <lastmod>2026-07-08</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/baidu-qianfan-token-enterprise-advanced/</loc>
+    <lastmod>2026-07-08</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/aliyun-bailian.lite/</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/aliyun-bailian.standard/</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/aliyun-bailian.pro/</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/aliyun-token-plan-standard/</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/aliyun-token-plan-advanced/</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/aliyun-token-plan-premium/</loc>
+    <lastmod>2026-07-22</lastmod>
+  </url>
+  <url>
+    <loc>https://creditsplan.cn/plans/aliyun-token-plan-shared-pack/</loc>
+    <lastmod>2026-07-22</lastmod>
   </url>
 </urlset>

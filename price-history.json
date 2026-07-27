@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20",
+  "generated_at": "2026-07-27",
   "schema_version": 1,
   "plans": {
     "volcengine-coding-lite": {
@@ -323,6 +323,10 @@
         {
           "date": "2026-07-15",
           "monthly_price": 198
+        },
+        {
+          "date": "2026-07-16",
+          "monthly_price": 150
         }
       ]
     },
@@ -332,6 +336,10 @@
         {
           "date": "2026-07-15",
           "monthly_price": 698
+        },
+        {
+          "date": "2026-07-16",
+          "monthly_price": 550
         }
       ]
     },
@@ -539,6 +547,105 @@
         {
           "date": "2026-07-19",
           "monthly_price": 699
+        }
+      ]
+    },
+    "xiaomi-mimo.lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-19",
+          "monthly_price": 39
+        }
+      ]
+    },
+    "xiaomi-mimo.standard": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-19",
+          "monthly_price": 99
+        }
+      ]
+    },
+    "xiaomi-mimo.pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-19",
+          "monthly_price": 329
+        }
+      ]
+    },
+    "xiaomi-mimo.max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-19",
+          "monthly_price": 659
+        }
+      ]
+    },
+    "aliyun-bailian.lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-19",
+          "monthly_price": 39
+        }
+      ]
+    },
+    "aliyun-bailian.standard": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-19",
+          "monthly_price": 139
+        }
+      ]
+    },
+    "aliyun-bailian.pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-19",
+          "monthly_price": 499
+        }
+      ]
+    },
+    "qiniu.enterprise-s": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 2999
+        }
+      ]
+    },
+    "qiniu.enterprise-m": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 4999
+        }
+      ]
+    },
+    "qiniu.enterprise-b": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 9999
+        }
+      ]
+    },
+    "aliyun-token-plan-shared-pack": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 5000
         }
       ]
     }

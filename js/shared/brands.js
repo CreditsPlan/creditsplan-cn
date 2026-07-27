@@ -1,5 +1,6 @@
 // Keep aliases and every consumer-specific brand field in this one definition list.
 // vendorNames overrides names only when news matching intentionally differs.
+const OSS_BRAND_BASE_URL = 'https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/';
 const BRAND_DEFINITIONS = [
   { names: ['OpenAI'] },
   { names: ['Anthropic', 'Claude'] },
@@ -14,7 +15,7 @@ const BRAND_DEFINITIONS = [
     id: 'deepseek',
     label: 'DeepSeek',
     names: ['DeepSeek'],
-    iconUrl: '/assets/icons/brands/reference-deepseek.png',
+    iconUrl: `${OSS_BRAND_BASE_URL}reference-deepseek.png`,
     planOrder: 2
   },
   {
@@ -22,70 +23,71 @@ const BRAND_DEFINITIONS = [
     label: '阿里云',
     names: ['阿里云', '阿里云百炼', '通义千问', '通义'],
     vendorNames: ['阿里云', '通义千问', '通义'],
-    iconUrl: '/assets/icons/brands/reference-bailian.png',
+    iconUrl: `${OSS_BRAND_BASE_URL}reference-bailian.png`,
     planOrder: 5
   },
   {
     id: 'volcano-agentplan',
     label: '火山引擎',
     names: ['火山方舟', '火山引擎', '豆包'],
-    iconUrl: '/assets/icons/brands/reference-volcano-agentplan.png',
+    iconUrl: `${OSS_BRAND_BASE_URL}reference-volcano-agentplan.png`,
     planOrder: 1
   },
   {
     id: 'zhipu-glm',
     label: '智谱',
-    names: ['智谱 GLM', '智谱'],
-    iconUrl: '/assets/icons/brands/reference-zhipu-glm.png',
+    names: ['智谱 GLM', '智谱', '智谱 BigModel', '智谱BigModel'],
+    vendorNames: ['智谱 GLM', '智谱'],
+    iconUrl: `${OSS_BRAND_BASE_URL}reference-zhipu-glm.png`,
     planOrder: 3
   },
   {
     id: 'zhipu-glm-en',
     label: 'Z.ai',
     names: ['Z.ai'],
-    iconUrl: '/assets/icons/brands/reference-zhipu-glm-en.png',
+    iconUrl: `${OSS_BRAND_BASE_URL}reference-zhipu-glm-en.png`,
     planOrder: 4
   },
   {
     id: 'minimax',
     label: 'MiniMax',
     names: ['MiniMax'],
-    iconUrl: '/assets/icons/brands/reference-minimax.png',
+    iconUrl: `${OSS_BRAND_BASE_URL}reference-minimax.png`,
     planOrder: 6
   },
   {
     id: 'baidu-qianfan',
     label: '百度千帆',
     names: ['百度千帆', '百度'],
-    iconUrl: '/assets/icons/brands/baidu-qianfan.ico',
+    iconUrl: `${OSS_BRAND_BASE_URL}baidu-qianfan.ico`,
     planOrder: 7
   },
   {
     id: 'tencent-hunyuan',
     label: '腾讯混元',
     names: ['腾讯混元', '腾讯'],
-    iconUrl: '/assets/icons/brands/tencent-hunyuan.svg',
+    iconUrl: `${OSS_BRAND_BASE_URL}tencent-hunyuan-20260726.svg`,
     planOrder: 8
   },
   {
     id: 'siliconflow',
     label: '硅基流动',
     names: ['硅基流动'],
-    iconUrl: '/assets/icons/brands/siliconflow.ico',
+    iconUrl: `${OSS_BRAND_BASE_URL}siliconflow.ico`,
     planOrder: 9
   },
   {
     id: 'stepfun',
     label: '阶跃星辰',
     names: ['阶跃星辰'],
-    iconUrl: '/assets/icons/brands/stepfun.svg',
+    iconUrl: `${OSS_BRAND_BASE_URL}stepfun.svg`,
     planOrder: 10
   },
   {
     id: 'qoder',
     label: 'Qoder',
     names: ['Qoder'],
-    iconUrl: '/assets/icons/brands/qoder.svg',
+    iconUrl: `${OSS_BRAND_BASE_URL}qoder.svg`,
     planOrder: 12
   },
   {
@@ -99,7 +101,7 @@ const BRAND_DEFINITIONS = [
     id: 'byteplus',
     label: 'BytePlus',
     names: ['BytePlus'],
-    iconUrl: '/assets/icons/brands/volcengine.svg',
+    iconUrl: `${OSS_BRAND_BASE_URL}byteplus.png`,
     planOrder: 14
   },
   {
@@ -107,7 +109,7 @@ const BRAND_DEFINITIONS = [
     label: 'Trae',
     names: ['Trae'],
     vendorNames: [],
-    iconUrl: '/assets/icons/brands/trae.png',
+    iconUrl: `${OSS_BRAND_BASE_URL}trae.png`,
     planOrder: 11
   },
   {
@@ -115,14 +117,14 @@ const BRAND_DEFINITIONS = [
     label: 'Qoder CN',
     names: ['Qoder CN'],
     vendorNames: [],
-    iconUrl: '/assets/icons/brands/qoder-cn.svg',
+    iconUrl: `${OSS_BRAND_BASE_URL}qoder-cn.svg`,
     planOrder: 13
   },
   {
     id: 'codebuddy',
     label: 'CodeBuddy',
     names: ['CodeBuddy'],
-    iconUrl: 'https://download.codebuddy.cn/web/website/9359723b811dbf8c3ea231c13426b9d14e013567/assets/logo.svg',
+    iconUrl: `${OSS_BRAND_BASE_URL}codebuddy.svg`,
     planOrder: 16
   }
 ];

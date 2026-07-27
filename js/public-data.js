@@ -27,7 +27,14 @@ export async function loadModelDataset() {
 export async function loadPlanDataset() {
   const dataset = await loadModelDataset();
   const plans = dataset.models.flatMap(model => normalizePlansFromModel(model));
-  return { ...dataset, plans, providerInfo: dataset.providerInfo || {} };
+  const modelCatalog = dataset.modelCatalog || [];
+  const nameById = new Map(modelCatalog.map(model => [model.id, model.name]));
+  for (const plan of plans) {
+    plan.supportedModelNames = (plan.modelIds || [])
+      .map(id => nameById.get(id))
+      .filter(Boolean);
+  }
+  return { ...dataset, plans, providerInfo: dataset.providerInfo || {}, modelCatalog };
 }
 
 function normalizeModelDataset(payload, source) {
@@ -39,7 +46,8 @@ function normalizeModelDataset(payload, source) {
         lastUpdated: payload.last_updated || latestDate(models.map(model => model.updatedAt)),
         models,
         rawModels: payload.models,
-        providerInfo: payload.provider_info || {}
+        providerInfo: payload.provider_info || {},
+        modelCatalog: normalizeModelCatalog(payload.model_catalog)
       };
     }
   }
@@ -49,8 +57,24 @@ function normalizeModelDataset(payload, source) {
     lastUpdated: payload?.last_updated || 'unknown',
     models: [],
     rawModels: [],
-    providerInfo: payload?.provider_info || {}
+    providerInfo: payload?.provider_info || {},
+    modelCatalog: []
   };
+}
+
+function normalizeModelCatalog(catalog) {
+  if (!Array.isArray(catalog)) return [];
+  return catalog
+    .map(item => ({
+      id: stringValue(item.id),
+      name: stringValue(item.name, item.id || ''),
+      provider: stringValue(item.provider, ''),
+      providerIconUrl: stringValue(item.provider_icon_url, ''),
+      logoUrl: stringValue(item.logo_url, ''),
+      sortOrder: numberOrNull(item.sort_order),
+      marketRegion: stringValue(item.market_region, '')
+    }))
+    .filter(item => item.id);
 }
 
 export async function loadUpdateDataset() {
@@ -72,7 +96,9 @@ export async function loadUpdateDataset() {
 
 async function fetchJson(url) {
   try {
-    const response = await fetch(url, { cache: 'no-store', headers: { Accept: 'application/json' } });
+    // 使用默认 HTTP 缓存：data.json 在 nginx 层已配置 5 分钟短缓存，
+    // 同时让 <link rel="preload" as="fetch"> 的预取结果能被复用，避免重复下载
+    const response = await fetch(url, { headers: { Accept: 'application/json' } });
     if (!response.ok) return null;
     return await response.json();
   } catch {
@@ -92,8 +118,8 @@ function normalizeBackendModel(model, source) {
     vendor: stringValue(model.provider, '待更新'),
     providerIconUrl: stringValue(model.provider_icon_url, model.icon_url || ''),
     modelName: stringValue(model.name, '待更新'),
-    inputPrice: formatPrice(model.input_price),
-    outputPrice: formatPrice(model.output_price),
+    inputPrice: formatPrice(model.input_price, model.currency),
+    outputPrice: formatPrice(model.output_price, model.currency),
     contextLength: formatContext(model.context_length),
     multimodal: capabilities.includes('vision') ? '支持' : '待确认',
     apiSupport: '支持',
@@ -132,6 +158,9 @@ function normalizePlansFromModel(model) {
         providerIconUrl: stringValue(plan.provider_icon_url, plan.icon_url, model.providerIconUrl),
         modelName: model.modelName,
         modelId: stringValue(plan.model_id, model.id),
+        modelIds: Array.isArray(plan.model_ids)
+          ? plan.model_ids.map(id => String(id || '').trim()).filter(Boolean)
+          : [],
         status: stringValue(plan.status, 'unknown'),
         statusLabel: stringValue(plan.status_label, '待确认'),
         url: stringValue(plan.url, ''),
@@ -384,10 +413,12 @@ function numberOrNull(value) {
   return Number.isFinite(number) ? number : null;
 }
 
-function formatPrice(value) {
+function formatPrice(value, currency) {
   const number = numberOrNull(value);
   if (number == null) return stringValue(value, '待更新');
-  return `\u00a5${number.toLocaleString('zh-CN', { maximumFractionDigits: 4 })}/百万 tokens`;
+  // 币种随后台 currency 字段显示，不做汇率转化（默认 CNY）
+  const symbol = currency === 'USD' ? '$' : '¥';
+  return `${symbol}${number.toLocaleString('zh-CN', { maximumFractionDigits: 4 })}/百万 tokens`;
 }
 
 function formatMonthlyPrice(value, currency = 'CNY') {

@@ -123,15 +123,16 @@ export function renderSelectedPlanDetail(plan) {
   const hasRmb = plan.rmbRecharge && plan.rmbRecharge !== '待确认' && plan.rmbRecharge !== '请以官网为准';
   const hasInvoice = plan.invoice && plan.invoice !== '待确认' && plan.invoice !== '请以官网为准';
 
-  addPlanExtraRow(rows, '套餐类型', typeLabel);
+  addPlanExtraRow(rows, '套餐类型', typeLabel, true);
+  addPlanExtraRow(rows, '支持模型', (plan.supportedModelNames || []).join('、'), true);
   if (plan.firstMonthPrice != null) {
     const firstMonthPrice = Number(plan.firstMonthPrice);
     addPlanExtraRow(rows, '首月价格', Number.isFinite(firstMonthPrice)
       ? `${currencySymbol(plan.monthlyCurrency || 'CNY')}${formatPriceNumber(firstMonthPrice)}`
       : plan.firstMonthPrice);
   }
-  if (plan.domesticPayment) addPlanExtraRow(rows, '国内支付', '支持');
-  addPlanExtraRow(rows, '包含调用量', plan.includedCalls);
+  if (plan.domesticPayment) addPlanExtraRow(rows, '国内支付', '支持', true);
+  addPlanExtraRow(rows, '包含调用量', plan.includedCalls, true);
   const fiveH = optionalDetailText(plan.fiveHoursRequests);
   const weekly = optionalDetailText(plan.weeklyRequests);
   if (fiveH || weekly) {
@@ -167,7 +168,7 @@ export function renderSelectedPlanDetail(plan) {
     const isLong = row.value.length > 40 || row.label === '刷新规则' || row.label === '备注' || row.label === '注意' || row.label === '适合';
     const itemClass = row.keepInline
       ? 'plan-extra-item plan-extra-inline'
-      : (isLong ? 'plan-extra-item plan-extra-wide' : 'plan-extra-item');
+      : (isLong ? 'plan-extra-item plan-extra-wide' : 'plan-extra-item plan-extra-inline');
     return `
     <div class="${itemClass}">
       <span class="plan-extra-label">${escapeHtml(row.label)}</span>

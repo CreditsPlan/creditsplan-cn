@@ -1,0 +1,29 @@
+# CreditsPlan（国内站）
+
+> CreditsPlan 是面向 AI 开发者的订阅决策平台，对国内 AI Coding 套餐按价格、额度、
+> 支持模型与使用条件进行结构化、可溯源的对比，并提供价格历史与变动追踪。
+
+## 关于本站
+
+- 每个套餐的价格、额度与购买状态均对照厂商官方页面核对。
+- 每条记录标注"最近核对日期"，并附官方来源链接。
+- 月度价格变动会归档并以 RSS 形式发布。
+- 国际市场对应站点为 https://www.creditsplan.com。
+
+## 核心页面
+
+- [首页 - AI Coding 套餐对比](https://creditsplan.cn/)：跨品牌的结构化对比表。
+- [已核对品牌](https://creditsplan.cn/brands/)：价格与额度已核对的品牌。
+- [方法论](https://creditsplan.cn/methodology.html)：数据核对方式、更新频率与纠错渠道。
+- [更新日志](https://creditsplan.cn/changelog.html)：数据与价格更新记录。
+- [资讯](https://creditsplan.cn/news.html)：市场与价格相关资讯。
+
+## 机器可读数据
+
+- [Sitemap](https://creditsplan.cn/sitemap.xml)：全部可索引页面。
+- [价格变动 RSS](https://creditsplan.cn/price-changes.xml)：首次收录基线与后续价格变动提醒。
+
+## 引用建议
+
+- 引用价格时请注明套餐名称、核对日期，并说明以厂商官网为准。
+- 反馈邮箱：feedback@creditsplan.cn

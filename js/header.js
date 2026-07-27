@@ -1,8 +1,9 @@
 import { bindThemeToggle } from './theme.js';
 
 const pages = [
-  ['index.html', '/', '模型套餐'],
+  ['index.html', '/', '套餐'],
   ['brands/', '/brands/', '品牌'],
+  ['model', '/model', '模型'],
   ['news.html', '/news.html', 'AI动态'],
   ['changelog.html', '/changelog.html', '更新日志']
 ];
@@ -37,8 +38,15 @@ export function renderHeader(currentPage = 'index.html') {
   const root = document.getElementById('header-root');
   if (!root) return;
   const current = normalized(currentPage);
+  // 「模型」与「套餐」同为首页文档，通过 /model 路径区分高亮（兼容旧链接 ?view=pricing）
+  const pathname = (globalThis.location?.pathname || '').replace(/\/+$/, '') || '/';
+  const isModelView = pathname === '/model'
+    || new URLSearchParams(globalThis.location?.search || '').get('view') === 'pricing';
   const nav = pages.map(([page, href, label]) => {
-    const active = normalized(page) === current;
+    let active;
+    if (page === 'model') active = current === 'index.html' && isModelView;
+    else if (page === 'index.html') active = current === 'index.html' && !isModelView;
+    else active = normalized(page) === current;
     return `<li><a class="focus-ring${active ? ' is-current' : ''}" data-page-link="${page}" href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a></li>`;
   }).join('');
 
@@ -46,7 +54,7 @@ export function renderHeader(currentPage = 'index.html') {
     <header>
       <nav class="nav-bar" id="navbar" aria-label="主导航">
         <a href="/" class="nav-logo">
-          <div class="nav-logo-icon"><img class="nav-logo-img" src="/logo.png" alt="CreditsPlan"/></div>
+          <div class="nav-logo-icon"><img class="nav-logo-img" src="https://creditsplan.oss-cn-hangzhou.aliyuncs.com/creditsplan-logo-original-arrow-600.webp" alt="CreditsPlan"/></div>
           <span>CreditsPlan</span>
         </a>
         <ul class="nav-links" id="primaryNav">
@@ -96,4 +104,25 @@ export function renderHeader(currentPage = 'index.html') {
       navToggle.focus();
     });
   }
+
+  // Speculation Rules：让浏览器在后台预渲染导航目标页，点击菜单时几乎零延迟切换
+  injectSpeculationRules();
+}
+
+let speculationInjected = false;
+function injectSpeculationRules() {
+  if (speculationInjected) return;
+  // 仅 Chromium 109+ 支持；不支持的浏览器忽略此 script 标签
+  if (!HTMLScriptElement.supports?.('speculationrules')) return;
+  speculationInjected = true;
+  const script = document.createElement('script');
+  script.type = 'speculationrules';
+  script.textContent = JSON.stringify({
+    prerender: [{
+      source: 'list',
+      urls: ['/', '/brands/', '/model', '/news.html', '/changelog.html'],
+      eagerness: 'immediate'
+    }]
+  });
+  document.head.appendChild(script);
 }

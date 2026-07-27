@@ -1,6 +1,35 @@
 {
-  "last_updated": "2026-07-19",
+  "last_updated": "2026-07-26",
   "entries": [
+    {
+      "id": "changelog-20260726-model-pricing",
+      "date": "2026-07-26",
+      "edition": "2026.07.26",
+      "kind": "feature",
+      "title": "模型目录与价格对比功能上线",
+      "summary": "新增模型目录、按模型筛选和独立价格对比页，帮助从“选套餐”进一步延伸到“选模型、比 API 成本”。",
+      "items": [
+        "套餐列表新增“按模型”维度，可直接查看每个模型对应的可用套餐。",
+        "新增模型价格对比页，集中展示厂商、上下文长度及官方输入/输出单价，并支持筛选和排序。",
+        "模型价格按厂商官方币种展示，保留官方定价来源，避免将折算价误认为原价。",
+        "套餐与模型价格数据支持 Excel、Word 和 PDF 导出，方便分析与存档。"
+      ]
+    },
+    {
+      "id": "changelog-20260721-xiaomi-mimo",
+      "date": "2026-07-21",
+      "edition": "2026.07.21",
+      "kind": "catalog",
+      "title": "新增 Xiaomi MiMo Token Plan 套餐",
+      "summary": "收录小米 MiMo 平台 V2.5 全系列模型 Token Plan，覆盖入门到发烧友 4 档方案。",
+      "items": [
+        "Lite（¥39/月）：尝鲜入门，41 亿 Credits/月，支持 V2.5 全系列模型。",
+        "Standard（¥99/月）：进阶用户，110 亿 Credits/月，2.7 倍 Lite 用量。",
+        "Pro（¥329/月）：专业开发者，380 亿 Credits/月，9.3 倍 Lite 用量。",
+        "Max（¥659/月）：编程发烧友，820 亿 Credits/月，20 倍 Lite 用量。",
+        "全系支持 OpenClaw、Codex、ClaudeCode、MiMoCode 等主流编程工具，非高峰期 0.8x 系数消耗。"
+      ]
+    },
     {
       "id": "changelog-20260719-zhipu",
       "date": "2026-07-19",
