@@ -82,6 +82,12 @@ CreditsPlan 是面向中文 AI 开发者的订阅决策平台，对国产 AI Cod
 - [`price-changes.xml`](https://creditsplan.cn/price-changes.xml)：价格变动 RSS
 - [`llms.txt`](https://creditsplan.cn/llms.txt)：面向 LLM 的站点说明
 
+## 版权与许可
+
+- 页面与代码：保留所有权利（All Rights Reserved），仅供浏览、学习与参考，未经授权不得用于搭建镜像或竞品站点
+- 数据文件（`data.json` / `price-history.json` 等）：采用 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh) 许可，允许注明来源的非商业性引用，禁止商用与改作
+- 详见 [LICENSE](./LICENSE)；品牌名称与商标归各自权利人所有
+
 ## 引用与反馈
 
 - 引用价格时请注明**套餐名称与核对日期**，并说明以厂商官网为准

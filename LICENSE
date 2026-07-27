@@ -1,0 +1,31 @@
+版权声明 / Copyright Notice
+
+Copyright (c) 2025-2026 CreditsPlan (https://creditsplan.cn)
+
+本仓库为 CreditsPlan 国内站（creditsplan.cn）的静态站点发布仓库，
+包含页面代码与结构化数据文件。
+
+1. 页面与代码
+   本仓库中的 HTML / CSS / JavaScript 等页面与代码保留所有权利
+   （All Rights Reserved），仅供浏览、学习与参考。未经书面授权，
+   不得用于搭建镜像站点、竞品站点或其他对外提供的公开服务。
+
+2. 数据文件
+   数据文件（data.json、price-history.json、changelog.json、
+   price-changes.xml 等）采用 CC BY-NC-ND 4.0 许可
+   （署名 - 非商业性使用 - 禁止演绎）：
+   - 允许在注明来源（CreditsPlan 与对应页面链接）并说明核对日期的
+     前提下进行非商业性引用；
+   - 禁止商业用途、二次分发与改作。
+   许可全文：https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh
+
+3. 第三方权利
+   本仓库中出现的品牌名称、商标、Logo 及产品信息归各自权利人所有，
+   仅用于信息展示与对比说明，不代表相关厂商的授权或背书。
+
+4. 免责声明
+   套餐价格与额度信息以各厂商官方页面为准，本仓库数据仅供参考，
+   不构成任何购买建议。
+
+引用与合作：feedback@creditsplan.cn 或提交 GitHub Issue
+（https://github.com/CreditsPlan/creditsplan-cn/issues）
