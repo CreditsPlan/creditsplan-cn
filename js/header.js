@@ -4,9 +4,17 @@ const pages = [
   ['index.html', '/', '套餐'],
   ['brands/', '/brands/', '品牌'],
   ['model', '/model', '模型'],
-  ['price-changes/', '/price-changes/', '价格变动'],
+  ['advisor/', '/advisor/', '选购助手'],
   ['news.html', '/news.html', 'AI动态'],
   ['changelog.html', '/changelog.html', '更新日志']
+];
+
+// 「价格」下拉分组：价格类页面收进一个入口，避免顶栏菜单过多（插在选购助手之后）
+const PRICE_GROUP_LABEL = '价格';
+const priceGroup = [
+  ['price-changes/', '/price-changes/', '价格变动'],
+  ['rankings/cheapest/', '/rankings/cheapest/', '最便宜榜'],
+  ['reports/', '/reports/', '价格月报']
 ];
 
 function normalized(page) {
@@ -43,13 +51,27 @@ export function renderHeader(currentPage = 'index.html') {
   const pathname = (globalThis.location?.pathname || '').replace(/\/+$/, '') || '/';
   const isModelView = pathname === '/model'
     || new URLSearchParams(globalThis.location?.search || '').get('view') === 'pricing';
-  const nav = pages.map(([page, href, label]) => {
+  const navItems = pages.map(([page, href, label]) => {
     let active;
     if (page === 'model') active = current === 'index.html' && isModelView;
     else if (page === 'index.html') active = current === 'index.html' && !isModelView;
     else active = normalized(page) === current;
     return `<li><a class="focus-ring${active ? ' is-current' : ''}" data-page-link="${page}" href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a></li>`;
+  });
+
+  // 价格下拉：桌面 hover/focus 展开；移动端菜单里由 CSS 平铺成普通菜单项
+  const priceActive = priceGroup.some(([page]) => normalized(page) === current);
+  const priceItems = priceGroup.map(([page, href, label]) => {
+    const active = normalized(page) === current;
+    return `<li><a class="focus-ring${active ? ' is-current' : ''}" data-page-link="${page}" href="${href}"${active ? ' aria-current="page"' : ''}>${label}</a></li>`;
   }).join('');
+  const priceDropdown = `<li class="nav-dropdown">
+    <button type="button" class="nav-dropdown-toggle focus-ring${priceActive ? ' is-current' : ''}" aria-haspopup="true" aria-expanded="false">${PRICE_GROUP_LABEL}<svg class="nav-dropdown-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+    <div class="nav-dropdown-panel"><ul class="nav-dropdown-menu">${priceItems}</ul></div>
+  </li>`;
+  // 插入到「选购助手」之后（pages 前 4 项之后）
+  navItems.splice(4, 0, priceDropdown);
+  const nav = navItems.join('');
 
   root.innerHTML = `
     <header>
@@ -121,7 +143,7 @@ function injectSpeculationRules() {
   script.textContent = JSON.stringify({
     prerender: [{
       source: 'list',
-      urls: ['/', '/brands/', '/model', '/news.html', '/changelog.html'],
+      urls: ['/', '/brands/', '/model', '/advisor/', '/rankings/cheapest/', '/reports/', '/news.html', '/changelog.html'],
       eagerness: 'immediate'
     }]
   });

@@ -8,6 +8,7 @@
 - [已核对品牌](https://creditsplan.cn/brands/)
 - [品牌一对一对比](https://creditsplan.cn/compare/)：任选两个品牌的价格与额度对比
 - [最便宜套餐榜](https://creditsplan.cn/rankings/cheapest/)：按月费从低到高排序
+- [套餐选购助手](https://creditsplan.cn/advisor/)：按模型系/用量/预算算出性价比排序
 - [价格变动时间线](https://creditsplan.cn/price-changes/)：每次核对到的涨降价记录
 - [价格月报归档](https://creditsplan.cn/reports/)
 - [数据校对方法](https://creditsplan.cn/methodology.html)

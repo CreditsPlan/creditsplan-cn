@@ -1,5 +1,6 @@
 // plan-advisor.js — 「帮我选套餐」性价比计算器（纯前端，基于已加载的套餐数据）
 // 输入：模型系（多选）、月用量档位、人民币直付/预算上限；输出：分层排序的套餐推荐。
+// 表单与结果渲染抽取为 createAdvisorApp，供首页弹窗（initPlanAdvisor）与独立页 /advisor/ 复用。
 import { escapeHtml, safeExternalUrl } from './render.js';
 import { renderBrandIcon } from './plans-table.js';
 import { outboundTrackingAttributes, purchaseLinkTarget } from './plans-detail.js';
@@ -179,73 +180,84 @@ function renderResultItem(item, providerInfo) {
   `;
 }
 
-function renderDialogShell(familyOptions) {
+// 表单 + 结果容器（弹窗与独立页共用），按 state 回填初始选中态
+function renderAdvisorForm(familyOptions, state) {
+  const customUsage = USAGE_TIERS.some(tier => tier.value === state.usage) ? '' : state.usage;
+  return `
+    <div class="plan-advisor-form">
+      <div class="plan-advisor-field">
+        <span class="plan-advisor-label">主要用哪个模型系？<small>可多选，不选=不限</small></span>
+        <div class="plan-advisor-options" data-advisor-families>
+          ${familyOptions.map(option => {
+            const active = state.families.has(option.family);
+            return `
+              <button type="button" class="plan-advisor-option${active ? ' is-active' : ''}" data-family="${escapeHtml(option.family)}" aria-pressed="${active}">
+                ${escapeHtml(option.family)}<span class="plan-advisor-option-count">${option.count}</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+      </div>
+      <div class="plan-advisor-field">
+        <span class="plan-advisor-label">每月大约调用多少次？</span>
+        <div class="plan-advisor-options" data-advisor-usage>
+          ${USAGE_TIERS.map(tier => {
+            const active = tier.value === state.usage;
+            return `
+              <button type="button" class="plan-advisor-option${active ? ' is-active' : ''}" data-usage="${tier.value}" aria-pressed="${active}">
+                ${escapeHtml(tier.label)}
+              </button>
+            `;
+          }).join('')}
+          <input type="number" min="1" class="plan-advisor-input" data-advisor-usage-custom placeholder="自定义次数" aria-label="自定义每月调用次数" value="${customUsage}">
+        </div>
+      </div>
+      <div class="plan-advisor-field plan-advisor-field--row">
+        <label class="plan-advisor-switch">
+          <input type="checkbox" data-advisor-rmb${state.rmbOnly ? ' checked' : ''}>
+          <span>仅看支持人民币直付</span>
+        </label>
+        <label class="plan-advisor-budget">
+          <span>预算上限</span>
+          <input type="number" min="0" class="plan-advisor-input" data-advisor-budget placeholder="¥/月，可不填" aria-label="每月预算上限（元）" value="${state.budget ?? ''}">
+        </label>
+      </div>
+    </div>
+    <div class="plan-advisor-results" data-advisor-results aria-live="polite"></div>
+  `;
+}
+
+function renderDialogShell() {
   return `
     <div class="plan-advisor-dialog" role="dialog" aria-modal="true" aria-labelledby="planAdvisorTitle" tabindex="-1">
       <div class="plan-advisor-head">
         <h2 id="planAdvisorTitle">哪个套餐最划算？</h2>
         <button type="button" class="plan-advisor-close" data-advisor-close aria-label="关闭计算器">✕</button>
       </div>
-      <div class="plan-advisor-body">
-        <div class="plan-advisor-form">
-          <div class="plan-advisor-field">
-            <span class="plan-advisor-label">主要用哪个模型系？<small>可多选，不选=不限</small></span>
-            <div class="plan-advisor-options" data-advisor-families>
-              ${familyOptions.map(option => `
-                <button type="button" class="plan-advisor-option" data-family="${escapeHtml(option.family)}" aria-pressed="false">
-                  ${escapeHtml(option.family)}<span class="plan-advisor-option-count">${option.count}</span>
-                </button>
-              `).join('')}
-            </div>
-          </div>
-          <div class="plan-advisor-field">
-            <span class="plan-advisor-label">每月大约调用多少次？</span>
-            <div class="plan-advisor-options" data-advisor-usage>
-              ${USAGE_TIERS.map(tier => `
-                <button type="button" class="plan-advisor-option${tier.id === 'medium' ? ' is-active' : ''}" data-usage="${tier.value}" aria-pressed="${tier.id === 'medium'}">
-                  ${escapeHtml(tier.label)}
-                </button>
-              `).join('')}
-              <input type="number" min="1" class="plan-advisor-input" data-advisor-usage-custom placeholder="自定义次数" aria-label="自定义每月调用次数">
-            </div>
-          </div>
-          <div class="plan-advisor-field plan-advisor-field--row">
-            <label class="plan-advisor-switch">
-              <input type="checkbox" data-advisor-rmb>
-              <span>仅看支持人民币直付</span>
-            </label>
-            <label class="plan-advisor-budget">
-              <span>预算上限</span>
-              <input type="number" min="0" class="plan-advisor-input" data-advisor-budget placeholder="¥/月，可不填" aria-label="每月预算上限（元）">
-            </label>
-          </div>
-        </div>
-        <div class="plan-advisor-results" data-advisor-results aria-live="polite"></div>
-      </div>
+      <div class="plan-advisor-body"></div>
       <p class="plan-advisor-disclaimer">额度与价格为公开资料估算，仅供比较参考，请以厂商官网为准。</p>
     </div>
   `;
 }
 
-// ---------- 初始化 ----------
+// ---------- 计算器应用（表单交互 + 结果渲染，挂载到任意容器） ----------
 
-export function initPlanAdvisor({ plans, providerInfo = {}, modelCatalog = [], fab }) {
-  if (!fab) return null;
+export function createAdvisorApp({ root, plans, providerInfo = {}, modelCatalog = [], initialState = {}, onStateChange = null }) {
   const { options: familyOptions, familyByModelId } = buildFamilyOptions(modelCatalog, plans);
+  const knownFamilies = new Set(familyOptions.map(option => option.family));
 
   const state = {
-    families: new Set(),
-    usage: USAGE_TIERS[1].value,
-    rmbOnly: false,
-    budget: null,
+    families: new Set([...(initialState.families || [])].filter(family => knownFamilies.has(family))),
+    usage: Number.isFinite(initialState.usage) && initialState.usage > 0 ? initialState.usage : USAGE_TIERS[1].value,
+    rmbOnly: initialState.rmbOnly === true,
+    budget: Number.isFinite(initialState.budget) && initialState.budget > 0 ? initialState.budget : null,
     showAll: false
   };
 
-  let overlay = null;
-  let lastFocused = null;
+  root.innerHTML = renderAdvisorForm(familyOptions, state);
 
   const renderResults = () => {
-    const container = overlay.querySelector('[data-advisor-results]');
+    const container = root.querySelector('[data-advisor-results]');
     const { results, paygoCount } = rankPlans(plans, state, familyByModelId);
     if (!results.length) {
       container.innerHTML = `
@@ -267,6 +279,85 @@ export function initPlanAdvisor({ plans, providerInfo = {}, modelCatalog = [], f
     `;
   };
 
+  const notify = () => { onStateChange?.(state); };
+
+  root.addEventListener('click', event => {
+    const familyButton = event.target.closest('[data-family]');
+    if (familyButton) {
+      const family = familyButton.dataset.family;
+      if (state.families.has(family)) state.families.delete(family);
+      else state.families.add(family);
+      const active = state.families.has(family);
+      familyButton.classList.toggle('is-active', active);
+      familyButton.setAttribute('aria-pressed', String(active));
+      state.showAll = false;
+      renderResults();
+      notify();
+      return;
+    }
+    const usageButton = event.target.closest('[data-usage]');
+    if (usageButton) {
+      state.usage = Number(usageButton.dataset.usage);
+      root.querySelectorAll('[data-usage]').forEach(button => {
+        const active = button === usageButton;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+      const custom = root.querySelector('[data-advisor-usage-custom]');
+      if (custom) custom.value = '';
+      state.showAll = false;
+      renderResults();
+      notify();
+      return;
+    }
+    if (event.target.closest('[data-advisor-more]')) {
+      state.showAll = true;
+      renderResults();
+    }
+  });
+
+  root.querySelector('[data-advisor-usage-custom]')?.addEventListener('input', event => {
+    const value = Number(event.target.value);
+    if (Number.isFinite(value) && value > 0) {
+      state.usage = value;
+      root.querySelectorAll('[data-usage]').forEach(button => {
+        button.classList.remove('is-active');
+        button.setAttribute('aria-pressed', 'false');
+      });
+    }
+    state.showAll = false;
+    renderResults();
+    notify();
+  });
+
+  root.querySelector('[data-advisor-rmb]')?.addEventListener('change', event => {
+    state.rmbOnly = event.target.checked;
+    state.showAll = false;
+    renderResults();
+    notify();
+  });
+
+  root.querySelector('[data-advisor-budget]')?.addEventListener('input', event => {
+    const value = Number(event.target.value);
+    state.budget = Number.isFinite(value) && value > 0 ? value : null;
+    state.showAll = false;
+    renderResults();
+    notify();
+  });
+
+  renderResults();
+  return { state, refresh: renderResults };
+}
+
+// ---------- 首页弹窗（overlay 外壳 + createAdvisorApp） ----------
+
+export function initPlanAdvisor({ plans, providerInfo = {}, modelCatalog = [], fab }) {
+  if (!fab) return null;
+
+  let overlay = null;
+  let app = null;
+  let lastFocused = null;
+
   const close = () => {
     if (!overlay) return;
     overlay.hidden = true;
@@ -279,71 +370,13 @@ export function initPlanAdvisor({ plans, providerInfo = {}, modelCatalog = [], f
     overlay = document.createElement('div');
     overlay.className = 'plan-advisor-overlay';
     overlay.hidden = true;
-    overlay.innerHTML = renderDialogShell(familyOptions);
+    overlay.innerHTML = renderDialogShell();
     document.body.appendChild(overlay);
+    app = createAdvisorApp({ root: overlay.querySelector('.plan-advisor-body'), plans, providerInfo, modelCatalog });
 
     overlay.addEventListener('click', event => {
       // 点击遮罩空白区域不关闭弹窗，避免误触丢失筛选条件；仅 ✕ 按钮与 ESC 关闭
-      if (event.target.closest('[data-advisor-close]')) {
-        close();
-        return;
-      }
-      const familyButton = event.target.closest('[data-family]');
-      if (familyButton) {
-        const family = familyButton.dataset.family;
-        if (state.families.has(family)) state.families.delete(family);
-        else state.families.add(family);
-        const active = state.families.has(family);
-        familyButton.classList.toggle('is-active', active);
-        familyButton.setAttribute('aria-pressed', String(active));
-        state.showAll = false;
-        renderResults();
-        return;
-      }
-      const usageButton = event.target.closest('[data-usage]');
-      if (usageButton) {
-        state.usage = Number(usageButton.dataset.usage);
-        overlay.querySelectorAll('[data-usage]').forEach(button => {
-          const active = button === usageButton;
-          button.classList.toggle('is-active', active);
-          button.setAttribute('aria-pressed', String(active));
-        });
-        const custom = overlay.querySelector('[data-advisor-usage-custom]');
-        if (custom) custom.value = '';
-        state.showAll = false;
-        renderResults();
-        return;
-      }
-      if (event.target.closest('[data-advisor-more]')) {
-        state.showAll = true;
-        renderResults();
-      }
-    });
-
-    overlay.querySelector('[data-advisor-usage-custom]')?.addEventListener('input', event => {
-      const value = Number(event.target.value);
-      if (Number.isFinite(value) && value > 0) {
-        state.usage = value;
-        overlay.querySelectorAll('[data-usage]').forEach(button => {
-          button.classList.remove('is-active');
-          button.setAttribute('aria-pressed', 'false');
-        });
-      }
-      state.showAll = false;
-      renderResults();
-    });
-
-    overlay.querySelector('[data-advisor-rmb]')?.addEventListener('change', event => {
-      state.rmbOnly = event.target.checked;
-      state.showAll = false;
-      renderResults();
-    });
-
-    overlay.querySelector('[data-advisor-budget]')?.addEventListener('input', event => {
-      const value = Number(event.target.value);
-      state.budget = Number.isFinite(value) && value > 0 ? value : null;
-      state.showAll = false;
-      renderResults();
+      if (event.target.closest('[data-advisor-close]')) close();
     });
 
     document.addEventListener('keydown', event => {
@@ -356,7 +389,7 @@ export function initPlanAdvisor({ plans, providerInfo = {}, modelCatalog = [], f
     lastFocused = document.activeElement;
     overlay.hidden = false;
     document.body.style.overflow = 'hidden';
-    renderResults();
+    app.refresh();
     overlay.querySelector('.plan-advisor-dialog')?.focus();
   };
 
