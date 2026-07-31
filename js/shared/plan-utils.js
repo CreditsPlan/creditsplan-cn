@@ -51,6 +51,30 @@ export function providerMetadata(provider, providerInfo = {}, providerNameMap = 
   return providerInfo[canonicalName] || providerInfo[name] || {};
 }
 
+// 数据隐私维度：计划级覆盖（privacy_override_json）优先，其余继承品牌级默认值。
+// 返回 { training, optOut, retention, policyUrl, verifiedAt, overridden, note }
+export function resolvePlanPrivacy(plan, providerInfo = {}, providerNameMap = {}) {
+  const metadata = providerMetadata(plan?.provider, providerInfo, providerNameMap);
+  let override = plan?.privacyOverride;
+  if (!override || typeof override !== 'object') {
+    try { override = plan?.privacy_override_json ? JSON.parse(plan.privacy_override_json) : {}; } catch { override = {}; }
+  }
+  const training = String(override.data_training || metadata.data_training || '').trim();
+  const optOut = String(override.training_opt_out || metadata.training_opt_out || '').trim();
+  const retention = String(override.data_retention || metadata.data_retention || '').trim();
+  const policyUrl = String(metadata.privacy_policy_url || '').trim();
+  const verifiedAt = String(metadata.privacy_verified_at || '').trim();
+  const note = String(override.note || '').trim();
+  const overridden = Boolean(override.data_training || note);
+  return { training, optOut, retention, policyUrl, verifiedAt, overridden, note };
+}
+
+export const DATA_TRAINING_LABELS = {
+  yes: '可能用于训练',
+  no: '不用于训练',
+  unclear: '未明确'
+};
+
 export function displayNameForProvider(provider, providerInfo = {}, providerNameMap = {}) {
   const metadata = providerMetadata(provider, providerInfo, providerNameMap);
   return String(metadata.name || provider || '');
@@ -171,4 +195,28 @@ export function planRmbFlag(plan) {
 export function planInvoiceFlag(plan) {
   const raw = plan.invoiceRaw != null ? plan.invoiceRaw : plan.invoice;
   return { yes: isYesLikeValue(raw), confirmed: isConfirmedValue(raw), raw };
+}
+
+// 核实时效：超过阈值天数未核实自动降级为「待复核」
+export const VERIFIED_STALE_DAYS = 30;
+
+export function verifiedFreshness(lastVerifiedAt) {
+  const date = String(lastVerifiedAt || '').trim();
+  if (!date) return { state: 'unknown', days: null, date: '' };
+  const parsed = new Date(`${date}T00:00:00`);
+  if (Number.isNaN(parsed.getTime())) return { state: 'unknown', days: null, date };
+  const days = Math.max(0, Math.floor((Date.now() - parsed.getTime()) / 86400000));
+  return { state: days > VERIFIED_STALE_DAYS ? 'stale' : 'fresh', days, date };
+}
+
+// 隐私信息核查时效：隐私政策变化频率低于价格，阈值放宽到 90 天
+export const PRIVACY_STALE_DAYS = 90;
+
+export function privacyFreshness(privacyVerifiedAt) {
+  const date = String(privacyVerifiedAt || '').trim();
+  if (!date) return { state: 'unknown', days: null, date: '' };
+  const parsed = new Date(`${date}T00:00:00`);
+  if (Number.isNaN(parsed.getTime())) return { state: 'unknown', days: null, date };
+  const days = Math.max(0, Math.floor((Date.now() - parsed.getTime()) / 86400000));
+  return { state: days > PRIVACY_STALE_DAYS ? 'stale' : 'fresh', days, date };
 }

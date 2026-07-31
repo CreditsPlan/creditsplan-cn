@@ -1,8 +1,11 @@
 import { escapeHtml } from './render.js';
+import { PROVIDER_NAME_MAP } from './shared/brands.js';
 import {
   cleanValue,
+  DATA_TRAINING_LABELS,
   displayNameForProvider,
   findPlanByKey,
+  resolvePlanPrivacy,
   supportedModelDisplay
 } from './shared/plan-utils.js';
 import {
@@ -12,6 +15,32 @@ import {
   hasActivePlanTableFilter,
   planTablePriceValue
 } from './shared/plan-table-utils.js';
+import { planQuotaDisplay, planUnitPriceDisplay } from './shared/quota-utils.js';
+
+let privacyProviderInfo = {};
+export function setPlanTablePrivacyContext(providerInfo) {
+  privacyProviderInfo = providerInfo || {};
+}
+
+function planDataTrainingLabel(plan) {
+  const privacy = resolvePlanPrivacy(plan, privacyProviderInfo, PROVIDER_NAME_MAP);
+  if (!privacy.training) return '待调研';
+  return DATA_TRAINING_LABELS[privacy.training] || privacy.training;
+}
+
+// 计费单位标签：按 limit_type 归一为用户可直接比较的计量口径（跨平台口径不同，直接比数字无意义）
+export const BILLING_UNIT_LABELS = {
+  token: 'Token 计费',
+  credits: '积分制',
+  five_hours: '请求次数',
+  weekly: '请求次数',
+  monthly: '请求次数',
+  undisclosed: '未公开'
+};
+
+export function planBillingUnitLabel(plan) {
+  return BILLING_UNIT_LABELS[plan.limitType] || '未公开';
+}
 
 export const PLAN_TABLE_FILTER_COLUMNS = [
   { key: 'provider', label: '品牌', value: plan => displayNameForProvider(plan.provider) || EMPTY_TABLE_VALUE },
@@ -19,14 +48,34 @@ export const PLAN_TABLE_FILTER_COLUMNS = [
   { key: 'monthlyPrice', label: '连续包月', value: plan => planTablePriceValue(plan.monthlyPrice) },
   { key: 'quarterlyPrice', label: '连续包季', value: plan => planTablePriceValue(plan.quarterlyPrice) },
   { key: 'annualPrice', label: '连续包年', value: plan => planTablePriceValue(plan.annualPrice) },
+  { key: 'billingUnit', label: '计费单位', value: plan => planBillingUnitLabel(plan) },
+  { key: 'quota', label: '额度', value: plan => planQuotaDisplay(plan)?.text || EMPTY_TABLE_VALUE },
+  { key: 'unitPrice', label: '等效单价', value: plan => planUnitPriceDisplay(plan)?.text || EMPTY_TABLE_VALUE },
   { key: 'model', label: '代表模型', value: plan => supportedModelDisplay(plan) || EMPTY_TABLE_VALUE },
   { key: 'status', label: '状态', value: plan => cleanValue(plan.statusLabel) || EMPTY_TABLE_VALUE },
+  { key: 'dataTraining', label: '数据训练', value: plan => planDataTrainingLabel(plan) },
   { key: 'verifiedAt', label: '核对日期', value: plan => cleanValue(plan.lastVerifiedAt) || '待核对' },
   { key: 'source', label: '来源', value: plan => plan.url ? '官网' : EMPTY_TABLE_VALUE }
 ];
 
 let planTableFilterState = createPlanTableFilterState();
+// “只看可购买”快捷开关（与列筛选独立，可叠加）
+let availableOnly = false;
 const collator = new Intl.Collator('zh-CN', { numeric: true, sensitivity: 'base' });
+
+// 可购买判定：可用与抢购中均算可购买，排除售罄/下线/待确认
+function planIsPurchasable(plan) {
+  return plan.status === 'available' || plan.status === 'rush_sale'
+    || plan.statusLabel === '可用' || plan.statusLabel === '可购买';
+}
+
+export function isAvailableOnlyActive() {
+  return availableOnly;
+}
+
+export function toggleAvailableOnly() {
+  availableOnly = !availableOnly;
+}
 
 function findPlanTableColumn(key) {
   return PLAN_TABLE_FILTER_COLUMNS.find(column => column.key === key);
@@ -41,6 +90,7 @@ function planTableColumnValue(plan, key) {
 
 export function clearPlanTableFilter() {
   planTableFilterState = createPlanTableFilterState();
+  availableOnly = false;
 }
 
 export function isPlanTableFilterActive() {
@@ -49,8 +99,22 @@ export function isPlanTableFilterActive() {
 }
 
 export function applyPlanTableFilter(plans) {
-  if (!isPlanTableFilterActive()) return plans;
-  return filterPlansByTableState(plans, planTableFilterState, planTableColumnValue);
+  let result = plans;
+  if (availableOnly) result = result.filter(planIsPurchasable);
+  if (isPlanTableFilterActive()) {
+    result = filterPlansByTableState(result, planTableFilterState, planTableColumnValue);
+  }
+  return result;
+}
+
+// “只看可购买”开关按钮已移入筛选栏（plans-page.js），此处仅在开关激活时显示过滤计数
+export function renderPlanTableQuickFilters(filteredPlans, plans) {
+  if (!availableOnly) return '';
+  return `
+    <div class="plan-table-quick-filters">
+      <span class="plan-table-filter-count">只看可购买：${filteredPlans.length} / ${plans.length} 条</span>
+    </div>
+  `;
 }
 
 function planTableFilterOptions(plans, column) {

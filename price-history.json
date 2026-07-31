@@ -1,332 +1,31 @@
 {
-  "generated_at": "2026-07-27",
+  "generated_at": "2026-07-31",
   "schema_version": 1,
   "plans": {
-    "volcengine-coding-lite": {
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 9.9
-        },
-        {
-          "date": "2026-07-08",
-          "monthly_price": 9.9
-        }
-      ],
-      "currency": "CNY"
-    },
-    "volcengine-coding-pro": {
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 49.9
-        },
-        {
-          "date": "2026-07-08",
-          "monthly_price": 49.9
-        }
-      ],
-      "currency": "CNY"
-    },
-    "volcengine-agent-small": {
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 9.9
-        },
-        {
-          "date": "2026-07-08",
-          "monthly_price": 9.9
-        }
-      ],
-      "currency": "CNY"
-    },
-    "volcengine-agent-medium": {
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 49.9
-        },
-        {
-          "date": "2026-07-08",
-          "monthly_price": 49.9
-        }
-      ],
-      "currency": "CNY"
-    },
-    "volcengine-agent-large": {
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 500
-        },
-        {
-          "date": "2026-07-08",
-          "monthly_price": 500
-        }
-      ],
-      "currency": "CNY"
-    },
-    "volcengine-agent-max": {
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 1000
-        },
-        {
-          "date": "2026-07-08",
-          "monthly_price": 1000
-        }
-      ],
-      "currency": "CNY"
-    },
-    "glm-5.1-coding-lite": {
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 49
-        },
-        {
-          "date": "2026-07-08",
-          "monthly_price": 49
-        }
-      ],
-      "currency": "CNY"
-    },
-    "glm-5.1-coding-pro": {
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 149
-        },
-        {
-          "date": "2026-07-08",
-          "monthly_price": 149
-        }
-      ],
-      "currency": "CNY"
-    },
-    "glm-5.1-coding-max": {
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 469
-        },
-        {
-          "date": "2026-07-08",
-          "monthly_price": 469
-        }
-      ],
-      "currency": "CNY"
-    },
-    "glm-5.1-coding-team-standard": {
-      "points": [
-        {
-          "date": "2026-07-08",
-          "monthly_price": 598
-        }
-      ],
-      "currency": "CNY"
-    },
-    "glm-5.1-coding-team-advanced": {
-      "points": [
-        {
-          "date": "2026-07-08",
-          "monthly_price": 1198
-        }
-      ],
-      "currency": "CNY"
-    },
-    "qoder-cn-pro": {
-      "points": [
-        {
-          "date": "2026-07-08",
-          "monthly_price": 59
-        }
-      ],
-      "currency": "CNY"
-    },
-    "qoder-cn-pro-plus": {
-      "points": [
-        {
-          "date": "2026-07-08",
-          "monthly_price": 169
-        }
-      ],
-      "currency": "CNY"
-    },
-    "qoder-cn-ultra": {
-      "points": [
-        {
-          "date": "2026-07-08",
-          "monthly_price": 559
-        }
-      ],
-      "currency": "CNY"
-    },
-    "qoder-cn-community": {
-      "points": [
-        {
-          "date": "2026-07-08",
-          "monthly_price": 0
-        }
-      ],
-      "currency": "CNY"
-    },
-    "qoder-cn-teams": {
-      "points": [
-        {
-          "date": "2026-07-08",
-          "monthly_price": 99
-        }
-      ],
-      "currency": "CNY"
-    },
-    "qoder-cn-enterprise-standard": {
-      "points": [
-        {
-          "date": "2026-07-08",
-          "monthly_price": 149
-        }
-      ],
-      "currency": "CNY"
-    },
-    "qoder-cn-enterprise": {
-      "points": [
-        {
-          "date": "2026-07-08",
-          "monthly_price": 199
-        }
-      ],
-      "currency": "CNY"
-    },
-    "qoder-cn-pro-redemption-card": {
-      "points": [
-        {
-          "date": "2026-07-08",
-          "monthly_price": 59
-        }
-      ],
-      "currency": "CNY"
-    },
-    "baidu-qianfan-coding-lite": {
+    "aliyun-bailian.lite": {
       "currency": "CNY",
       "points": [
         {
-          "date": "2026-07-15",
-          "monthly_price": 40
+          "date": "2026-07-19",
+          "monthly_price": 39
         }
       ]
     },
-    "baidu-qianfan-coding-pro": {
+    "aliyun-bailian.pro": {
       "currency": "CNY",
       "points": [
         {
-          "date": "2026-07-15",
-          "monthly_price": 200
+          "date": "2026-07-19",
+          "monthly_price": 499
         }
       ]
     },
-    "baidu-qianfan-token-enterprise-light": {
+    "aliyun-bailian.standard": {
       "currency": "CNY",
       "points": [
         {
-          "date": "2026-07-15",
-          "monthly_price": 149
-        }
-      ]
-    },
-    "baidu-qianfan-token-enterprise-professional": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-15",
-          "monthly_price": 419
-        }
-      ]
-    },
-    "baidu-qianfan-token-enterprise-advanced": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-15",
-          "monthly_price": 989
-        }
-      ]
-    },
-    "baidu-qianfan-token-mini": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-15",
-          "monthly_price": 9.9
-        }
-      ]
-    },
-    "baidu-qianfan-token-lite": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-15",
-          "monthly_price": 40
-        }
-      ]
-    },
-    "baidu-qianfan-token-pro": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-15",
-          "monthly_price": 200
-        }
-      ]
-    },
-    "baidu-qianfan-token-max": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-15",
-          "monthly_price": 600
-        }
-      ]
-    },
-    "baidu-coding-lite": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-15",
-          "monthly_price": 49
-        }
-      ]
-    },
-    "baidu-coding-pro": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-15",
-          "monthly_price": 269
-        }
-      ]
-    },
-    "deepseek-api-paygo": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-15",
-          "monthly_price": null
-        }
-      ]
-    },
-    "aliyun-token-plan-standard": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-15",
-          "monthly_price": 198
-        },
-        {
-          "date": "2026-07-16",
-          "monthly_price": 150
+          "date": "2026-07-19",
+          "monthly_price": 139
         }
       ]
     },
@@ -352,12 +51,469 @@
         }
       ]
     },
-    "minimax-m3-token-plus": {
+    "aliyun-token-plan-shared-pack": {
       "currency": "CNY",
       "points": [
         {
           "date": "2026-07-16",
+          "monthly_price": 5000
+        }
+      ]
+    },
+    "aliyun-token-plan-standard": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-15",
+          "monthly_price": 198
+        },
+        {
+          "date": "2026-07-16",
+          "monthly_price": 150
+        }
+      ]
+    },
+    "baidu-qianfan-token-enterprise-advanced": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-15",
+          "monthly_price": 989
+        }
+      ]
+    },
+    "baidu-qianfan-token-enterprise-light": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-15",
+          "monthly_price": 149
+        }
+      ]
+    },
+    "baidu-qianfan-token-enterprise-professional": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-15",
+          "monthly_price": 419
+        }
+      ]
+    },
+    "baidu-qianfan-token-lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-15",
+          "monthly_price": 40
+        }
+      ]
+    },
+    "baidu-qianfan-token-max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-15",
+          "monthly_price": 600
+        }
+      ]
+    },
+    "baidu-qianfan-token-mini": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-15",
+          "monthly_price": 9.9
+        }
+      ]
+    },
+    "baidu-qianfan-token-pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-15",
+          "monthly_price": 200
+        }
+      ]
+    },
+    "codebuddy-enterprise-dedicated": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 316
+        }
+      ]
+    },
+    "codebuddy-enterprise-flagship": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 198
+        }
+      ]
+    },
+    "codebuddy-personal-advanced": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 140
+        }
+      ]
+    },
+    "codebuddy-personal-flagship": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 700
+        }
+      ]
+    },
+    "codebuddy-personal-standard": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 70
+        }
+      ]
+    },
+    "codebuddy-personal-trial": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 0
+        }
+      ]
+    },
+    "cucloud.personal-lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 15
+        }
+      ]
+    },
+    "cucloud.personal-max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 45
+        }
+      ]
+    },
+    "cucloud.personal-pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 30
+        }
+      ]
+    },
+    "cucloud.team-lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 198
+        }
+      ]
+    },
+    "cucloud.team-max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 1398
+        }
+      ]
+    },
+    "cucloud.team-pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 698
+        }
+      ]
+    },
+    "deepseek-api-paygo": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-04",
+          "monthly_price": null
+        }
+      ]
+    },
+    "glm-5.1-coding-lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
           "monthly_price": 49
+        },
+        {
+          "date": "2026-07-31",
+          "monthly_price": 118
+        }
+      ]
+    },
+    "glm-5.1-coding-max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 469
+        },
+        {
+          "date": "2026-07-31",
+          "monthly_price": 1078
+        }
+      ]
+    },
+    "glm-5.1-coding-pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 149
+        },
+        {
+          "date": "2026-07-31",
+          "monthly_price": 538
+        }
+      ]
+    },
+    "glm-5.1-coding-team-advanced": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-08",
+          "monthly_price": 1198
+        }
+      ]
+    },
+    "glm-5.1-coding-team-standard": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-08",
+          "monthly_price": 598
+        }
+      ]
+    },
+    "huaweicloud.lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 59
+        }
+      ]
+    },
+    "huaweicloud.max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 799
+        }
+      ]
+    },
+    "huaweicloud.pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 399
+        }
+      ]
+    },
+    "huaweicloud.standard": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 149
+        }
+      ]
+    },
+    "iflytek-spark.efficient": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 199
+        }
+      ]
+    },
+    "iflytek-spark.express": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 999
+        }
+      ]
+    },
+    "iflytek-spark.token-plan": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-31",
+          "monthly_price": 200
+        }
+      ]
+    },
+    "iflytek-spark.token-plan-01077f": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-31",
+          "monthly_price": 2000
+        }
+      ]
+    },
+    "iflytek-spark.token-plan-24aa9e": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-31",
+          "monthly_price": 600
+        }
+      ]
+    },
+    "jdcloud.lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 40
+        }
+      ]
+    },
+    "jdcloud.pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 200
+        }
+      ]
+    },
+    "jdcloud.token-plan-lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-31",
+          "monthly_price": 69
+        }
+      ]
+    },
+    "jdcloud.token-plan-lite-075842": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-31",
+          "monthly_price": 207
+        }
+      ]
+    },
+    "jdcloud.token-plan-max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-31",
+          "monthly_price": 999
+        }
+      ]
+    },
+    "jdcloud.token-plan-max-c782a6": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-31",
+          "monthly_price": 2997
+        }
+      ]
+    },
+    "jdcloud.token-plan-pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-31",
+          "monthly_price": 599
+        }
+      ]
+    },
+    "jdcloud.token-plan-pro-cac661": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-31",
+          "monthly_price": 1797
+        }
+      ]
+    },
+    "jdcloud.token-plan-standard": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-31",
+          "monthly_price": 199
+        }
+      ]
+    },
+    "jdcloud.token-plan-standard-89952f": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-31",
+          "monthly_price": 597
+        }
+      ]
+    },
+    "kimi-k2.6-code-allegretto": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-19",
+          "monthly_price": 199
+        }
+      ]
+    },
+    "kimi-k2.6-code-allegro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-19",
+          "monthly_price": 699
+        }
+      ]
+    },
+    "kimi-k2.6-code-andante": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-19",
+          "monthly_price": 49
+        }
+      ]
+    },
+    "kimi-k2.6-code-moderato": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-19",
+          "monthly_price": 99
         }
       ]
     },
@@ -370,12 +526,156 @@
         }
       ]
     },
+    "minimax-m3-token-plus": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 49
+        }
+      ]
+    },
     "minimax-m3-token-ultra": {
       "currency": "CNY",
       "points": [
         {
           "date": "2026-07-16",
           "monthly_price": 469
+        }
+      ]
+    },
+    "mthreads.lite-plan": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": null
+        }
+      ]
+    },
+    "mthreads.max-plan": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": null
+        }
+      ]
+    },
+    "mthreads.pro-plan": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": null
+        }
+      ]
+    },
+    "qiniu.enterprise-b": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 9999
+        }
+      ]
+    },
+    "qiniu.enterprise-m": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 4999
+        }
+      ]
+    },
+    "qiniu.enterprise-s": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 2999
+        }
+      ]
+    },
+    "qoder-cn-community": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-08",
+          "monthly_price": 0
+        }
+      ]
+    },
+    "qoder-cn-enterprise": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-08",
+          "monthly_price": 199
+        }
+      ]
+    },
+    "qoder-cn-enterprise-standard": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-08",
+          "monthly_price": 149
+        }
+      ]
+    },
+    "qoder-cn-pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-08",
+          "monthly_price": 59
+        }
+      ]
+    },
+    "qoder-cn-pro-plus": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-08",
+          "monthly_price": 169
+        }
+      ]
+    },
+    "qoder-cn-pro-redemption-card": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-08",
+          "monthly_price": 59
+        }
+      ]
+    },
+    "qoder-cn-teams": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-08",
+          "monthly_price": 99
+        }
+      ]
+    },
+    "qoder-cn-ultra": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-08",
+          "monthly_price": 559
+        }
+      ]
+    },
+    "step-flash-max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-16",
+          "monthly_price": 699
         }
       ]
     },
@@ -406,12 +706,84 @@
         }
       ]
     },
-    "step-flash-max": {
+    "streamlake.max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 350
+        }
+      ]
+    },
+    "streamlake.mini": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 29
+        }
+      ]
+    },
+    "streamlake.pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 140
+        }
+      ]
+    },
+    "streamlake.starter": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 70
+        }
+      ]
+    },
+    "tencent-cloud.lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 39
+        }
+      ]
+    },
+    "tencent-cloud.max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 599
+        }
+      ]
+    },
+    "tencent-cloud.pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 299
+        }
+      ]
+    },
+    "tencent-cloud.standard": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-27",
+          "monthly_price": 99
+        }
+      ]
+    },
+    "trae-cn-express": {
       "currency": "CNY",
       "points": [
         {
           "date": "2026-07-16",
-          "monthly_price": 699
+          "monthly_price": 1999
         }
       ]
     },
@@ -451,102 +823,111 @@
         }
       ]
     },
-    "trae-cn-express": {
+    "ucloud.basic": {
       "currency": "CNY",
       "points": [
         {
-          "date": "2026-07-16",
-          "monthly_price": 1999
-        }
-      ]
-    },
-    "codebuddy-personal-trial": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-16",
-          "monthly_price": 0
-        }
-      ]
-    },
-    "codebuddy-personal-standard": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-16",
-          "monthly_price": 70
-        }
-      ]
-    },
-    "codebuddy-personal-advanced": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-16",
-          "monthly_price": 140
-        }
-      ]
-    },
-    "codebuddy-personal-flagship": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-16",
-          "monthly_price": 700
-        }
-      ]
-    },
-    "codebuddy-enterprise-flagship": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-16",
-          "monthly_price": 198
-        }
-      ]
-    },
-    "codebuddy-enterprise-dedicated": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-16",
-          "monthly_price": 316
-        }
-      ]
-    },
-    "kimi-k2.6-code-andante": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-19",
-          "monthly_price": 49
-        }
-      ]
-    },
-    "kimi-k2.6-code-moderato": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-19",
-          "monthly_price": 99
-        }
-      ]
-    },
-    "kimi-k2.6-code-allegretto": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-19",
+          "date": "2026-07-29",
           "monthly_price": 199
         }
       ]
     },
-    "kimi-k2.6-code-allegro": {
+    "ucloud.lite": {
       "currency": "CNY",
       "points": [
         {
-          "date": "2026-07-19",
-          "monthly_price": 699
+          "date": "2026-07-29",
+          "monthly_price": 99
+        }
+      ]
+    },
+    "ucloud.max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 799
+        }
+      ]
+    },
+    "ucloud.mini": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 49
+        }
+      ]
+    },
+    "ucloud.pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 499
+        }
+      ]
+    },
+    "ucloud.ultra": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 999
+        }
+      ]
+    },
+    "volcengine-agent-large": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 500
+        }
+      ]
+    },
+    "volcengine-agent-max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 1000
+        }
+      ]
+    },
+    "volcengine-agent-medium": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 200
+        }
+      ]
+    },
+    "volcengine-agent-small": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 40
+        }
+      ]
+    },
+    "volcengine-coding-lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 40
+        }
+      ]
+    },
+    "volcengine-coding-pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 200
         }
       ]
     },
@@ -559,12 +940,12 @@
         }
       ]
     },
-    "xiaomi-mimo.standard": {
+    "xiaomi-mimo.max": {
       "currency": "CNY",
       "points": [
         {
           "date": "2026-07-19",
-          "monthly_price": 99
+          "monthly_price": 659
         }
       ]
     },
@@ -577,75 +958,12 @@
         }
       ]
     },
-    "xiaomi-mimo.max": {
+    "xiaomi-mimo.standard": {
       "currency": "CNY",
       "points": [
         {
           "date": "2026-07-19",
-          "monthly_price": 659
-        }
-      ]
-    },
-    "aliyun-bailian.lite": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-19",
-          "monthly_price": 39
-        }
-      ]
-    },
-    "aliyun-bailian.standard": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-19",
-          "monthly_price": 139
-        }
-      ]
-    },
-    "aliyun-bailian.pro": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-19",
-          "monthly_price": 499
-        }
-      ]
-    },
-    "qiniu.enterprise-s": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-16",
-          "monthly_price": 2999
-        }
-      ]
-    },
-    "qiniu.enterprise-m": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-16",
-          "monthly_price": 4999
-        }
-      ]
-    },
-    "qiniu.enterprise-b": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-16",
-          "monthly_price": 9999
-        }
-      ]
-    },
-    "aliyun-token-plan-shared-pack": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-16",
-          "monthly_price": 5000
+          "monthly_price": 99
         }
       ]
     }

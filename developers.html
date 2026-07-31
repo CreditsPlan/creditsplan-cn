@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN" class="scroll-smooth" data-default-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/rss+xml" title="CreditsPlan 价格变动" href="https://creditsplan.cn/price-changes.xml">
+  <title>开发者 API：AI Coding 套餐价格数据 - CreditsPlan</title>
+  <meta name="description" content="通过带鉴权的稳定 JSON API 获取 CreditsPlan 人工核对的 AI Coding 套餐价格、额度与价格历史数据，适合价格监控、比价工具与研究用途。">
+  <link rel="canonical" href="https://creditsplan.cn/developers.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://creditsplan.cn/developers.html">
+  <link rel="alternate" hreflang="en" href="https://www.creditsplan.com/developers.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.creditsplan.com/developers.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://creditsplan.cn/developers.html">
+  <meta property="og:title" content="开发者 API：AI Coding 套餐价格数据 - CreditsPlan">
+  <meta property="og:description" content="通过带鉴权的稳定 JSON API 获取 CreditsPlan 人工核对的 AI Coding 套餐价格、额度与价格历史数据。">
+  <meta property="og:image" content="https://creditsplan.oss-cn-hangzhou.aliyuncs.com/creditsplan-logo-original-arrow-600.webp">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:site_name" content="CreditsPlan">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="开发者 API：AI Coding 套餐价格数据 - CreditsPlan">
+  <meta name="twitter:description" content="通过带鉴权的稳定 JSON API 获取 CreditsPlan 人工核对的 AI Coding 套餐价格、额度与价格历史数据。">
+  <meta name="twitter:image" content="https://creditsplan.oss-cn-hangzhou.aliyuncs.com/creditsplan-logo-original-arrow-600.webp">
+  <link rel="icon" href="https://creditsplan.oss-cn-hangzhou.aliyuncs.com/favicon-sharp.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles.tailwind.57d442f1ee36.css">
+  <script src="./js/theme-init.js"></script>
+</head>
+<body class="text-slate-950 antialiased dark:text-slate-100" data-page="developers.html">
+  <div class="min-h-screen">
+    <div id="header-root" data-auto-init>
+      <header>
+        <nav class="nav-bar" id="navbar" aria-label="主导航">
+          <a href="/" class="nav-logo">
+            <div class="nav-logo-icon"><img class="nav-logo-img" src="https://creditsplan.oss-cn-hangzhou.aliyuncs.com/creditsplan-logo-original-arrow-600.webp" alt="CreditsPlan"/></div>
+            <span>CreditsPlan</span>
+          </a>
+          <ul class="nav-links" id="primaryNav">
+            <li><a class="focus-ring" data-page-link="index.html" href="/">套餐</a></li>
+            <li><a class="focus-ring" data-page-link="brands/" href="/brands/">品牌</a></li>
+            <li><a class="focus-ring" data-page-link="model" href="/model">模型</a></li>
+            <li><a class="focus-ring" data-page-link="news.html" href="/news.html">AI动态</a></li>
+            <li><a class="focus-ring" data-page-link="changelog.html" href="/changelog.html">更新日志</a></li>
+            <li class="nav-mobile-only"><a href="https://www.creditsplan.com/" target="_blank" rel="noopener noreferrer">前往国际站（海外套餐）</a></li>
+            <li class="nav-mobile-only"><a href="https://github.com/creditsplan/creditsplan-cn" target="_blank" rel="noopener noreferrer">前往 GitHub</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a href="https://www.creditsplan.com/" target="_blank" rel="noopener noreferrer" class="intl-site-link" aria-label="前往国际站（海外套餐 / 美元结算）" title="前往国际站（海外套餐 / 美元结算）">前往国际站 →</a>
+            <a href="https://github.com/creditsplan/creditsplan-cn" target="_blank" rel="noopener noreferrer" class="github-link-btn" aria-label="GitHub交流" title="GitHub交流">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <button data-theme-toggle type="button" class="theme-toggle-btn" aria-label="切换主题" aria-pressed="false" title="切换深色/浅色模式">
+              <svg class="theme-icon-sun h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              </svg>
+              <svg class="theme-icon-moon h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </button>
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="打开主菜单" aria-controls="primaryNav" aria-expanded="false">菜单</button>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <main class="pb-16">
+      <section class="page-shell mx-auto max-w-7xl px-4 pt-0 pb-8 sm:px-6 lg:px-8">
+        <div class="workbench-head">
+          <div class="workbench-intro">
+            <p class="workbench-kicker">DEVELOPERS</p>
+            <h1 class="workbench-title">开发者 API</h1>
+            <p class="workbench-summary">以稳定契约的 JSON API 获取 CreditsPlan 人工核对的 AI Coding 套餐价格、额度与价格历史数据。数据与站点展示同源，每条记录带官方来源链接与最近核对日期。</p>
+          </div>
+        </div>
+
+        <div class="mt-6 grid gap-6 lg:grid-cols-3">
+          <article class="space-y-6 lg:col-span-2">
+            <section class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" aria-labelledby="api-endpoints">
+              <h2 id="api-endpoints" class="text-xl font-bold text-slate-900 dark:text-white">端点</h2>
+              <dl class="mt-4 space-y-4 text-sm leading-7">
+                <div>
+                  <dt class="font-mono font-semibold text-slate-900 dark:text-white">GET /api/v1/plans.json</dt>
+                  <dd class="text-slate-600 dark:text-slate-300">全部已核对套餐：价格（月/季/年/首月）、币种、额度、权益、退款政策、购买状态、官方来源与核对日期。</dd>
+                </div>
+                <div>
+                  <dt class="font-mono font-semibold text-slate-900 dark:text-white">GET /api/v1/price-history.json</dt>
+                  <dd class="text-slate-600 dark:text-slate-300">按套餐归档的月费价格历史（日期 + 价格记录点），适合做价格走势与变动监控。</dd>
+                </div>
+                <div>
+                  <dt class="font-mono font-semibold text-slate-900 dark:text-white">GET /api/v1/meta.json</dt>
+                  <dd class="text-slate-600 dark:text-slate-300">数据集元信息：schema 版本、生成时间与条目数量。</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" aria-labelledby="api-auth">
+              <h2 id="api-auth" class="text-xl font-bold text-slate-900 dark:text-white">鉴权与调用</h2>
+              <p class="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">所有端点需要在请求头携带 <code class="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-xs dark:bg-slate-800">X-API-Key</code>；缺失或无效返回 <code class="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-xs dark:bg-slate-800">401</code>。</p>
+              <pre class="mt-4 overflow-x-auto rounded-lg bg-slate-900 p-4 text-xs leading-6 text-slate-100"><code>curl -H "X-API-Key: cpk_你的密钥" \
+  https://www.creditsplan.cn/api/v1/plans.json</code></pre>
+              <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                <li>响应为 UTF-8 JSON，顶层含 <code class="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-xs dark:bg-slate-800">schema_version</code> 与 <code class="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-xs dark:bg-slate-800">generated_at</code>。</li>
+                <li>契约承诺：v1 字段只增不改名、不删除；破坏性变更会以 v2 新版本发布。</li>
+                <li>限速：每密钥 5 请求/秒；响应缓存 5 分钟。数据随站点发布更新（通常每个工作日）。</li>
+              </ul>
+            </section>
+
+            <section class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" aria-labelledby="api-fields">
+              <h2 id="api-fields" class="text-xl font-bold text-slate-900 dark:text-white">字段说明（plans.json 摘要）</h2>
+              <dl class="mt-4 space-y-3 text-sm leading-7">
+                <div><dt class="inline font-mono font-semibold text-slate-900 dark:text-white">plan_id</dt><dd class="inline text-slate-600 dark:text-slate-300"> — 稳定套餐标识（品牌 slug + 套餐 slug），跨版本不变。</dd></div>
+                <div><dt class="inline font-mono font-semibold text-slate-900 dark:text-white">monthly_price / quarterly_price / yearly_price</dt><dd class="inline text-slate-600 dark:text-slate-300"> — 各计费周期刊例价，币种见 monthly_currency；null 表示官方未公开。</dd></div>
+                <div><dt class="inline font-mono font-semibold text-slate-900 dark:text-white">included_calls / token_limit / credits_limit</dt><dd class="inline text-slate-600 dark:text-slate-300"> — 官方页原文记录的额度说明，不做推算。</dd></div>
+                <div><dt class="inline font-mono font-semibold text-slate-900 dark:text-white">last_verified_at / data_status / source_url</dt><dd class="inline text-slate-600 dark:text-slate-300"> — 最近人工核对日期、核对状态与官方来源页链接。</dd></div>
+              </dl>
+            </section>
+          </article>
+
+          <aside class="space-y-6">
+            <section class="rounded-xl border border-brand-200 bg-brand-50 p-6 dark:border-brand-900/60 dark:bg-brand-950/20" aria-labelledby="api-apply">
+              <h2 id="api-apply" class="text-lg font-bold text-slate-900 dark:text-white">申请 API Key</h2>
+              <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">邮件说明你的用途（产品/研究/内部工具）与预估调用量，我们会在 1-2 个工作日内回复密钥与授权条款。定价请联系获取。</p>
+              <a class="focus-ring mt-4 inline-flex min-h-10 items-center rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700" href="mailto:feedback@creditsplan.cn?subject=CreditsPlan%20API%20Key%20%E7%94%B3%E8%AF%B7">feedback@creditsplan.cn</a>
+            </section>
+
+            <section class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900" aria-labelledby="api-terms">
+              <h2 id="api-terms" class="text-lg font-bold text-slate-900 dark:text-white">使用条款要点</h2>
+              <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                <li>数据可用于产品与研究，转载展示时请注明来源 CreditsPlan 并保留核对日期。</li>
+                <li>禁止转售原始数据集或将密钥共享给第三方。</li>
+                <li>价格快照仅供参考，交易请以厂商官网实时价格为准。</li>
+              </ul>
+              <p class="mt-3 text-xs leading-6 text-slate-500 dark:text-slate-400">数据核对方式详见<a class="focus-ring rounded underline hover:text-slate-900 dark:hover:text-white" href="/methodology.html">数据校对方法</a>。</p>
+            </section>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-root">
+      <footer>
+        <div class="footer-shell mx-auto flex flex-col gap-2 px-4 py-3 text-sm text-slate-500 dark:text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <nav class="flex flex-wrap items-center gap-x-3 gap-y-1" aria-label="页脚导航">
+            <a class="focus-ring rounded hover:text-slate-900 dark:hover:text-white" href="/methodology.html">数据校对方法</a>
+            <a class="focus-ring rounded hover:text-slate-900 dark:hover:text-white" href="/developers.html">开发者 API</a>
+            <a class="focus-ring rounded hover:text-slate-900 dark:hover:text-white" href="mailto:feedback@creditsplan.cn">反馈邮箱：feedback@creditsplan.cn</a>
+          </nav>
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer" class="focus-ring rounded hover:text-slate-900 dark:hover:text-white">湘ICP备2026019664号-1</a>
+            <a href="https://beian.mps.gov.cn/#/query/webSearch?code=43062102000098" target="_blank" rel="noopener noreferrer" class="focus-ring rounded hover:text-slate-900 dark:hover:text-white inline-flex items-center gap-1"><img src="https://beian.mps.gov.cn/web/assets/logo01.6189a29f.png" alt="" class="h-3.5 w-auto">湘公网安备43062102000098号</a>
+            <span>© 2026 CreditsPlan</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script type="module" src="./js/app.c8f27f504d91.js"></script>
+</body>
+</html>

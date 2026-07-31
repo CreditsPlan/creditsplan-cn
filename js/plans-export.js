@@ -6,6 +6,7 @@ import {
   supportedModelDisplay
 } from './shared/plan-utils.js';
 import { PLAN_TYPE_LABELS } from './plans-detail.js';
+import { planQuotaDisplay, planUnitPriceDisplay } from './shared/quota-utils.js';
 
 const EXPORT_COLUMNS = [
   { key: 'brand', label: '品牌' },
@@ -14,6 +15,8 @@ const EXPORT_COLUMNS = [
   { key: 'monthlyPrice', label: '连续包月' },
   { key: 'quarterlyPrice', label: '连续包季' },
   { key: 'annualPrice', label: '连续包年' },
+  { key: 'quota', label: '额度' },
+  { key: 'unitPrice', label: '等效单价' },
   { key: 'model', label: '代表模型' },
   { key: 'status', label: '状态' },
   { key: 'verifiedAt', label: '核对日期' },
@@ -21,7 +24,7 @@ const EXPORT_COLUMNS = [
 ];
 
 // 各列宽度（单位：默认字体字符数），与 EXPORT_COLUMNS 一一对应
-const EXPORT_COL_WIDTHS = [14, 30, 12, 12, 12, 12, 34, 10, 12, 42];
+const EXPORT_COL_WIDTHS = [14, 28, 12, 12, 12, 12, 24, 12, 30, 10, 12, 38];
 
 // 模型价格导出列（「模型」价格对比视图）
 const MODEL_EXPORT_COLUMNS = [
@@ -91,6 +94,8 @@ function prepareExportRows(plans, providerInfo) {
         monthlyPrice: cleanExportValue(plan.monthlyPrice),
         quarterlyPrice: cleanExportValue(plan.quarterlyPrice),
         annualPrice: cleanExportValue(plan.annualPrice),
+        quota: planQuotaDisplay(plan)?.full || '',
+        unitPrice: planUnitPriceDisplay(plan)?.text || '',
         model: supportedModelDisplay(plan) || '',
         status: plan.statusLabel || '',
         verifiedAt: plan.lastVerifiedAt || '待核对',
@@ -273,7 +278,7 @@ export function exportModelPricesExcel(models) {
 
 /* ─── Word (.doc HTML document format) ─── */
 
-const WORD_COL_WIDTHS = ['9%', '15%', '9%', '8%', '8%', '8%', '13%', '6%', '8%', '16%'];
+const WORD_COL_WIDTHS = ['8%', '14%', '8%', '8%', '8%', '8%', '10%', '6%', '10%', '5%', '7%', '8%'];
 
 function buildWordHtml(title, columns, colWidths, rows) {
   const headerHtml = columns.map((col, i) => `<th style="width:${colWidths[i]}">${escapeXml(col.label)}</th>`).join('');
@@ -336,7 +341,7 @@ const PDF_FONT = '11px "Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif
 const PDF_FONT_BOLD = 'bold 11px "Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif';
 const PDF_TITLE_FONT = 'bold 16px "Microsoft YaHei","PingFang SC","Noto Sans SC",sans-serif';
 
-const PDF_COL_RATIOS = [0.09, 0.15, 0.09, 0.08, 0.08, 0.08, 0.13, 0.06, 0.08, 0.16];
+const PDF_COL_RATIOS = [0.08, 0.14, 0.08, 0.08, 0.08, 0.08, 0.10, 0.06, 0.10, 0.05, 0.07, 0.08];
 
 function pdfColWidths(ratios) {
   const total = PDF_PAGE_WIDTH - PDF_MARGIN * 2;

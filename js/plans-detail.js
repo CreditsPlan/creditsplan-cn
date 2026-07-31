@@ -1,13 +1,19 @@
 import { escapeHtml, safeExternalUrl } from './render.js';
+import { PROVIDER_NAME_MAP } from './shared/brands.js';
 import {
   currencySymbol,
+  DATA_TRAINING_LABELS,
   displayNameForProvider,
   formatPriceNumber,
   getRiskDisplayText,
   hasDisplayPrice,
   optionalDetailText,
-  supportedModelDisplay
+  privacyFreshness,
+  resolvePlanPrivacy,
+  supportedModelDisplay,
+  verifiedFreshness
 } from './shared/plan-utils.js';
+import { planQuotaDisplay } from './shared/quota-utils.js';
 
 export const PLAN_TYPE_LABELS = {
   coding_plan: 'Coding Plan',
@@ -23,6 +29,17 @@ export function outboundTrackingAttributes(plan) {
     plan.brand || plan.brandSlug || plan.brand_slug || plan.raw?.brand || plan.raw?.brand_slug || planId.split('.')[0] || ''
   ).trim();
   return `data-track="plan-out" data-plan-id="${escapeHtml(planId)}" data-brand="${escapeHtml(brand)}"`;
+}
+
+// affiliate 跳转层：配置了邀请码的套餐走站内 /go/{plan_id}（nginx 302 带码 URL），
+// 其余保持官方直链；带码外跳按规范标注 rel="sponsored nofollow"。
+export function purchaseLinkTarget(plan, planUrl) {
+  const planId = String(plan.planId || plan.plan_id || plan.raw?.planId || plan.raw?.plan_id || '').trim();
+  const hasAffiliate = plan.hasAffiliate === true || plan.raw?.has_affiliate === true;
+  if (hasAffiliate && planId && /^[A-Za-z0-9._-]+$/.test(planId)) {
+    return { href: `/go/${planId}`, rel: 'sponsored nofollow noopener noreferrer' };
+  }
+  return { href: planUrl, rel: 'noopener noreferrer nofollow' };
 }
 
 function addPlanExtraRow(rows, label, value, keepInline) {
@@ -57,6 +74,22 @@ function notesWithoutTableDuplicates(plan) {
   return notes;
 }
 
+// 首月特惠行：仅当首月价低于标准月价时展示（与月价相同无信息量，不展示）
+export function firstMonthPriceText(plan) {
+  const value = Number(plan.firstMonthPrice);
+  if (!Number.isFinite(value) || value <= 0) return '';
+  const monthly = Number(plan.monthlyPriceValue);
+  if (Number.isFinite(monthly) && value >= monthly) return '';
+  return `${currencySymbol(plan.monthlyCurrency || 'CNY')}${formatPriceNumber(value)}`;
+}
+
+function firstMonthLineHtml(plan) {
+  const text = firstMonthPriceText(plan);
+  return text
+    ? `<div class="plan-price-subline plan-price-subline--first"><span>首月特惠</span><strong>${escapeHtml(text)}/月</strong></div>`
+    : '';
+}
+
 export function renderPlanPriceBlock(plan) {
   const hasMonthlyPrice = hasDisplayPrice(plan.monthlyPrice);
   const hasQuarterlyPrice = hasDisplayPrice(plan.quarterlyPrice);
@@ -84,6 +117,7 @@ export function renderPlanPriceBlock(plan) {
         <div class="plan-price-subline"><span>按年计费</span><strong>${escapeHtml(plan.annualPrice)}</strong></div>
         ${quarterlyLineHtml}
         ${monthlyLineHtml}
+        ${firstMonthLineHtml(plan)}
       </div>`;
   }
 
@@ -104,6 +138,7 @@ export function renderPlanPriceBlock(plan) {
         </div>
         <div class="plan-price-subline"><span>按季计费</span><strong>${escapeHtml(plan.quarterlyPrice)}</strong></div>
         ${monthlyLineHtml}
+        ${firstMonthLineHtml(plan)}
       </div>`;
   }
 
@@ -113,15 +148,22 @@ export function renderPlanPriceBlock(plan) {
         <span class="plan-price-label">连续包月</span>
         <span class="plan-price-main">${escapeHtml(plan.monthlyPrice)}</span>
       </div>
+      ${firstMonthLineHtml(plan)}
     </div>`;
 }
 
-export function renderSelectedPlanDetail(plan) {
+export function renderSelectedPlanDetail(plan, providerInfo = {}) {
   if (!plan) return '';
   const typeLabel = PLAN_TYPE_LABELS[plan.planType] || plan.planType || '';
   const rows = [];
   const hasRmb = plan.rmbRecharge && plan.rmbRecharge !== '待确认' && plan.rmbRecharge !== '请以官网为准';
   const hasInvoice = plan.invoice && plan.invoice !== '待确认' && plan.invoice !== '请以官网为准';
+  const privacy = resolvePlanPrivacy(plan, providerInfo, PROVIDER_NAME_MAP);
+  // 额度列已展示的字段不在展开详情中重复；包含调用量与 Token 上限内容重复时只保留一处
+  const quotaField = (planQuotaDisplay(plan) || {}).field || '';
+  const compactTokenLimit = optionalDetailText(plan.tokenLimit).replace(/\s+/g, '');
+  const tokenLimitDuplicated = Boolean(compactTokenLimit)
+    && optionalDetailText(plan.includedCalls).replace(/\s+/g, '').includes(compactTokenLimit);
 
   addPlanExtraRow(rows, '套餐类型', typeLabel, true);
   addPlanExtraRow(rows, '支持模型', (plan.supportedModelNames || []).join('、'), true);
@@ -132,18 +174,18 @@ export function renderSelectedPlanDetail(plan) {
       : plan.firstMonthPrice);
   }
   if (plan.domesticPayment) addPlanExtraRow(rows, '国内支付', '支持', true);
-  addPlanExtraRow(rows, '包含调用量', plan.includedCalls, true);
+  if (quotaField !== 'includedCalls') addPlanExtraRow(rows, '包含调用量', plan.includedCalls, true);
   const fiveH = optionalDetailText(plan.fiveHoursRequests);
   const weekly = optionalDetailText(plan.weeklyRequests);
   if (fiveH || weekly) {
     const combined = [fiveH ? `5小时请求 ${fiveH}` : '', weekly ? `周请求 ${weekly}` : ''].filter(Boolean).join('  ·  ');
     addPlanExtraRow(rows, '请求频率', combined);
   }
-  addPlanExtraRow(rows, '月请求', plan.monthlyRequests);
+  if (quotaField !== 'monthlyRequests') addPlanExtraRow(rows, '月请求', plan.monthlyRequests);
   addPlanExtraRow(rows, '5小时实测 Tokens', plan.measuredFiveHoursTokens);
   addPlanExtraRow(rows, '周实测 Tokens', plan.measuredWeeklyTokens);
   addPlanExtraRow(rows, '月实测 Tokens', plan.measuredMonthlyTokens);
-  addPlanExtraRow(rows, 'Token上限', plan.tokenLimit);
+  if (quotaField !== 'tokenLimit' && !tokenLimitDuplicated) addPlanExtraRow(rows, 'Token上限', plan.tokenLimit);
   addPlanExtraRow(rows, '权益', plan.benefits);
   addPlanExtraRow(rows, '输入价格', plan.modelInputPrice);
   addPlanExtraRow(rows, '输出价格', plan.modelOutputPrice);
@@ -162,6 +204,17 @@ export function renderSelectedPlanDetail(plan) {
   addPlanExtraRow(rows, '适用场景', plan.suitableFor);
   addPlanExtraRow(rows, '适合', plan.recommendationText);
   addPlanExtraRow(rows, '注意', getRiskDisplayText(plan));
+  if (privacy.training) {
+    const trainingLabel = DATA_TRAINING_LABELS[privacy.training] || privacy.training;
+    const privacyFresh = privacyFreshness(privacy.verifiedAt);
+    const freshnessNote = privacyFresh.state === 'stale'
+      ? `（${privacyFresh.date} 核对，待复核）`
+      : (privacyFresh.state === 'fresh' ? `（${privacyFresh.date} 核对）` : '');
+    const baseLabel = privacy.note ? `${trainingLabel}（${privacy.note}）` : trainingLabel;
+    addPlanExtraRow(rows, '数据训练', `${baseLabel}${freshnessNote}`, true);
+  }
+  addPlanExtraRow(rows, '训练关闭', privacy.optOut);
+  addPlanExtraRow(rows, '数据保留', privacy.retention);
   addPlanExtraRow(rows, '备注', notesWithoutTableDuplicates(plan));
 
   const rowsHtml = rows.length ? rows.map(row => {
@@ -176,13 +229,26 @@ export function renderSelectedPlanDetail(plan) {
     </div>`;
   }).join('') : '<p class="plan-extra-empty">暂无表格外补充信息。</p>';
   const planUrl = safeExternalUrl(plan.url);
-  const sourceMeta = plan.lastVerifiedAt
-    ? `数据来源：${escapeHtml(plan.sourceType || '后台维护')} · 核对日期 ${escapeHtml(plan.lastVerifiedAt)}`
+  const purchaseLink = purchaseLinkTarget(plan, planUrl);
+  const verifiedFresh = verifiedFreshness(plan.lastVerifiedAt);
+  const verifiedText = verifiedFresh.state === 'fresh'
+    ? `官方页核实于 ${escapeHtml(verifiedFresh.date)}（${verifiedFresh.days === 0 ? '今日' : `${verifiedFresh.days} 天前`}）`
+    : verifiedFresh.state === 'stale'
+      ? `上次核实 ${escapeHtml(verifiedFresh.date)} · 超过 30 天，待复核`
+      : '';
+  const sourceMeta = verifiedText
+    ? `数据来源：${escapeHtml(plan.sourceType || '后台维护')} · ${verifiedText}`
     : '';
-  const footerHtml = sourceMeta || planUrl
+  const privacyPolicyLink = privacy.policyUrl
+    ? `<a href="${escapeHtml(privacy.policyUrl)}" target="_blank" rel="noopener noreferrer nofollow">隐私政策来源</a>`
+    : '';
+  const footerHtml = sourceMeta || planUrl || privacyPolicyLink
     ? `<div class="selected-plan-detail-footer">
         <span>${sourceMeta}</span>
-        ${planUrl ? `<a href="${escapeHtml(planUrl)}" target="_blank" rel="noopener noreferrer nofollow" ${outboundTrackingAttributes(plan)}>打开官网</a>` : ''}
+        <span class="selected-plan-detail-footer-links">
+          ${privacyPolicyLink}
+          ${planUrl ? `<a href="${escapeHtml(purchaseLink.href)}" target="_blank" rel="${purchaseLink.rel}" ${outboundTrackingAttributes(plan)}>打开官网</a>` : ''}
+        </span>
        </div>`
     : '';
 

@@ -1,17 +1,12 @@
 import { initAppShell } from './app.js';
 import {
-  exportModelPricesExcel,
-  exportModelPricesPdf,
-  exportModelPricesWord,
-  exportPlansExcel,
-  exportPlansPdf,
-  exportPlansWord
-} from './plans-export.js';
-import {
   bindPlanTableFilters,
-  clearPlanTableFilter
+  clearPlanTableFilter,
+  isAvailableOnlyActive,
+  toggleAvailableOnly
 } from './plans-filters.js';
 import { renderModelPriceView } from './model-price-table.js';
+import { initPlanAdvisor } from './plan-advisor.js';
 import { renderAllPlansDualView, renderBrandIcon } from './plans-table.js';
 import { loadPlanDataset } from './public-data.js';
 import { escapeHtml } from './render.js';
@@ -47,6 +42,16 @@ function modelHasPrice(model) {
   const input = model.raw?.input_price;
   const output = model.raw?.output_price;
   return (input != null && input !== '') || (output != null && output !== '');
+}
+
+// 平均月付：只统计人民币计价且有月价的套餐（国际美元套餐不参与，避免混币种均值失真）
+function averageMonthlyPrice(plans) {
+  const values = plans
+    .filter(plan => (plan.monthlyCurrency || 'CNY') === 'CNY')
+    .map(plan => plan.monthlyPriceValue)
+    .filter(value => Number.isFinite(value) && value > 0);
+  if (!values.length) return null;
+  return values.reduce((sum, value) => sum + value, 0) / values.length;
 }
 
 const els = {
@@ -192,23 +197,25 @@ function bindExportMenu(root, getExportPlans, providerInfo, getMode = () => 'pla
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') closeMenu();
   });
-  menu.addEventListener('click', event => {
+  menu.addEventListener('click', async event => {
     const option = event.target.closest('[data-export-format]');
     if (!option) return;
     closeMenu();
     const format = option.dataset.exportFormat;
+    // 导出模块体积较大且非首屏功能，点击时才动态加载（build 时分包）
+    const exporter = await import('./plans-export.js');
     // 模型价格视图导出模型单价表，其余视图导出套餐表
     if (getMode() === 'pricing') {
       const models = getModels();
-      if (format === 'excel') exportModelPricesExcel(models);
-      else if (format === 'word') exportModelPricesWord(models);
-      else if (format === 'pdf') exportModelPricesPdf(models);
+      if (format === 'excel') exporter.exportModelPricesExcel(models);
+      else if (format === 'word') exporter.exportModelPricesWord(models);
+      else if (format === 'pdf') exporter.exportModelPricesPdf(models);
       return;
     }
     const plans = getExportPlans();
-    if (format === 'excel') exportPlansExcel(plans, providerInfo);
-    else if (format === 'word') exportPlansWord(plans, providerInfo);
-    else if (format === 'pdf') exportPlansPdf(plans, providerInfo);
+    if (format === 'excel') exporter.exportPlansExcel(plans, providerInfo);
+    else if (format === 'word') exporter.exportPlansWord(plans, providerInfo);
+    else if (format === 'pdf') exporter.exportPlansPdf(plans, providerInfo);
   });
 }
 
@@ -222,6 +229,12 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
   const visibleModels = [...modelGrouped.values()]
     .sort((a, b) => (a.sortOrder - b.sortOrder) || a.label.localeCompare(b.label, 'zh-CN'));
   const counts = { all: displayablePlans.length, free: filterFreePlans(displayablePlans).length };
+  const avgMonthly = averageMonthlyPrice(displayablePlans);
+  const statsHtml = `
+            <span>${displayablePlans.length} 条记录</span>
+            <span>${visibleBrands.length} 个品牌</span>
+            <span>${visibleModels.length} 个模型</span>
+            ${avgMonthly != null ? `<span>平均月付 ¥${Math.round(avgMonthly)}</span>` : ''}`;
 
   els.codingPlanOverview.innerHTML = `
     <section class="plans-workbench" aria-labelledby="codingPlanTitle">
@@ -232,10 +245,7 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
           <p id="workbenchSummary" class="workbench-summary">${escapeHtml(WORKBENCH_COPY.plans.summary)}</p>
         </div>
         <div class="workbench-meta">
-          <span id="workbenchStats">
-            <span>${displayablePlans.length} 条记录</span>
-            <span>${visibleBrands.length} 个品牌</span>
-            <span>${visibleModels.length} 个模型</span>
+          <span id="workbenchStats">${statsHtml}
           </span>
           ${renderExportMenu()}
         </div>
@@ -248,6 +258,9 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
               <button type="button" data-dimension="brand" class="brand-tab is-active"><span>按品牌</span></button>
               <button type="button" data-dimension="model" class="brand-tab"><span>按模型</span></button>
             </div>
+            <button type="button" class="plan-quick-filter" data-plan-available-toggle aria-pressed="false">
+              <span class="plan-quick-filter-mark" aria-hidden="true">✓</span>只看可购买
+            </button>
             <div class="brand-search-box">
               <svg class="brand-search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4 4" stroke-linecap="round"/></svg>
               <input id="brandSearchInput" type="search" class="brand-search-input" placeholder="搜索品牌…" autocomplete="off" aria-label="搜索品牌或模型">
@@ -292,6 +305,10 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
     <button id="plansBackTop" class="plans-back-top" type="button" aria-label="返回套餐列表顶部" title="返回顶部">
       <span aria-hidden="true">↑</span>
     </button>
+    <button id="planAdvisorFab" class="plan-advisor-fab" type="button" aria-label="打开套餐性价比计算器" title="哪个套餐最划算？">
+      <span aria-hidden="true">¥</span>
+      <span>帮我选套餐</span>
+    </button>
   `;
 
   finishPlansLoading();
@@ -302,6 +319,10 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
   const modelTabs = els.codingPlanOverview.querySelector('#modelTabs');
   const detail = els.codingPlanOverview.querySelector('#brandDetail');
   initPlansBackTop(workbench);
+  const advisorFab = els.codingPlanOverview.querySelector('#planAdvisorFab');
+  const advisor = initPlanAdvisor({ plans: displayablePlans, providerInfo, modelCatalog, fab: advisorFab });
+  // SEO 落地页导流：通过 /#advisor 进入首页时自动打开计算器
+  if (advisor && location.hash === '#advisor') advisor.open();
 
   let currentPlans = displayablePlans;
   let activeBrandId = 'all';
@@ -309,7 +330,16 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
   bindExportMenu(els.codingPlanOverview, () => currentPlans, providerInfo, () => activeDimension, () => models);
   let selectedPlanKey = '';
   const expandedProviders = new Set();
+  // “只看可购买”开关常驻筛选栏，不随视图重绘，需手动同步激活态（切换品牌/维度时会被重置）
+  const availableOnlyToggle = filterBar.querySelector('[data-plan-available-toggle]');
+  const syncAvailableOnlyToggle = () => {
+    if (!availableOnlyToggle) return;
+    const active = isAvailableOnlyActive();
+    availableOnlyToggle.classList.toggle('is-active', active);
+    availableOnlyToggle.setAttribute('aria-pressed', String(active));
+  };
   const renderCurrentView = () => {
+    syncAvailableOnlyToggle();
     if (activeDimension === 'pricing') {
       renderModelPriceView(detail, models, providerInfo);
       return;
@@ -384,7 +414,7 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
       const vendorCount = new Set(priced.map(m => PROVIDER_NAME_MAP[m.vendor] || m.vendor)).size;
       stats.innerHTML = `<span>${priced.length} 个模型</span><span>${vendorCount} 个厂商</span>`;
     } else {
-      stats.innerHTML = `<span>${displayablePlans.length} 条记录</span><span>${visibleBrands.length} 个品牌</span><span>${visibleModels.length} 个模型</span>`;
+      stats.innerHTML = statsHtml;
     }
   };
 
@@ -410,6 +440,8 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
       filterBar.hidden = false;
       (mode === 'brand' ? brandTabs : modelTabs).querySelector('[data-brand="all"]')?.classList.add('is-active');
     }
+    // 计算器只服务套餐视图，模型价格视图下隐藏悬浮按钮
+    if (advisorFab) advisorFab.hidden = mode === 'pricing';
     if (searchInput) { searchInput.value = ''; }
     filterTabsBySearch();
     syncWorkbenchHead(mode);
@@ -435,6 +467,12 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
   searchInput?.addEventListener('input', filterTabsBySearch);
 
   filterBar.addEventListener('click', event => {
+    const availableToggle = event.target.closest('[data-plan-available-toggle]');
+    if (availableToggle) {
+      toggleAvailableOnly();
+      renderFilteredView();
+      return;
+    }
     const dimension = event.target.closest('[data-dimension]');
     if (dimension) {
       switchDimension(dimension.dataset.dimension);

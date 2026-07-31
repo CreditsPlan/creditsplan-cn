@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-31T06:44:53.093Z",
+  "site": "cn",
+  "docs": "https://www.creditsplan.cn/developers.html",
+  "endpoints": [
+    "/api/v1/plans.json",
+    "/api/v1/price-history.json",
+    "/api/v1/meta.json"
+  ],
+  "plan_count": 105,
+  "price_history_plan_count": 105
+}

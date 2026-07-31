@@ -4,6 +4,7 @@ const pages = [
   ['index.html', '/', '套餐'],
   ['brands/', '/brands/', '品牌'],
   ['model', '/model', '模型'],
+  ['price-changes/', '/price-changes/', '价格变动'],
   ['news.html', '/news.html', 'AI动态'],
   ['changelog.html', '/changelog.html', '更新日志']
 ];

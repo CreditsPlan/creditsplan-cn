@@ -17,6 +17,23 @@ function isBlockedUrl(url) {
   catch { return false; }
 }
 
+// 屏蔽域名的条目改用 AI HOT 详情页兜底，不再整条丢弃。
+function fallbackPermalink(item) {
+  const permalink = item?.permalink || item?.attribution?.canonical || '';
+  return isBlockedUrl(permalink) ? '' : permalink;
+}
+
+function resolveItemUrl(item, rawUrl) {
+  const url = rawUrl == null ? (item?.url || '') : rawUrl;
+  return isBlockedUrl(url) ? fallbackPermalink(item) : url;
+}
+
+// 只有原始链接被屏蔽且拿不到详情页时才丢弃条目。
+function isBlockedWithoutFallback(item, rawUrl) {
+  const url = rawUrl == null ? (item?.url || '') : rawUrl;
+  return isBlockedUrl(url) && !fallbackPermalink(item);
+}
+
 const state = {
   view: 'selected',
   category: '',
@@ -83,7 +100,7 @@ async function loadItems(append = false) {
       cursor: append ? state.nextCursor : undefined
     });
 
-    const filtered = (result.items || []).filter(item => !isBlockedUrl(item.url));
+    const filtered = (result.items || []).filter(item => !isBlockedWithoutFallback(item, item.url));
     if (append) {
       state.items = [...state.items, ...filtered];
     } else {
@@ -143,7 +160,7 @@ function renderTimelineItem(item) {
   const source = item.source || '';
   const title = item.title || '';
   const summary = item.summary || '';
-  const url = safeExternalUrl(item.url);
+  const url = safeExternalUrl(resolveItemUrl(item, item.url));
   const category = item.category || '';
   const score = item.score;
   const selected = item.selected;
@@ -323,7 +340,7 @@ function renderDailySections(sections) {
 
 function renderDailySection(section) {
   const items = (Array.isArray(section.items) ? section.items : [])
-    .filter(item => !isBlockedUrl(item.sourceUrl || item.url || ''));
+    .filter(item => !isBlockedWithoutFallback(item, item.sourceUrl || item.url || ''));
   const itemsHtml = items.length
     ? items.map(renderDailyItem).join('')
     : '<p class="aihot-daily-empty">暂无动态</p>';
@@ -336,7 +353,7 @@ function renderDailySection(section) {
 function renderDailyItem(item) {
   const title = item.title || '';
   const summary = item.summary || '';
-  const sourceUrl = safeExternalUrl(item.sourceUrl || item.url);
+  const sourceUrl = safeExternalUrl(resolveItemUrl(item, item.sourceUrl || item.url));
   const sourceName = item.sourceName || item.source || '';
   const category = item.category || '';
   const score = item.score || 0;
@@ -362,7 +379,7 @@ function renderDailyItem(item) {
 }
 
 function renderFlashes(flashes) {
-  const safe = flashes.filter(f => !isBlockedUrl(f.sourceUrl || f.url || ''));
+  const safe = flashes.filter(f => !isBlockedWithoutFallback(f, f.sourceUrl || f.url || ''));
   if (!els.flashesSection || !els.flashesList || !safe.length) {
     if (els.flashesSection) els.flashesSection.classList.add('hidden');
     return;
@@ -370,7 +387,7 @@ function renderFlashes(flashes) {
   els.flashesSection.classList.remove('hidden');
   els.flashesList.innerHTML = safe.map(flash => {
     const title = flash.title || '';
-    const sourceUrl = safeExternalUrl(flash.sourceUrl || flash.url);
+    const sourceUrl = safeExternalUrl(resolveItemUrl(flash, flash.sourceUrl || flash.url));
     const sourceName = flash.sourceName || flash.source || '';
     const publishedAt = flash.publishedAt || '';
     const timeStr = publishedAt ? new Date(publishedAt).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' }) : '';
