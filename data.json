@@ -3572,7 +3572,7 @@
       "name": "KAT-Coder-Pro V1",
       "provider": "快手StreamLake",
       "lifecycle_status": "legacy",
-      "provider_icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
       "logo_url": null,
       "input_price": null,
       "output_price": null,
@@ -3601,7 +3601,7 @@
       "name": "KAT-Coder-Pro V2",
       "provider": "快手StreamLake",
       "lifecycle_status": "legacy",
-      "provider_icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
       "logo_url": null,
       "input_price": null,
       "output_price": null,
@@ -3630,7 +3630,7 @@
       "name": "KAT-Coder-Pro V2.5",
       "provider": "快手StreamLake",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
       "logo_url": null,
       "input_price": null,
       "output_price": null,
@@ -4163,7 +4163,7 @@
       "name": "Spark-X2-Agent, GLM-5.2, DeepSeek-V4-Pro, Kimi-K2.7-Code, Qwen3-Coder-Next-FP8, GLM-4.7-Flash",
       "provider": "讯飞星火",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://maas.xfyun.cn/spark-icon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/iflytek-spark.ico",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -4187,7 +4187,7 @@
           "id": "iflytek-spark.efficient",
           "name": "高效版",
           "provider": "讯飞星火",
-          "provider_icon_url": "https://maas.xfyun.cn/spark-icon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/iflytek-spark.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -4251,7 +4251,7 @@
           "id": "iflytek-spark.express",
           "name": "速通版",
           "provider": "讯飞星火",
-          "provider_icon_url": "https://maas.xfyun.cn/spark-icon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/iflytek-spark.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -4318,7 +4318,7 @@
       "name": "DeepSeek-V3.2, GLM-5, GLM-4.7, MiniMax-M2.5, Kimi-K2.5, Kimi-K2-Turbo, Qwen3-Coder",
       "provider": "京东云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -4342,7 +4342,7 @@
           "id": "jdcloud.lite",
           "name": "Lite套餐",
           "provider": "京东云",
-          "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -4408,7 +4408,7 @@
           "id": "jdcloud.pro",
           "name": "Pro套餐",
           "provider": "京东云",
-          "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -4477,7 +4477,7 @@
       "name": "DeepSeek-V4-Flash, MiniMax-M2.5",
       "provider": "联通云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://www.cucloud.cn/templets/1/default/images/logo_menu.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/cucloud.ico",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -4501,7 +4501,7 @@
           "id": "cucloud.personal-lite",
           "name": "个人 Lite",
           "provider": "联通云",
-          "provider_icon_url": "https://www.cucloud.cn/templets/1/default/images/logo_menu.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/cucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -4565,7 +4565,7 @@
           "id": "cucloud.personal-pro",
           "name": "个人 Pro",
           "provider": "联通云",
-          "provider_icon_url": "https://www.cucloud.cn/templets/1/default/images/logo_menu.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/cucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -4629,7 +4629,7 @@
           "id": "cucloud.personal-max",
           "name": "个人 Max",
           "provider": "联通云",
-          "provider_icon_url": "https://www.cucloud.cn/templets/1/default/images/logo_menu.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/cucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -4696,7 +4696,7 @@
       "name": "GLM-5.1, GLM-5, Kimi-K2.6, DeepSeek-V4-Flash, DeepSeek-V3.2",
       "provider": "华为云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://www.huaweicloud.com/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/huaweicloud.ico",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -4720,7 +4720,7 @@
           "id": "huaweicloud.lite",
           "name": "Lite",
           "provider": "华为云",
-          "provider_icon_url": "https://www.huaweicloud.com/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/huaweicloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -4786,7 +4786,7 @@
           "id": "huaweicloud.standard",
           "name": "Standard",
           "provider": "华为云",
-          "provider_icon_url": "https://www.huaweicloud.com/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/huaweicloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -4852,7 +4852,7 @@
           "id": "huaweicloud.pro",
           "name": "Pro",
           "provider": "华为云",
-          "provider_icon_url": "https://www.huaweicloud.com/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/huaweicloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -4918,7 +4918,7 @@
           "id": "huaweicloud.max",
           "name": "Max",
           "provider": "华为云",
-          "provider_icon_url": "https://www.huaweicloud.com/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/huaweicloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -4987,7 +4987,7 @@
       "name": "DeepSeek-V4-Pro, DeepSeek-V4-Flash, MiniMax-M2.7, GLM-5.1, GLM-5",
       "provider": "腾讯云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://cloud.tencent.com/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -5011,7 +5011,7 @@
           "id": "tencent-cloud.lite",
           "name": "体验套餐 (Lite)",
           "provider": "腾讯云",
-          "provider_icon_url": "https://cloud.tencent.com/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5078,7 +5078,7 @@
           "id": "tencent-cloud.standard",
           "name": "基础套餐 (Standard)",
           "provider": "腾讯云",
-          "provider_icon_url": "https://cloud.tencent.com/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5145,7 +5145,7 @@
           "id": "tencent-cloud.pro",
           "name": "进阶套餐 (Pro)",
           "provider": "腾讯云",
-          "provider_icon_url": "https://cloud.tencent.com/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5212,7 +5212,7 @@
           "id": "tencent-cloud.max",
           "name": "专业套餐 (Max)",
           "provider": "腾讯云",
-          "provider_icon_url": "https://cloud.tencent.com/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5282,7 +5282,7 @@
       "name": "GLM-5.1, GLM-5.2, Kimi-K2.6, MiniMax-M3, DeepSeek-V4-Flash, DeepSeek-V4-Pro",
       "provider": "京东云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -5306,7 +5306,7 @@
           "id": "jdcloud.token-plan-lite",
           "name": "Token Plan 个人版 Lite",
           "provider": "京东云",
-          "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5367,7 +5367,7 @@
           "id": "jdcloud.token-plan-standard",
           "name": "Token Plan 个人版 Standard",
           "provider": "京东云",
-          "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5428,7 +5428,7 @@
           "id": "jdcloud.token-plan-pro",
           "name": "Token Plan 个人版 Pro",
           "provider": "京东云",
-          "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5489,7 +5489,7 @@
           "id": "jdcloud.token-plan-max",
           "name": "Token Plan 个人版 Max",
           "provider": "京东云",
-          "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5550,7 +5550,7 @@
           "id": "jdcloud.token-plan-lite-075842",
           "name": "Token Plan 企业版 Lite",
           "provider": "京东云",
-          "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5611,7 +5611,7 @@
           "id": "jdcloud.token-plan-standard-89952f",
           "name": "Token Plan 企业版 Standard",
           "provider": "京东云",
-          "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5672,7 +5672,7 @@
           "id": "jdcloud.token-plan-pro-cac661",
           "name": "Token Plan 企业版 Pro",
           "provider": "京东云",
-          "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5733,7 +5733,7 @@
           "id": "jdcloud.token-plan-max-c782a6",
           "name": "Token Plan 企业版 Max",
           "provider": "京东云",
-          "provider_icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -8086,7 +8086,7 @@
       "name": "GLM-4.7",
       "provider": "摩尔线程",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://code.mthreads.com/title_logo.svg",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/mthreads.svg",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -8110,7 +8110,7 @@
           "id": "mthreads.lite-plan",
           "name": "Lite Plan",
           "provider": "摩尔线程",
-          "provider_icon_url": "https://code.mthreads.com/title_logo.svg",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/mthreads.svg",
           "model_id": null,
           "regions": [
             "domestic"
@@ -8173,7 +8173,7 @@
           "id": "mthreads.pro-plan",
           "name": "Pro Plan",
           "provider": "摩尔线程",
-          "provider_icon_url": "https://code.mthreads.com/title_logo.svg",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/mthreads.svg",
           "model_id": null,
           "regions": [
             "domestic"
@@ -8236,7 +8236,7 @@
           "id": "mthreads.max-plan",
           "name": "Max Plan",
           "provider": "摩尔线程",
-          "provider_icon_url": "https://code.mthreads.com/title_logo.svg",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/mthreads.svg",
           "model_id": null,
           "regions": [
             "domestic"
@@ -8302,7 +8302,7 @@
       "name": "DeepSeek-V4,GLM-5.1,MiniMax,Kimi",
       "provider": "UCloud优云智算",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://www.compshare.cn/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/ucloud.ico",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -8326,7 +8326,7 @@
           "id": "ucloud.mini",
           "name": "Mini 迷你版",
           "provider": "UCloud优云智算",
-          "provider_icon_url": "https://www.compshare.cn/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/ucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -8389,7 +8389,7 @@
           "id": "ucloud.lite",
           "name": "Lite 入门版",
           "provider": "UCloud优云智算",
-          "provider_icon_url": "https://www.compshare.cn/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/ucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -8452,7 +8452,7 @@
           "id": "ucloud.basic",
           "name": "Basic 基础版",
           "provider": "UCloud优云智算",
-          "provider_icon_url": "https://www.compshare.cn/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/ucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -8515,7 +8515,7 @@
           "id": "ucloud.pro",
           "name": "Pro 增强版",
           "provider": "UCloud优云智算",
-          "provider_icon_url": "https://www.compshare.cn/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/ucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -8578,7 +8578,7 @@
           "id": "ucloud.max",
           "name": "Max 高级版",
           "provider": "UCloud优云智算",
-          "provider_icon_url": "https://www.compshare.cn/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/ucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -8641,7 +8641,7 @@
           "id": "ucloud.ultra",
           "name": "Ultra 畅享版",
           "provider": "UCloud优云智算",
-          "provider_icon_url": "https://www.compshare.cn/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/ucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -8707,7 +8707,7 @@
       "name": "kat-coder-pro-v2.5",
       "provider": "快手StreamLake",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -8731,7 +8731,7 @@
           "id": "streamlake.mini",
           "name": "Mini",
           "provider": "快手StreamLake",
-          "provider_icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
           "model_id": "kat-coder-pro-v2.5",
           "regions": [
             "domestic"
@@ -8796,7 +8796,7 @@
           "id": "streamlake.starter",
           "name": "Starter",
           "provider": "快手StreamLake",
-          "provider_icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
           "model_id": "kat-coder-pro-v2.5",
           "regions": [
             "domestic"
@@ -8861,7 +8861,7 @@
           "id": "streamlake.pro",
           "name": "Pro",
           "provider": "快手StreamLake",
-          "provider_icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
           "model_id": "kat-coder-pro-v2.5",
           "regions": [
             "domestic"
@@ -8926,7 +8926,7 @@
           "id": "streamlake.max",
           "name": "Max",
           "provider": "快手StreamLake",
-          "provider_icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
           "model_id": "kat-coder-pro-v2.5",
           "regions": [
             "domestic"
@@ -8994,7 +8994,7 @@
       "name": "Spark-X2-Agent, Spark-X2, Spark-X2-Flash, GLM-5.2, GLM-5.1, GLM-5, DeepSeek-V4-Pro, DeepSeek-V4-Flash, DeepSeek-V3.2, Kimi-K2.6, Kimi-K2.5, MiniMax-M2.5, Qwen3.5-397B-A17B, Qwen3.6-35B-A3B, Qwen3.5-35B-A3B, Qwen3-Coder-Next-FP8, GLM-4.7-Flash",
       "provider": "讯飞星火",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://maas.xfyun.cn/spark-icon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/iflytek-spark.ico",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -9018,7 +9018,7 @@
           "id": "iflytek-spark.token-plan",
           "name": "Token Plan 标准成员",
           "provider": "讯飞星火",
-          "provider_icon_url": "https://maas.xfyun.cn/spark-icon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/iflytek-spark.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -9079,7 +9079,7 @@
           "id": "iflytek-spark.token-plan-24aa9e",
           "name": "Token Plan 高级成员",
           "provider": "讯飞星火",
-          "provider_icon_url": "https://maas.xfyun.cn/spark-icon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/iflytek-spark.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -9140,7 +9140,7 @@
           "id": "iflytek-spark.token-plan-01077f",
           "name": "Token Plan 尊享成员",
           "provider": "讯飞星火",
-          "provider_icon_url": "https://maas.xfyun.cn/spark-icon.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/iflytek-spark.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -9204,7 +9204,7 @@
       "name": "DeepSeek-V4-Pro, DeepSeek-V4-Flash, MiniMax-M2.5",
       "provider": "联通云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://www.cucloud.cn/templets/1/default/images/logo_menu.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/cucloud.ico",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -9228,7 +9228,7 @@
           "id": "cucloud.team-lite",
           "name": "团队 Lite",
           "provider": "联通云",
-          "provider_icon_url": "https://www.cucloud.cn/templets/1/default/images/logo_menu.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/cucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -9293,7 +9293,7 @@
           "id": "cucloud.team-pro",
           "name": "团队 Pro",
           "provider": "联通云",
-          "provider_icon_url": "https://www.cucloud.cn/templets/1/default/images/logo_menu.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/cucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -9358,7 +9358,7 @@
           "id": "cucloud.team-max",
           "name": "团队 Max",
           "provider": "联通云",
-          "provider_icon_url": "https://www.cucloud.cn/templets/1/default/images/logo_menu.ico",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/cucloud.ico",
           "model_id": null,
           "regions": [
             "domestic"
@@ -9628,7 +9628,7 @@
       "name": "KAT-Coder-Pro V1",
       "provider": "快手StreamLake",
       "lifecycle_status": "legacy",
-      "provider_icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
       "logo_url": null,
       "sort_order": 99,
       "market_region": "domestic"
@@ -9638,7 +9638,7 @@
       "name": "KAT-Coder-Pro V2",
       "provider": "快手StreamLake",
       "lifecycle_status": "legacy",
-      "provider_icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
       "logo_url": null,
       "sort_order": 99,
       "market_region": "domestic"
@@ -9648,7 +9648,7 @@
       "name": "KAT-Coder-Pro V2.5",
       "provider": "快手StreamLake",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
       "logo_url": null,
       "sort_order": 99,
       "market_region": "domestic"
@@ -10291,7 +10291,7 @@
     },
     "腾讯云": {
       "name": "腾讯云",
-      "icon_url": "https://cloud.tencent.com/favicon.ico",
+      "icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
       "sort_order": 52,
       "region": "domestic",
       "seo_slug": "tencent-cloud",
@@ -10369,7 +10369,7 @@
     },
     "讯飞星火": {
       "name": "讯飞星火",
-      "icon_url": "https://maas.xfyun.cn/spark-icon.ico",
+      "icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/iflytek-spark.ico",
       "sort_order": 170,
       "region": "domestic",
       "seo_slug": "iflytek-spark",
@@ -10382,7 +10382,7 @@
     },
     "京东云": {
       "name": "京东云",
-      "icon_url": "https://img1.jcloudcs.com/portal/favicon.ico",
+      "icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/jdcloud.ico",
       "sort_order": 180,
       "region": "domestic",
       "seo_slug": "jdcloud",
@@ -10395,7 +10395,7 @@
     },
     "联通云": {
       "name": "联通云",
-      "icon_url": "https://www.cucloud.cn/templets/1/default/images/logo_menu.ico",
+      "icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/cucloud.ico",
       "sort_order": 190,
       "region": "domestic",
       "seo_slug": "cucloud",
@@ -10408,7 +10408,7 @@
     },
     "华为云": {
       "name": "华为云",
-      "icon_url": "https://www.huaweicloud.com/favicon.ico",
+      "icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/huaweicloud.ico",
       "sort_order": 200,
       "region": "domestic",
       "seo_slug": "huaweicloud",
@@ -10421,7 +10421,7 @@
     },
     "摩尔线程": {
       "name": "摩尔线程",
-      "icon_url": "https://code.mthreads.com/title_logo.svg",
+      "icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/mthreads.svg",
       "sort_order": 210,
       "region": "domestic",
       "seo_slug": "mthreads",
@@ -10434,7 +10434,7 @@
     },
     "UCloud优云智算": {
       "name": "UCloud优云智算",
-      "icon_url": "https://www.compshare.cn/favicon.ico",
+      "icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/ucloud.ico",
       "sort_order": 220,
       "region": "domestic",
       "seo_slug": "ucloud",
@@ -10447,7 +10447,7 @@
     },
     "快手StreamLake": {
       "name": "快手StreamLake",
-      "icon_url": "https://p4-sl.streamlake.com/kos/nlav11935/streamlake-website/public/favicon.ico",
+      "icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/streamlake.ico",
       "sort_order": 230,
       "region": "domestic",
       "seo_slug": "streamlake",
