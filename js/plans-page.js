@@ -263,7 +263,7 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
             </button>
             <div class="brand-search-box">
               <svg class="brand-search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4 4" stroke-linecap="round"/></svg>
-              <input id="brandSearchInput" type="search" class="brand-search-input" placeholder="搜索品牌…" autocomplete="off" aria-label="搜索品牌或模型">
+              <input id="brandSearchInput" type="search" class="brand-search-input" placeholder="搜索品牌或模型，如 Qoder、Claude…" autocomplete="off" aria-label="搜索品牌或模型">
             </div>
           </div>
           <div id="brandTabs" class="brand-tab-list">

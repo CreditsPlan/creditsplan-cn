@@ -122,11 +122,11 @@
           "risk_text": "按量计费没有固定月度额度，本页仅记录充值入口和官方计费口径。",
           "sort_order": 0,
           "privacy_override_json": null,
+          "planId": "deepseek.topup",
           "model_ids": [
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "deepseek.topup"
+          "has_affiliate": false
         }
       ]
     },
@@ -251,11 +251,11 @@
           "risk_text": "",
           "sort_order": 1,
           "privacy_override_json": null,
+          "planId": "kimi.code.49",
           "model_ids": [
             "kimi-k3"
           ],
-          "has_affiliate": false,
-          "planId": "kimi.code.49"
+          "has_affiliate": false
         },
         {
           "id": "kimi-k2.6-code-moderato",
@@ -314,11 +314,11 @@
           "risk_text": "",
           "sort_order": 2,
           "privacy_override_json": null,
+          "planId": "kimi.code.99",
           "model_ids": [
             "kimi-k3"
           ],
-          "has_affiliate": false,
-          "planId": "kimi.code.99"
+          "has_affiliate": false
         },
         {
           "id": "kimi-k2.6-code-allegretto",
@@ -377,11 +377,11 @@
           "risk_text": "",
           "sort_order": 3,
           "privacy_override_json": null,
+          "planId": "kimi.code.199",
           "model_ids": [
             "kimi-k3"
           ],
-          "has_affiliate": false,
-          "planId": "kimi.code.199"
+          "has_affiliate": false
         },
         {
           "id": "kimi-k2.6-code-allegro",
@@ -440,11 +440,11 @@
           "risk_text": "",
           "sort_order": 4,
           "privacy_override_json": null,
+          "planId": "kimi.code.699",
           "model_ids": [
             "kimi-k3"
           ],
-          "has_affiliate": false,
-          "planId": "kimi.code.699"
+          "has_affiliate": false
         }
       ]
     },
@@ -537,11 +537,11 @@
           "risk_text": "月度 token 和日常编程调用次数均为官网约数；图像、语音、音乐与文本共享额度，实际消耗和可用模型以控制台实时说明为准。",
           "sort_order": 1,
           "privacy_override_json": null,
+          "planId": "minimax.token-plan.49",
           "model_ids": [
             "minimax-m3"
           ],
-          "has_affiliate": false,
-          "planId": "minimax.token-plan.49"
+          "has_affiliate": false
         },
         {
           "id": "minimax-m3-token-max",
@@ -600,11 +600,11 @@
           "risk_text": "月度 token 和日常编程调用次数均为官网约数；年付划线价按截图记录；图像、语音、音乐与文本共享额度，实际消耗和可用模型以控制台实时说明为准。",
           "sort_order": 2,
           "privacy_override_json": null,
+          "planId": "minimax.token-plan.119",
           "model_ids": [
             "minimax-m3"
           ],
-          "has_affiliate": false,
-          "planId": "minimax.token-plan.119"
+          "has_affiliate": false
         },
         {
           "id": "minimax-m3-token-ultra",
@@ -663,11 +663,11 @@
           "risk_text": "月度 token 和日常编程调用次数均为官网约数；图像、语音、音乐与文本共享额度，实际消耗和可用模型以控制台实时说明为准。",
           "sort_order": 3,
           "privacy_override_json": null,
+          "planId": "minimax.token-plan.469",
           "model_ids": [
             "minimax-m3"
           ],
-          "has_affiliate": false,
-          "planId": "minimax.token-plan.469"
+          "has_affiliate": false
         }
       ]
     },
@@ -949,11 +949,11 @@
           "risk_text": "免费体验为限时活动；活动期限、Credits 换算和可用模型以官网实时说明为准。",
           "sort_order": 1,
           "privacy_override_json": null,
+          "planId": "stepfun.coding-plan.49",
           "model_ids": [
             "step-3.7-flash"
           ],
-          "has_affiliate": false,
-          "planId": "stepfun.coding-plan.49"
+          "has_affiliate": false
         },
         {
           "id": "step-flash-plus",
@@ -1012,11 +1012,11 @@
           "risk_text": "Credits 换算、API 速率优先级和可用模型以官网实时说明为准。",
           "sort_order": 2,
           "privacy_override_json": null,
+          "planId": "stepfun.coding-plan.99",
           "model_ids": [
             "step-3.7-flash"
           ],
-          "has_affiliate": false,
-          "planId": "stepfun.coding-plan.99"
+          "has_affiliate": false
         },
         {
           "id": "step-flash-pro",
@@ -1075,11 +1075,11 @@
           "risk_text": "Credits 换算、API 速率优先级和可用模型以官网实时说明为准。",
           "sort_order": 3,
           "privacy_override_json": null,
+          "planId": "stepfun.coding-plan.199",
           "model_ids": [
             "step-3.7-flash"
           ],
-          "has_affiliate": false,
-          "planId": "stepfun.coding-plan.199"
+          "has_affiliate": false
         },
         {
           "id": "step-flash-max",
@@ -1138,11 +1138,11 @@
           "risk_text": "Credits 换算、API 速率优先级和可用模型以官网实时说明为准。",
           "sort_order": 4,
           "privacy_override_json": null,
+          "planId": "stepfun.coding-plan.699",
           "model_ids": [
             "step-3.7-flash"
           ],
-          "has_affiliate": false,
-          "planId": "stepfun.coding-plan.699"
+          "has_affiliate": false
         }
       ]
     },
@@ -1300,11 +1300,11 @@
           "risk_text": "体验版和部分功能处于限时免费活动中，活动期限与可用能力以官网实时说明为准。",
           "sort_order": 1,
           "privacy_override_json": null,
+          "planId": "codebuddy.coding-plan.0",
           "model_ids": [
             "hy3"
           ],
-          "has_affiliate": false,
-          "planId": "codebuddy.coding-plan.0"
+          "has_affiliate": false
         },
         {
           "id": "codebuddy-personal-standard",
@@ -1363,11 +1363,11 @@
           "risk_text": "赠送积分和 7 折、5.6 折价格均来自限时页面，资格、期限和续费价以官网结算页为准。",
           "sort_order": 2,
           "privacy_override_json": null,
+          "planId": "codebuddy.coding-plan.70",
           "model_ids": [
             "hy3"
           ],
-          "has_affiliate": false,
-          "planId": "codebuddy.coding-plan.70"
+          "has_affiliate": false
         },
         {
           "id": "codebuddy-personal-advanced",
@@ -1426,11 +1426,11 @@
           "risk_text": "赠送积分和 7 折、5.6 折价格均来自限时页面，资格、期限和续费价以官网结算页为准。",
           "sort_order": 3,
           "privacy_override_json": null,
+          "planId": "codebuddy.coding-plan.140",
           "model_ids": [
             "hy3"
           ],
-          "has_affiliate": false,
-          "planId": "codebuddy.coding-plan.140"
+          "has_affiliate": false
         },
         {
           "id": "codebuddy-personal-flagship",
@@ -1489,11 +1489,11 @@
           "risk_text": "赠送积分和 7 折、5.6 折价格均来自限时页面，资格、期限和续费价以官网结算页为准。",
           "sort_order": 4,
           "privacy_override_json": null,
+          "planId": "codebuddy.coding-plan.700",
           "model_ids": [
             "hy3"
           ],
-          "has_affiliate": false,
-          "planId": "codebuddy.coding-plan.700"
+          "has_affiliate": false
         },
         {
           "id": "codebuddy-enterprise-flagship",
@@ -1552,11 +1552,11 @@
           "risk_text": "双倍 Credits 为限时活动；企业采购、坐席口径、赠送资格和服务条款以官网或合同为准。",
           "sort_order": 5,
           "privacy_override_json": null,
+          "planId": "codebuddy.coding-plan.198",
           "model_ids": [
             "hy3"
           ],
-          "has_affiliate": false,
-          "planId": "codebuddy.coding-plan.198"
+          "has_affiliate": false
         },
         {
           "id": "codebuddy-enterprise-dedicated",
@@ -1615,11 +1615,11 @@
           "risk_text": "双倍 Credits 为限时活动；100 坐席起购、单租户专享部署、赠送资格和服务条款以官网或合同为准。",
           "sort_order": 6,
           "privacy_override_json": null,
+          "planId": "codebuddy.coding-plan.316",
           "model_ids": [
             "hy3"
           ],
-          "has_affiliate": false,
-          "planId": "codebuddy.coding-plan.316"
+          "has_affiliate": false
         }
       ]
     },
@@ -1712,11 +1712,11 @@
           "risk_text": "免费权益、功能开放范围和可用模型可能随客户端规则调整。",
           "sort_order": 1,
           "privacy_override_json": null,
+          "planId": "trae.coding-plan.0",
           "model_ids": [
             "doubao-seed-2.1-pro"
           ],
-          "has_affiliate": false,
-          "planId": "trae.coding-plan.0"
+          "has_affiliate": false
         },
         {
           "id": "trae-cn-speed-pro",
@@ -1775,11 +1775,11 @@
           "risk_text": "¥59 为新用户限时优惠；是否可享受、优惠期限和续费价以官网结算页为准。",
           "sort_order": 2,
           "privacy_override_json": null,
+          "planId": "trae.coding-plan.99",
           "model_ids": [
             "doubao-seed-2.1-pro"
           ],
-          "has_affiliate": false,
-          "planId": "trae.coding-plan.99"
+          "has_affiliate": false
         },
         {
           "id": "trae-cn-speed-pro-plus",
@@ -1838,11 +1838,11 @@
           "risk_text": "首月赠送速通为活动权益；可用范围和持续时间以官网实时说明为准。",
           "sort_order": 3,
           "privacy_override_json": null,
+          "planId": "trae.coding-plan.239",
           "model_ids": [
             "doubao-seed-2.1-pro"
           ],
-          "has_affiliate": false,
-          "planId": "trae.coding-plan.239"
+          "has_affiliate": false
         },
         {
           "id": "trae-cn-speed-ultra",
@@ -1901,11 +1901,11 @@
           "risk_text": "SOTA 模型优先解锁的具体模型池、排队优先级和额度消耗以客户端实时规则为准。",
           "sort_order": 4,
           "privacy_override_json": null,
+          "planId": "trae.coding-plan.699",
           "model_ids": [
             "doubao-seed-2.1-pro"
           ],
-          "has_affiliate": false,
-          "planId": "trae.coding-plan.699"
+          "has_affiliate": false
         },
         {
           "id": "trae-cn-express",
@@ -1964,11 +1964,11 @@
           "risk_text": "官网显示限量发售和低至价，实际可购价格、名额、有效期和续费条件可能实时变化。",
           "sort_order": 5,
           "privacy_override_json": null,
+          "planId": "trae.coding-plan.1999",
           "model_ids": [
             "doubao-seed-2.1-pro"
           ],
-          "has_affiliate": false,
-          "planId": "trae.coding-plan.1999"
+          "has_affiliate": false
         }
       ]
     },
@@ -3736,11 +3736,11 @@
           "risk_text": "",
           "sort_order": 0,
           "privacy_override_json": null,
+          "planId": "xiaomi.token-plan.39",
           "model_ids": [
             "mimo-v2.5-pro"
           ],
-          "has_affiliate": false,
-          "planId": "xiaomi.token-plan.39"
+          "has_affiliate": false
         },
         {
           "id": "xiaomi-mimo.standard",
@@ -3799,11 +3799,11 @@
           "risk_text": "",
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "xiaomi.token-plan.99",
           "model_ids": [
             "mimo-v2.5-pro"
           ],
-          "has_affiliate": false,
-          "planId": "xiaomi.token-plan.99"
+          "has_affiliate": false
         },
         {
           "id": "xiaomi-mimo.pro",
@@ -3862,11 +3862,11 @@
           "risk_text": "",
           "sort_order": 20,
           "privacy_override_json": null,
+          "planId": "xiaomi.token-plan.329",
           "model_ids": [
             "mimo-v2.5-pro"
           ],
-          "has_affiliate": false,
-          "planId": "xiaomi.token-plan.329"
+          "has_affiliate": false
         },
         {
           "id": "xiaomi-mimo.max",
@@ -3925,11 +3925,11 @@
           "risk_text": "",
           "sort_order": 30,
           "privacy_override_json": null,
+          "planId": "xiaomi.token-plan.659",
           "model_ids": [
             "mimo-v2.5-pro"
           ],
-          "has_affiliate": false,
-          "planId": "xiaomi.token-plan.659"
+          "has_affiliate": false
         }
       ]
     },
@@ -4015,14 +4015,14 @@
           "risk_text": null,
           "sort_order": 0,
           "privacy_override_json": null,
+          "planId": "qiniu.enterprise.token-plan.2999",
           "model_ids": [
             "minimax-m3",
             "kimi-k3",
             "glm-5.2",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "qiniu.enterprise.token-plan.2999"
+          "has_affiliate": false
         },
         {
           "id": "qiniu.enterprise-m",
@@ -4081,14 +4081,14 @@
           "risk_text": null,
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "qiniu.enterprise.token-plan.4999",
           "model_ids": [
             "minimax-m3",
             "kimi-k3",
             "glm-5.2",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "qiniu.enterprise.token-plan.4999"
+          "has_affiliate": false
         },
         {
           "id": "qiniu.enterprise-b",
@@ -4147,14 +4147,14 @@
           "risk_text": null,
           "sort_order": 20,
           "privacy_override_json": null,
+          "planId": "qiniu.enterprise.token-plan.9999",
           "model_ids": [
             "minimax-m3",
             "kimi-k3",
             "glm-5.2",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "qiniu.enterprise.token-plan.9999"
+          "has_affiliate": false
         }
       ]
     },
@@ -4240,12 +4240,12 @@
           "risk_text": null,
           "sort_order": 0,
           "privacy_override_json": null,
+          "planId": "iflytek.coding-plan.199",
           "model_ids": [
             "glm-5.2",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "iflytek.coding-plan.199"
+          "has_affiliate": false
         },
         {
           "id": "iflytek-spark.express",
@@ -4304,12 +4304,12 @@
           "risk_text": null,
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "iflytek.coding-plan.999",
           "model_ids": [
             "glm-5.2",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "iflytek.coding-plan.999"
+          "has_affiliate": false
         }
       ]
     },
@@ -4395,14 +4395,14 @@
           "risk_text": null,
           "sort_order": 0,
           "privacy_override_json": null,
+          "planId": "jdcloud.lite.coding-plan.40",
           "model_ids": [
             "kimi-k2-5",
             "glm-5",
             "glm-4-7",
             "minimax-m2-5"
           ],
-          "has_affiliate": false,
-          "planId": "jdcloud.lite.coding-plan.40"
+          "has_affiliate": false
         },
         {
           "id": "jdcloud.pro",
@@ -4461,14 +4461,14 @@
           "risk_text": null,
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "jdcloud.pro.coding-plan.200",
           "model_ids": [
             "kimi-k2-5",
             "glm-5",
             "glm-4-7",
             "minimax-m2-5"
           ],
-          "has_affiliate": false,
-          "planId": "jdcloud.pro.coding-plan.200"
+          "has_affiliate": false
         }
       ]
     },
@@ -4554,12 +4554,12 @@
           "risk_text": null,
           "sort_order": 0,
           "privacy_override_json": null,
+          "planId": "cucloud.personal.token-plan.15",
           "model_ids": [
             "minimax-m2-5",
             "deepseek-v4-flash"
           ],
-          "has_affiliate": false,
-          "planId": "cucloud.personal.token-plan.15"
+          "has_affiliate": false
         },
         {
           "id": "cucloud.personal-pro",
@@ -4618,12 +4618,12 @@
           "risk_text": null,
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "cucloud.personal.token-plan.30",
           "model_ids": [
             "minimax-m2-5",
             "deepseek-v4-flash"
           ],
-          "has_affiliate": false,
-          "planId": "cucloud.personal.token-plan.30"
+          "has_affiliate": false
         },
         {
           "id": "cucloud.personal-max",
@@ -4682,12 +4682,12 @@
           "risk_text": null,
           "sort_order": 20,
           "privacy_override_json": null,
+          "planId": "cucloud.personal.token-plan.45",
           "model_ids": [
             "minimax-m2-5",
             "deepseek-v4-flash"
           ],
-          "has_affiliate": false,
-          "planId": "cucloud.personal.token-plan.45"
+          "has_affiliate": false
         }
       ]
     },
@@ -4773,14 +4773,14 @@
           "risk_text": null,
           "sort_order": 0,
           "privacy_override_json": null,
+          "planId": "huaweicloud.lite.token-plan.59",
           "model_ids": [
             "glm-5-1",
             "glm-5",
             "kimi-k2.6",
             "deepseek-v4-flash"
           ],
-          "has_affiliate": false,
-          "planId": "huaweicloud.lite.token-plan.59"
+          "has_affiliate": false
         },
         {
           "id": "huaweicloud.standard",
@@ -4839,14 +4839,14 @@
           "risk_text": null,
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "huaweicloud.standard.token-plan.149",
           "model_ids": [
             "glm-5-1",
             "glm-5",
             "kimi-k2.6",
             "deepseek-v4-flash"
           ],
-          "has_affiliate": false,
-          "planId": "huaweicloud.standard.token-plan.149"
+          "has_affiliate": false
         },
         {
           "id": "huaweicloud.pro",
@@ -4905,14 +4905,14 @@
           "risk_text": null,
           "sort_order": 20,
           "privacy_override_json": null,
+          "planId": "huaweicloud.pro.token-plan.399",
           "model_ids": [
             "glm-5-1",
             "glm-5",
             "kimi-k2.6",
             "deepseek-v4-flash"
           ],
-          "has_affiliate": false,
-          "planId": "huaweicloud.pro.token-plan.399"
+          "has_affiliate": false
         },
         {
           "id": "huaweicloud.max",
@@ -4971,14 +4971,14 @@
           "risk_text": null,
           "sort_order": 30,
           "privacy_override_json": null,
+          "planId": "huaweicloud.max.token-plan.799",
           "model_ids": [
             "glm-5-1",
             "glm-5",
             "kimi-k2.6",
             "deepseek-v4-flash"
           ],
-          "has_affiliate": false,
-          "planId": "huaweicloud.max.token-plan.799"
+          "has_affiliate": false
         }
       ]
     },
@@ -5064,6 +5064,7 @@
           "risk_text": null,
           "sort_order": 0,
           "privacy_override_json": null,
+          "planId": "tencent.token-plan.39",
           "model_ids": [
             "glm-5-1",
             "glm-5",
@@ -5071,8 +5072,7 @@
             "deepseek-v4-flash",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "tencent.token-plan.39"
+          "has_affiliate": false
         },
         {
           "id": "tencent-cloud.standard",
@@ -5131,6 +5131,7 @@
           "risk_text": null,
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "tencent.token-plan.99",
           "model_ids": [
             "glm-5-1",
             "glm-5",
@@ -5138,8 +5139,7 @@
             "deepseek-v4-flash",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "tencent.token-plan.99"
+          "has_affiliate": false
         },
         {
           "id": "tencent-cloud.pro",
@@ -5198,6 +5198,7 @@
           "risk_text": null,
           "sort_order": 20,
           "privacy_override_json": null,
+          "planId": "tencent.token-plan.299",
           "model_ids": [
             "glm-5-1",
             "glm-5",
@@ -5205,8 +5206,7 @@
             "deepseek-v4-flash",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "tencent.token-plan.299"
+          "has_affiliate": false
         },
         {
           "id": "tencent-cloud.max",
@@ -5265,6 +5265,7 @@
           "risk_text": null,
           "sort_order": 30,
           "privacy_override_json": null,
+          "planId": "tencent.token-plan.599",
           "model_ids": [
             "glm-5-1",
             "glm-5",
@@ -5272,8 +5273,7 @@
             "deepseek-v4-flash",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "tencent.token-plan.599"
+          "has_affiliate": false
         }
       ]
     },
@@ -5359,9 +5359,9 @@
           "risk_text": null,
           "sort_order": 0,
           "privacy_override_json": null,
+          "planId": "jdcloud.token.token-plan.69",
           "model_ids": [],
-          "has_affiliate": false,
-          "planId": "jdcloud.token.token-plan.69"
+          "has_affiliate": false
         },
         {
           "id": "jdcloud.token-plan-standard",
@@ -5420,9 +5420,9 @@
           "risk_text": null,
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "jdcloud.token.token-plan.199",
           "model_ids": [],
-          "has_affiliate": false,
-          "planId": "jdcloud.token.token-plan.199"
+          "has_affiliate": false
         },
         {
           "id": "jdcloud.token-plan-pro",
@@ -5481,9 +5481,9 @@
           "risk_text": null,
           "sort_order": 20,
           "privacy_override_json": null,
+          "planId": "jdcloud.token.token-plan.599",
           "model_ids": [],
-          "has_affiliate": false,
-          "planId": "jdcloud.token.token-plan.599"
+          "has_affiliate": false
         },
         {
           "id": "jdcloud.token-plan-max",
@@ -5542,9 +5542,9 @@
           "risk_text": null,
           "sort_order": 30,
           "privacy_override_json": null,
+          "planId": "jdcloud.token.token-plan.999",
           "model_ids": [],
-          "has_affiliate": false,
-          "planId": "jdcloud.token.token-plan.999"
+          "has_affiliate": false
         },
         {
           "id": "jdcloud.token-plan-lite-075842",
@@ -5603,9 +5603,9 @@
           "risk_text": null,
           "sort_order": 40,
           "privacy_override_json": null,
+          "planId": "jdcloud.token.token-plan.207",
           "model_ids": [],
-          "has_affiliate": false,
-          "planId": "jdcloud.token.token-plan.207"
+          "has_affiliate": false
         },
         {
           "id": "jdcloud.token-plan-standard-89952f",
@@ -5664,9 +5664,9 @@
           "risk_text": null,
           "sort_order": 50,
           "privacy_override_json": null,
+          "planId": "jdcloud.token.token-plan.597",
           "model_ids": [],
-          "has_affiliate": false,
-          "planId": "jdcloud.token.token-plan.597"
+          "has_affiliate": false
         },
         {
           "id": "jdcloud.token-plan-pro-cac661",
@@ -5725,9 +5725,9 @@
           "risk_text": null,
           "sort_order": 60,
           "privacy_override_json": null,
+          "planId": "jdcloud.token.token-plan.1797",
           "model_ids": [],
-          "has_affiliate": false,
-          "planId": "jdcloud.token.token-plan.1797"
+          "has_affiliate": false
         },
         {
           "id": "jdcloud.token-plan-max-c782a6",
@@ -5786,9 +5786,9 @@
           "risk_text": null,
           "sort_order": 70,
           "privacy_override_json": null,
+          "planId": "jdcloud.token.token-plan.2997",
           "model_ids": [],
-          "has_affiliate": false,
-          "planId": "jdcloud.token.token-plan.2997"
+          "has_affiliate": false
         }
       ]
     },
@@ -5874,6 +5874,7 @@
           "risk_text": "实际可用量受项目复杂度、代码库规模、是否启用自动接受、是否开启 thinking 等因素影响，波动较大；MiniMax、Kimi、DeepSeek-V4-Pro 等模型抵扣系数较高、额度消耗较快。必须使用 Coding Plan 指定 Base URL，否则可能产生额外 API 请求费用；在非编程工具中使用对应 Base URL 与 API Key 可能被判定为滥用。用量信息以火山方舟控制台开通管理页为准。",
           "sort_order": 1,
           "privacy_override_json": null,
+          "planId": "volcengine.coding-plan.40",
           "model_ids": [
             "doubao-seed-2.1-pro",
             "minimax-m3",
@@ -5881,8 +5882,7 @@
             "glm-5.2",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "volcengine.coding-plan.40"
+          "has_affiliate": false
         },
         {
           "id": "volcengine-coding-pro",
@@ -5941,6 +5941,7 @@
           "risk_text": "实际可用量受项目复杂度、代码库规模、是否启用自动接受、是否开启 thinking 等因素影响，波动较大；MiniMax、Kimi、DeepSeek-V4-Pro 等模型抵扣系数较高、额度消耗较快。必须使用 Coding Plan 指定 Base URL，否则可能产生额外 API 请求费用；在非编程工具中使用对应 Base URL 与 API Key 可能被判定为滥用。用量信息以火山方舟控制台开通管理页为准。",
           "sort_order": 2,
           "privacy_override_json": null,
+          "planId": "volcengine.coding-plan.200",
           "model_ids": [
             "doubao-seed-2.1-pro",
             "minimax-m3",
@@ -5948,8 +5949,7 @@
             "glm-5.2",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "volcengine.coding-plan.200"
+          "has_affiliate": false
         },
         {
           "id": "volcengine-agent-small",
@@ -6008,11 +6008,11 @@
           "risk_text": "",
           "sort_order": 3,
           "privacy_override_json": null,
+          "planId": "volcengine.agent-plan.40",
           "model_ids": [
             "doubao-seed-2.1-pro"
           ],
-          "has_affiliate": false,
-          "planId": "volcengine.agent-plan.40"
+          "has_affiliate": false
         },
         {
           "id": "volcengine-agent-medium",
@@ -6071,11 +6071,11 @@
           "risk_text": "",
           "sort_order": 4,
           "privacy_override_json": null,
+          "planId": "volcengine.agent-plan.200",
           "model_ids": [
             "doubao-seed-2.1-pro"
           ],
-          "has_affiliate": false,
-          "planId": "volcengine.agent-plan.200"
+          "has_affiliate": false
         },
         {
           "id": "volcengine-agent-large",
@@ -6134,11 +6134,11 @@
           "risk_text": "",
           "sort_order": 5,
           "privacy_override_json": null,
+          "planId": "volcengine.agent-plan.500",
           "model_ids": [
             "doubao-seed-2.1-pro"
           ],
-          "has_affiliate": false,
-          "planId": "volcengine.agent-plan.500"
+          "has_affiliate": false
         },
         {
           "id": "volcengine-agent-max",
@@ -6197,11 +6197,11 @@
           "risk_text": "",
           "sort_order": 6,
           "privacy_override_json": null,
+          "planId": "volcengine.agent-plan.1000",
           "model_ids": [
             "doubao-seed-2.1-pro"
           ],
-          "has_affiliate": false,
-          "planId": "volcengine.agent-plan.1000"
+          "has_affiliate": false
         }
       ]
     },
@@ -6287,6 +6287,7 @@
           "risk_text": "免费体验额度和试用资格可能受账号状态、活动规则和官网调整影响。",
           "sort_order": 1,
           "privacy_override_json": null,
+          "planId": "qoder-cn.coding-plan.0",
           "model_ids": [
             "qwen3.8-max",
             "deepseek-v4-pro",
@@ -6294,8 +6295,7 @@
             "kimi-2.7-code",
             "minimax-m2.7"
           ],
-          "has_affiliate": false,
-          "planId": "qoder-cn.coding-plan.0"
+          "has_affiliate": false
         },
         {
           "id": "qoder-cn-pro",
@@ -6354,6 +6354,7 @@
           "risk_text": "截图未展示精确请求数、退款、续费和超额规则，购买前需查看官网结算页。",
           "sort_order": 2,
           "privacy_override_json": null,
+          "planId": "qoder-cn.coding-plan.59",
           "model_ids": [
             "qwen3.8-max",
             "deepseek-v4-pro",
@@ -6361,8 +6362,7 @@
             "kimi-2.7-code",
             "minimax-m2.7"
           ],
-          "has_affiliate": false,
-          "planId": "qoder-cn.coding-plan.59"
+          "has_affiliate": false
         },
         {
           "id": "qoder-cn-pro-plus",
@@ -6421,6 +6421,7 @@
           "risk_text": "截图未展示精确请求数、退款、续费和超额规则，购买前需查看官网结算页。",
           "sort_order": 3,
           "privacy_override_json": null,
+          "planId": "qoder-cn.coding-plan.169",
           "model_ids": [
             "qwen3.8-max",
             "deepseek-v4-pro",
@@ -6428,8 +6429,7 @@
             "kimi-2.7-code",
             "minimax-m2.7"
           ],
-          "has_affiliate": false,
-          "planId": "qoder-cn.coding-plan.169"
+          "has_affiliate": false
         },
         {
           "id": "qoder-cn-ultra",
@@ -6488,6 +6488,7 @@
           "risk_text": "",
           "sort_order": 4,
           "privacy_override_json": null,
+          "planId": "qoder-cn.coding-plan.559",
           "model_ids": [
             "qwen3.8-max",
             "deepseek-v4-pro",
@@ -6495,8 +6496,7 @@
             "kimi-2.7-code",
             "minimax-m2.7"
           ],
-          "has_affiliate": false,
-          "planId": "qoder-cn.coding-plan.559"
+          "has_affiliate": false
         },
         {
           "id": "qoder-cn-teams",
@@ -6555,6 +6555,7 @@
           "risk_text": "截图未展示最低席位数、发票、退款、续费和组织管理细则，企业采购前需核对官网。",
           "sort_order": 5,
           "privacy_override_json": null,
+          "planId": "qoder-cn.coding-plan.99",
           "model_ids": [
             "qwen3.8-max",
             "deepseek-v4-pro",
@@ -6562,8 +6563,7 @@
             "kimi-2.7-code",
             "minimax-m2.7"
           ],
-          "has_affiliate": false,
-          "planId": "qoder-cn.coding-plan.99"
+          "has_affiliate": false
         },
         {
           "id": "qoder-cn-enterprise-standard",
@@ -6622,6 +6622,7 @@
           "risk_text": "截图按钮为敬请期待，实际开售时间、购买资格、组织管理和服务条款需以官网为准。",
           "sort_order": 6,
           "privacy_override_json": "{\"data_training\":\"no\",\"note\":\"企业版默认关闭数据共享，不用于模型训练\"}",
+          "planId": "qoder-cn.coding-plan.149",
           "model_ids": [
             "qwen3.8-max",
             "deepseek-v4-pro",
@@ -6629,8 +6630,7 @@
             "kimi-2.7-code",
             "minimax-m2.7"
           ],
-          "has_affiliate": false,
-          "planId": "qoder-cn.coding-plan.149"
+          "has_affiliate": false
         },
         {
           "id": "qoder-cn-enterprise",
@@ -6689,6 +6689,7 @@
           "risk_text": "企业专属版涉及最低人数、VPC 部署和商务条款，采购前需与官网或商务渠道确认。",
           "sort_order": 7,
           "privacy_override_json": "{\"data_training\":\"no\",\"note\":\"企业版默认关闭数据共享，不用于模型训练\"}",
+          "planId": "qoder-cn.coding-plan.199",
           "model_ids": [
             "qwen3.8-max",
             "deepseek-v4-pro",
@@ -6696,8 +6697,7 @@
             "kimi-2.7-code",
             "minimax-m2.7"
           ],
-          "has_affiliate": false,
-          "planId": "qoder-cn.coding-plan.199"
+          "has_affiliate": false
         },
         {
           "id": "qoder-cn-pro-redemption-card",
@@ -6756,6 +6756,7 @@
           "risk_text": "电子兑换码仅供非付费会员状态账号兑换；购买日起 90 天有效；不支持退款；每张仅限使用一次，兑换后不可撤销和转让。",
           "sort_order": 8,
           "privacy_override_json": null,
+          "planId": "qoder-cn.credits-plan.59",
           "model_ids": [
             "qwen3.8-max",
             "deepseek-v4-pro",
@@ -6763,8 +6764,7 @@
             "kimi-2.7-code",
             "minimax-m2.7"
           ],
-          "has_affiliate": false,
-          "planId": "qoder-cn.credits-plan.59"
+          "has_affiliate": false
         }
       ]
     },
@@ -6850,11 +6850,11 @@
           "risk_text": "首购优惠资格和持续时间以活动规则为准；连续包月次月恢复原价。",
           "sort_order": 1,
           "privacy_override_json": null,
+          "planId": "baidu-qianfan.token-plan.9.9",
           "model_ids": [
             "ernie-5.1"
           ],
-          "has_affiliate": false,
-          "planId": "baidu-qianfan.token-plan.9.9"
+          "has_affiliate": false
         },
         {
           "id": "baidu-qianfan-token-lite",
@@ -6913,11 +6913,11 @@
           "risk_text": "当前暂时售罄；首购优惠资格和持续时间以活动规则为准；连续包月次月恢复原价。",
           "sort_order": 2,
           "privacy_override_json": null,
+          "planId": "baidu-qianfan.token-plan.40",
           "model_ids": [
             "ernie-5.1"
           ],
-          "has_affiliate": false,
-          "planId": "baidu-qianfan.token-plan.40"
+          "has_affiliate": false
         },
         {
           "id": "baidu-qianfan-token-pro",
@@ -6976,11 +6976,11 @@
           "risk_text": "当前暂时售罄；首购优惠资格和持续时间以活动规则为准；连续包月次月恢复原价。",
           "sort_order": 3,
           "privacy_override_json": null,
+          "planId": "baidu-qianfan.token-plan.200",
           "model_ids": [
             "ernie-5.1"
           ],
-          "has_affiliate": false,
-          "planId": "baidu-qianfan.token-plan.200"
+          "has_affiliate": false
         },
         {
           "id": "baidu-qianfan-token-max",
@@ -7039,11 +7039,11 @@
           "risk_text": "首购优惠资格和持续时间以活动规则为准；连续包月次月恢复原价。",
           "sort_order": 4,
           "privacy_override_json": null,
+          "planId": "baidu-qianfan.token-plan.600",
           "model_ids": [
             "ernie-5.1"
           ],
-          "has_affiliate": false,
-          "planId": "baidu-qianfan.token-plan.600"
+          "has_affiliate": false
         },
         {
           "id": "baidu-qianfan-token-enterprise-light",
@@ -7102,11 +7102,11 @@
           "risk_text": "积分消耗动态决定；仅限兼容 AI 工具交互式使用；禁止多人共享，违规可能封禁。",
           "sort_order": 5,
           "privacy_override_json": null,
+          "planId": "baidu-qianfan.token-plan.149",
           "model_ids": [
             "ernie-5.1"
           ],
-          "has_affiliate": false,
-          "planId": "baidu-qianfan.token-plan.149"
+          "has_affiliate": false
         },
         {
           "id": "baidu-qianfan-token-enterprise-professional",
@@ -7165,11 +7165,11 @@
           "risk_text": "积分消耗动态决定；仅限兼容 AI 工具交互式使用；禁止多人共享，违规可能封禁。",
           "sort_order": 6,
           "privacy_override_json": null,
+          "planId": "baidu-qianfan.token-plan.419",
           "model_ids": [
             "ernie-5.1"
           ],
-          "has_affiliate": false,
-          "planId": "baidu-qianfan.token-plan.419"
+          "has_affiliate": false
         },
         {
           "id": "baidu-qianfan-token-enterprise-advanced",
@@ -7228,11 +7228,11 @@
           "risk_text": "积分消耗动态决定；仅限兼容 AI 工具交互式使用；禁止多人共享，违规可能封禁。",
           "sort_order": 7,
           "privacy_override_json": null,
+          "planId": "baidu-qianfan.token-plan.989",
           "model_ids": [
             "ernie-5.1"
           ],
-          "has_affiliate": false,
-          "planId": "baidu-qianfan.token-plan.989"
+          "has_affiliate": false
         }
       ]
     },
@@ -7318,13 +7318,13 @@
           "risk_text": "",
           "sort_order": 4,
           "privacy_override_json": null,
+          "planId": "aliyun.token-plan.39",
           "model_ids": [
             "deepseek-v4-pro",
             "qwen3.8-max",
             "glm-5.2"
           ],
-          "has_affiliate": false,
-          "planId": "aliyun.token-plan.39"
+          "has_affiliate": false
         },
         {
           "id": "aliyun-bailian.standard",
@@ -7383,13 +7383,13 @@
           "risk_text": "",
           "sort_order": 5,
           "privacy_override_json": null,
+          "planId": "aliyun.token-plan.139",
           "model_ids": [
             "deepseek-v4-pro",
             "qwen3.8-max",
             "glm-5.2"
           ],
-          "has_affiliate": false,
-          "planId": "aliyun.token-plan.139"
+          "has_affiliate": false
         },
         {
           "id": "aliyun-bailian.pro",
@@ -7448,13 +7448,13 @@
           "risk_text": "",
           "sort_order": 6,
           "privacy_override_json": null,
+          "planId": "aliyun.token-plan.499",
           "model_ids": [
             "deepseek-v4-pro",
             "qwen3.8-max",
             "glm-5.2"
           ],
-          "has_affiliate": false,
-          "planId": "aliyun.token-plan.499"
+          "has_affiliate": false
         }
       ]
     },
@@ -7540,11 +7540,11 @@
           "risk_text": "Token Plan 团队版为按坐席订阅的模型调用资源包，不等同于前台会员订阅；限时价与额度以官方购买页和控制台为准。",
           "sort_order": 7,
           "privacy_override_json": null,
+          "planId": "aliyun.token-plan.150",
           "model_ids": [
             "qwen3.8-max"
           ],
-          "has_affiliate": false,
-          "planId": "aliyun.token-plan.150"
+          "has_affiliate": false
         },
         {
           "id": "aliyun-token-plan-advanced",
@@ -7603,11 +7603,11 @@
           "risk_text": "Token Plan 团队版为按坐席订阅的模型调用资源包，不等同于前台会员订阅；限时价与额度以官方购买页和控制台为准。",
           "sort_order": 8,
           "privacy_override_json": null,
+          "planId": "aliyun.token-plan.550",
           "model_ids": [
             "qwen3.8-max"
           ],
-          "has_affiliate": false,
-          "planId": "aliyun.token-plan.550"
+          "has_affiliate": false
         },
         {
           "id": "aliyun-token-plan-premium",
@@ -7666,11 +7666,11 @@
           "risk_text": "Token Plan 团队版为按坐席订阅的模型调用资源包，不等同于前台会员订阅；额度以官方购买页和控制台为准。",
           "sort_order": 9,
           "privacy_override_json": null,
+          "planId": "aliyun.token-plan.1398",
           "model_ids": [
             "qwen3.8-max"
           ],
-          "has_affiliate": false,
-          "planId": "aliyun.token-plan.1398"
+          "has_affiliate": false
         },
         {
           "id": "aliyun-token-plan-shared-pack",
@@ -7729,13 +7729,13 @@
           "risk_text": "Token Plan 团队版共享用量包为跨坐席弹性额度，有效期 1 个月且到期清零；额度以官方购买页和控制台为准。",
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "aliyun.token-plan.5000",
           "model_ids": [
             "minimax-m2-5",
             "glm-5.2",
             "qwen3.8-max"
           ],
-          "has_affiliate": false,
-          "planId": "aliyun.token-plan.5000"
+          "has_affiliate": false
         }
       ]
     },
@@ -7821,11 +7821,11 @@
           "risk_text": "官方按积分公开额度，实际可用 token 随缓存命中率与高峰/非高峰时段浮动（非高峰按 50% 抵扣，高峰为周一至周五 14:00-18:00）；具体售卖状态以购买页为准。",
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "glm.coding-plan.118",
           "model_ids": [
             "glm-5.2"
           ],
-          "has_affiliate": false,
-          "planId": "glm.coding-plan.118"
+          "has_affiliate": false
         },
         {
           "id": "glm-5.1-coding-pro",
@@ -7884,11 +7884,11 @@
           "risk_text": "官方按积分公开额度，实际可用 token 随缓存命中率与高峰/非高峰时段浮动（非高峰按 50% 抵扣，高峰为周一至周五 14:00-18:00）；具体售卖状态以购买页为准。",
           "sort_order": 20,
           "privacy_override_json": null,
+          "planId": "glm.coding-plan.538",
           "model_ids": [
             "glm-5.2"
           ],
-          "has_affiliate": false,
-          "planId": "glm.coding-plan.538"
+          "has_affiliate": false
         },
         {
           "id": "glm-5.1-coding-max",
@@ -7947,11 +7947,11 @@
           "risk_text": "官方按积分公开额度，实际可用 token 随缓存命中率与高峰/非高峰时段浮动（非高峰按 50% 抵扣，高峰为周一至周五 14:00-18:00）；具体售卖状态以购买页为准。",
           "sort_order": 30,
           "privacy_override_json": null,
+          "planId": "glm.coding-plan.1078",
           "model_ids": [
             "glm-5.2"
           ],
-          "has_affiliate": false,
-          "planId": "glm.coding-plan.1078"
+          "has_affiliate": false
         },
         {
           "id": "glm-5.1-coding-team-standard",
@@ -8010,11 +8010,11 @@
           "risk_text": "2个席位起购",
           "sort_order": 40,
           "privacy_override_json": null,
+          "planId": "glm.coding-plan.598",
           "model_ids": [
             "glm-5.2"
           ],
-          "has_affiliate": false,
-          "planId": "glm.coding-plan.598"
+          "has_affiliate": false
         },
         {
           "id": "glm-5.1-coding-team-advanced",
@@ -8073,11 +8073,11 @@
           "risk_text": "2个席位起购",
           "sort_order": 50,
           "privacy_override_json": null,
+          "planId": "glm.coding-plan.1198",
           "model_ids": [
             "glm-5.2"
           ],
-          "has_affiliate": false,
-          "planId": "glm.coding-plan.1198"
+          "has_affiliate": false
         }
       ]
     },
@@ -8163,11 +8163,11 @@
           "risk_text": null,
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "mthreads.lite.coding-plan",
           "model_ids": [
             "glm-4-7"
           ],
-          "has_affiliate": false,
-          "planId": "mthreads.lite.coding-plan"
+          "has_affiliate": false
         },
         {
           "id": "mthreads.pro-plan",
@@ -8226,11 +8226,11 @@
           "risk_text": null,
           "sort_order": 20,
           "privacy_override_json": null,
+          "planId": "mthreads.pro.coding-plan",
           "model_ids": [
             "glm-4-7"
           ],
-          "has_affiliate": false,
-          "planId": "mthreads.pro.coding-plan"
+          "has_affiliate": false
         },
         {
           "id": "mthreads.max-plan",
@@ -8289,11 +8289,11 @@
           "risk_text": null,
           "sort_order": 30,
           "privacy_override_json": null,
+          "planId": "mthreads.max.coding-plan",
           "model_ids": [
             "glm-4-7"
           ],
-          "has_affiliate": false,
-          "planId": "mthreads.max.coding-plan"
+          "has_affiliate": false
         }
       ]
     },
@@ -8379,11 +8379,11 @@
           "risk_text": null,
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "ucloud.mini.coding-plan.49",
           "model_ids": [
             "glm-5-1"
           ],
-          "has_affiliate": false,
-          "planId": "ucloud.mini.coding-plan.49"
+          "has_affiliate": false
         },
         {
           "id": "ucloud.lite",
@@ -8442,11 +8442,11 @@
           "risk_text": null,
           "sort_order": 20,
           "privacy_override_json": null,
+          "planId": "ucloud.lite.coding-plan.99",
           "model_ids": [
             "glm-5-1"
           ],
-          "has_affiliate": false,
-          "planId": "ucloud.lite.coding-plan.99"
+          "has_affiliate": false
         },
         {
           "id": "ucloud.basic",
@@ -8505,11 +8505,11 @@
           "risk_text": null,
           "sort_order": 30,
           "privacy_override_json": null,
+          "planId": "ucloud.basic.coding-plan.199",
           "model_ids": [
             "glm-5-1"
           ],
-          "has_affiliate": false,
-          "planId": "ucloud.basic.coding-plan.199"
+          "has_affiliate": false
         },
         {
           "id": "ucloud.pro",
@@ -8568,11 +8568,11 @@
           "risk_text": null,
           "sort_order": 40,
           "privacy_override_json": null,
+          "planId": "ucloud.pro.coding-plan.499",
           "model_ids": [
             "glm-5-1"
           ],
-          "has_affiliate": false,
-          "planId": "ucloud.pro.coding-plan.499"
+          "has_affiliate": false
         },
         {
           "id": "ucloud.max",
@@ -8631,11 +8631,11 @@
           "risk_text": null,
           "sort_order": 50,
           "privacy_override_json": null,
+          "planId": "ucloud.max.coding-plan.799",
           "model_ids": [
             "glm-5-1"
           ],
-          "has_affiliate": false,
-          "planId": "ucloud.max.coding-plan.799"
+          "has_affiliate": false
         },
         {
           "id": "ucloud.ultra",
@@ -8694,11 +8694,11 @@
           "risk_text": null,
           "sort_order": 60,
           "privacy_override_json": null,
+          "planId": "ucloud.ultra.coding-plan.999",
           "model_ids": [
             "glm-5-1"
           ],
-          "has_affiliate": false,
-          "planId": "ucloud.ultra.coding-plan.999"
+          "has_affiliate": false
         }
       ]
     },
@@ -8784,13 +8784,13 @@
           "risk_text": null,
           "sort_order": 10,
           "privacy_override_json": null,
+          "planId": "streamlake.mini.coding-plan.29",
           "model_ids": [
             "kat-coder-pro-v2.5",
             "kat-coder-pro-v2",
             "kat-coder-pro-v1"
           ],
-          "has_affiliate": false,
-          "planId": "streamlake.mini.coding-plan.29"
+          "has_affiliate": false
         },
         {
           "id": "streamlake.starter",
@@ -8849,13 +8849,13 @@
           "risk_text": null,
           "sort_order": 20,
           "privacy_override_json": null,
+          "planId": "streamlake.starter.coding-plan.70",
           "model_ids": [
             "kat-coder-pro-v2.5",
             "kat-coder-pro-v2",
             "kat-coder-pro-v1"
           ],
-          "has_affiliate": false,
-          "planId": "streamlake.starter.coding-plan.70"
+          "has_affiliate": false
         },
         {
           "id": "streamlake.pro",
@@ -8914,13 +8914,13 @@
           "risk_text": null,
           "sort_order": 30,
           "privacy_override_json": null,
+          "planId": "streamlake.pro.coding-plan.140",
           "model_ids": [
             "kat-coder-pro-v2.5",
             "kat-coder-pro-v2",
             "kat-coder-pro-v1"
           ],
-          "has_affiliate": false,
-          "planId": "streamlake.pro.coding-plan.140"
+          "has_affiliate": false
         },
         {
           "id": "streamlake.max",
@@ -8979,13 +8979,13 @@
           "risk_text": null,
           "sort_order": 40,
           "privacy_override_json": null,
+          "planId": "streamlake.max.coding-plan.350",
           "model_ids": [
             "kat-coder-pro-v2.5",
             "kat-coder-pro-v2",
             "kat-coder-pro-v1"
           ],
-          "has_affiliate": false,
-          "planId": "streamlake.max.coding-plan.350"
+          "has_affiliate": false
         }
       ]
     },
@@ -9071,9 +9071,9 @@
           "risk_text": null,
           "sort_order": 20,
           "privacy_override_json": null,
+          "planId": "iflytek.token-plan.200",
           "model_ids": [],
-          "has_affiliate": false,
-          "planId": "iflytek.token-plan.200"
+          "has_affiliate": false
         },
         {
           "id": "iflytek-spark.token-plan-24aa9e",
@@ -9132,9 +9132,9 @@
           "risk_text": null,
           "sort_order": 30,
           "privacy_override_json": null,
+          "planId": "iflytek.token-plan.600",
           "model_ids": [],
-          "has_affiliate": false,
-          "planId": "iflytek.token-plan.600"
+          "has_affiliate": false
         },
         {
           "id": "iflytek-spark.token-plan-01077f",
@@ -9193,9 +9193,9 @@
           "risk_text": null,
           "sort_order": 40,
           "privacy_override_json": null,
+          "planId": "iflytek.token-plan.2000",
           "model_ids": [],
-          "has_affiliate": false,
-          "planId": "iflytek.token-plan.2000"
+          "has_affiliate": false
         }
       ]
     },
@@ -9281,13 +9281,13 @@
           "risk_text": null,
           "sort_order": 30,
           "privacy_override_json": null,
+          "planId": "cucloud.team.token-plan.198",
           "model_ids": [
             "minimax-m2-5",
             "deepseek-v4-flash",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "cucloud.team.token-plan.198"
+          "has_affiliate": false
         },
         {
           "id": "cucloud.team-pro",
@@ -9346,13 +9346,13 @@
           "risk_text": null,
           "sort_order": 40,
           "privacy_override_json": null,
+          "planId": "cucloud.team.token-plan.698",
           "model_ids": [
             "minimax-m2-5",
             "deepseek-v4-flash",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "cucloud.team.token-plan.698"
+          "has_affiliate": false
         },
         {
           "id": "cucloud.team-max",
@@ -9411,13 +9411,13 @@
           "risk_text": null,
           "sort_order": 50,
           "privacy_override_json": null,
+          "planId": "cucloud.team.token-plan.1398",
           "model_ids": [
             "minimax-m2-5",
             "deepseek-v4-flash",
             "deepseek-v4-pro"
           ],
-          "has_affiliate": false,
-          "planId": "cucloud.team.token-plan.1398"
+          "has_affiliate": false
         }
       ]
     }

@@ -501,7 +501,7 @@ export function renderModelPriceView(container, models, providerInfo = {}) {
       </div>
       <div class="brand-search-box">
         <svg class="brand-search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4 4" stroke-linecap="round"/></svg>
-        <input type="search" class="brand-search-input" data-model-search placeholder="搜索模型…" autocomplete="off" aria-label="搜索模型" value="${escapeHtml(searchQuery)}">
+        <input type="search" class="brand-search-input" data-model-search placeholder="搜索模型，如 GPT-5、Claude…" autocomplete="off" aria-label="搜索模型" value="${escapeHtml(searchQuery)}">
       </div>
     </div>`;
   }

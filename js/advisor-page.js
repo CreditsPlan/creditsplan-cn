@@ -1,5 +1,5 @@
 // advisor-page.js — 独立选购助手页（/advisor/）：复用 plan-advisor 的 createAdvisorApp，
-// 筛选条件同步到 URL query（families/usage/budget/rmb），复制链接即可分享当前结果。
+// 筛选条件同步到 URL query（families/usage/budget），复制链接即可分享当前结果。
 // 页面外壳（header/footer/主题）由 HEAD_COMMON 中 app.js 的 data-auto-init 完成。
 import { createAdvisorApp } from './plan-advisor.js';
 import { loadPlanDataset } from './public-data.js';
@@ -14,8 +14,7 @@ function stateFromLocation() {
   return {
     families,
     usage: Number.isFinite(usage) && usage > 0 ? usage : undefined,
-    budget: Number.isFinite(budget) && budget > 0 ? budget : undefined,
-    rmbOnly: params.get('rmb') === '1'
+    budget: Number.isFinite(budget) && budget > 0 ? budget : undefined
   };
 }
 
@@ -24,7 +23,6 @@ function syncStateToLocation(state) {
   if (state.families.size) params.set('families', [...state.families].join(','));
   if (state.usage) params.set('usage', String(state.usage));
   if (state.budget != null) params.set('budget', String(state.budget));
-  if (state.rmbOnly) params.set('rmb', '1');
   const query = params.toString();
   history.replaceState(null, '', `${location.pathname}${query ? `?${query}` : ''}`);
 }

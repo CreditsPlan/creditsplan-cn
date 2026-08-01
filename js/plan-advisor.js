@@ -1,5 +1,5 @@
 // plan-advisor.js — 「帮我选套餐」性价比计算器（纯前端，基于已加载的套餐数据）
-// 输入：模型系（多选）、月用量档位、人民币直付/预算上限；输出：分层排序的套餐推荐。
+// 输入：模型系（多选）、月用量档位、预算上限；输出：分层排序的套餐推荐。
 // 表单与结果渲染抽取为 createAdvisorApp，供首页弹窗（initPlanAdvisor）与独立页 /advisor/ 复用。
 import { escapeHtml, safeExternalUrl } from './render.js';
 import { renderBrandIcon } from './plans-table.js';
@@ -70,13 +70,12 @@ function planFamilies(plan, familyByModelId) {
 
 // 分层：1 额度覆盖用量（每千次成本升序）→ 2 额度可能不足 → 3 额度未公开（月价升序）→ 4 模型未标注
 export function rankPlans(plans, criteria, familyByModelId) {
-  const { families, usage, rmbOnly, budget } = criteria;
+  const { families, usage, budget } = criteria;
   const results = [];
   let paygoCount = 0;
 
   for (const plan of plans) {
     if (plan.planType === 'api_package') { paygoCount += 1; continue; }
-    if (rmbOnly && !plan.domesticPayment) continue;
 
     const price = effectiveMonthlyPrice(plan);
     if (budget != null && price && price.cny > budget) continue;
@@ -143,7 +142,6 @@ function renderResultItem(item, providerInfo) {
   if (costPer1k != null) {
     chips.push(`<span class="plan-advisor-chip">每千次 ≈ ${formatMoney(costPer1k)}</span>`);
   }
-  if (plan.domesticPayment) chips.push('<span class="plan-advisor-chip">人民币直付</span>');
   if (plan.supportedModelNames?.length) {
     const names = plan.supportedModelNames.slice(0, 3).join(' / ');
     chips.push(`<span class="plan-advisor-chip">支持 ${escapeHtml(names)}${plan.supportedModelNames.length > 3 ? ' 等' : ''}</span>`);
@@ -213,10 +211,6 @@ function renderAdvisorForm(familyOptions, state) {
         </div>
       </div>
       <div class="plan-advisor-field plan-advisor-field--row">
-        <label class="plan-advisor-switch">
-          <input type="checkbox" data-advisor-rmb${state.rmbOnly ? ' checked' : ''}>
-          <span>仅看支持人民币直付</span>
-        </label>
         <label class="plan-advisor-budget">
           <span>预算上限</span>
           <input type="number" min="0" class="plan-advisor-input" data-advisor-budget placeholder="¥/月，可不填" aria-label="每月预算上限（元）" value="${state.budget ?? ''}">
@@ -249,7 +243,6 @@ export function createAdvisorApp({ root, plans, providerInfo = {}, modelCatalog 
   const state = {
     families: new Set([...(initialState.families || [])].filter(family => knownFamilies.has(family))),
     usage: Number.isFinite(initialState.usage) && initialState.usage > 0 ? initialState.usage : USAGE_TIERS[1].value,
-    rmbOnly: initialState.rmbOnly === true,
     budget: Number.isFinite(initialState.budget) && initialState.budget > 0 ? initialState.budget : null,
     showAll: false
   };
@@ -325,13 +318,6 @@ export function createAdvisorApp({ root, plans, providerInfo = {}, modelCatalog 
         button.setAttribute('aria-pressed', 'false');
       });
     }
-    state.showAll = false;
-    renderResults();
-    notify();
-  });
-
-  root.querySelector('[data-advisor-rmb]')?.addEventListener('change', event => {
-    state.rmbOnly = event.target.checked;
     state.showAll = false;
     renderResults();
     notify();
