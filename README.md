@@ -1,4 +1,6 @@
-# CreditsPlan（国内站）
+﻿# CreditsPlan（国内站）
+
+**[English](README_en.md) | 中文**
 
 <p align="center">
   <a href="https://creditsplan.cn/"><img src="./logo.webp" alt="CreditsPlan Logo" width="120"></a>
@@ -28,7 +30,7 @@ CreditsPlan 是面向中文 AI 开发者的订阅决策平台，对国产 AI Cod
 
 - ✅ **官方来源核对**：每个套餐的价格、额度与购买状态均对照厂商官方页面核对，并附来源链接
 - 🕒 **最近核对日期**：每条记录标注核对日期，透明可查
-- 📈 **价格历史追踪**：价格变动会归档（`price-history.json`），并通过 [RSS](https://creditsplan.cn/price-changes.xml) 发布
+-  **价格历史追踪**：价格变动会归档（`price-history.json`），并通过 [RSS](https://creditsplan.cn/price-changes.xml) 发布
 - 🇨🇳 **国内使用条件**：标注人民币支付、发票支持、账号门槛等国内开发者关心的信息
 
 ## 核心页面
@@ -55,8 +57,8 @@ CreditsPlan 是面向中文 AI 开发者的订阅决策平台，对国产 AI Cod
 ├── plans/                  # 各套餐详情页（静态化 SEO 页面）
 ├── news.html               # AI 动态
 ├── methodology.html        # 方法论
-├── changelog.html          # 更新日志
-├── data.json               # 套餐与模型核心数据
+── changelog.html          # 更新日志
+── data.json               # 套餐与模型核心数据
 ├── changelog.json          # 更新日志数据
 ├── price-history.json      # 价格历史数据
 ├── price-changes.xml       # 价格变动 RSS
