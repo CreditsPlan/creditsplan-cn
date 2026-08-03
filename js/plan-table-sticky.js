@@ -14,7 +14,7 @@ export function initPlanTableSticky(detail) {
   let rafId = 0;
 
   const headerOffset = () => {
-    const raw = getComputedStyle(document.documentElement).getPropertyValue('--header-height');
+    const raw = window.getComputedStyle(document.documentElement).getPropertyValue('--header-height');
     const value = parseFloat(raw);
     return Number.isFinite(value) && value > 0 ? value : 64;
   };
@@ -54,7 +54,7 @@ export function initPlanTableSticky(detail) {
     const wrap = detail.querySelector('.plan-table-wrap');
     const table = wrap?.querySelector('table');
     // 移动端卡片视图 / 表格未渲染时不吸顶
-    if (!viewTable || !wrap || !table || getComputedStyle(viewTable).display === 'none') {
+    if (!viewTable || !wrap || !table || window.getComputedStyle(viewTable).display === 'none') {
       hideBar();
       return;
     }
