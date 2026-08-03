@@ -1,5 +1,6 @@
 import { initAppShell } from './app.js';
 import {
+  applyPlanTableFilter,
   bindPlanTableFilters,
   clearPlanTableFilter,
   isAvailableOnlyActive,
@@ -327,7 +328,8 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
   let currentPlans = displayablePlans;
   let activeBrandId = 'all';
   let activeDimension = 'brand';
-  bindExportMenu(els.codingPlanOverview, () => currentPlans, providerInfo, () => activeDimension, () => models);
+  // 套餐导出跟随列筛选与「只看可购买」（与表格展示口径一致）
+  bindExportMenu(els.codingPlanOverview, () => applyPlanTableFilter(currentPlans), providerInfo, () => activeDimension, () => models);
   let selectedPlanKey = '';
   const expandedProviders = new Set();
   // “只看可购买”开关常驻筛选栏，不随视图重绘，需手动同步激活态（切换品牌/维度时会被重置）
@@ -490,10 +492,9 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
     renderCurrentView();
   });
 
-  // 导航菜单「模型」入口：/model 直达模型价格对比视图（兼容旧链接 ?view=pricing，会被同步成 /model）
+  // 导航菜单「模型」入口：/model 直达模型价格对比视图
   const entryPath = (globalThis.location?.pathname || '').replace(/\/+$/, '') || '/';
-  const isLegacyPricingQuery = new URLSearchParams(globalThis.location?.search || '').get('view') === 'pricing';
-  if (entryPath === '/model' || isLegacyPricingQuery) {
+  if (entryPath === '/model') {
     switchDimension('pricing');
   }
 }
@@ -503,7 +504,6 @@ function syncPricingViewToLocation(mode) {
   if (typeof globalThis.history?.replaceState !== 'function') return;
   try {
     const url = new URL(globalThis.location.href);
-    url.searchParams.delete('view'); // 清理旧格式 ?view=pricing
     const pathname = mode === 'pricing' ? '/model' : '/';
     globalThis.history.replaceState(null, '', `${pathname}${url.searchParams.toString() ? `?${url.searchParams.toString()}` : ''}${url.hash}`);
   } catch { /* ignore invalid locations */ }

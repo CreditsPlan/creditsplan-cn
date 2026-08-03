@@ -47,10 +47,9 @@ export function renderHeader(currentPage = 'index.html') {
   const root = document.getElementById('header-root');
   if (!root) return;
   const current = normalized(currentPage);
-  // 「模型」与「套餐」同为首页文档，通过 /model 路径区分高亮（兼容旧链接 ?view=pricing）
+  // 「模型」与「套餐」同为首页文档，通过 /model 路径区分高亮
   const pathname = (globalThis.location?.pathname || '').replace(/\/+$/, '') || '/';
-  const isModelView = pathname === '/model'
-    || new URLSearchParams(globalThis.location?.search || '').get('view') === 'pricing';
+  const isModelView = pathname === '/model';
   const navItems = pages.map(([page, href, label]) => {
     let active;
     if (page === 'model') active = current === 'index.html' && isModelView;

@@ -42,9 +42,18 @@ export function purchaseLinkTarget(plan, planUrl) {
   return { href: planUrl, rel: 'noopener noreferrer nofollow' };
 }
 
-function addPlanExtraRow(rows, label, value, keepInline) {
+function addPlanExtraRow(rows, label, value, keepInline, wide, compactInline, nowrapValue) {
   const text = optionalDetailText(value);
-  if (text) rows.push({ label, value: text, keepInline: keepInline || false });
+  if (text) {
+    rows.push({
+      label,
+      value: text,
+      keepInline: keepInline || false,
+      wide: wide || false,
+      compactInline: compactInline || false,
+      nowrapValue: nowrapValue || false
+    });
+  }
 }
 
 function notesWithoutTableDuplicates(plan) {
@@ -165,45 +174,56 @@ export function renderSelectedPlanDetail(plan, providerInfo = {}) {
   const tokenLimitDuplicated = Boolean(compactTokenLimit)
     && optionalDetailText(plan.includedCalls).replace(/\s+/g, '').includes(compactTokenLimit);
 
-  addPlanExtraRow(rows, '套餐类型', typeLabel, true);
-  addPlanExtraRow(rows, '支持模型', (plan.supportedModelNames || []).join('、'), true);
+  addPlanExtraRow(rows, '套餐类型', typeLabel, false, false, true);
+  addPlanExtraRow(rows, '支持模型', (plan.supportedModelNames || []).join('、'), false, true);
   if (plan.firstMonthPrice != null) {
     const firstMonthPrice = Number(plan.firstMonthPrice);
     addPlanExtraRow(rows, '首月价格', Number.isFinite(firstMonthPrice)
       ? `${currencySymbol(plan.monthlyCurrency || 'CNY')}${formatPriceNumber(firstMonthPrice)}`
       : plan.firstMonthPrice);
   }
-  if (plan.domesticPayment) addPlanExtraRow(rows, '国内支付', '支持', true);
-  if (quotaField !== 'includedCalls') addPlanExtraRow(rows, '包含调用量', plan.includedCalls, true);
-  const fiveH = optionalDetailText(plan.fiveHoursRequests);
-  const weekly = optionalDetailText(plan.weeklyRequests);
-  if (fiveH || weekly) {
-    const combined = [fiveH ? `5小时请求 ${fiveH}` : '', weekly ? `周请求 ${weekly}` : ''].filter(Boolean).join('  ·  ');
-    addPlanExtraRow(rows, '请求频率', combined);
+  if (plan.domesticPayment) addPlanExtraRow(rows, '国内支付', '支持', false, false, true);
+  if (quotaField !== 'includedCalls') addPlanExtraRow(rows, '包含调用量', plan.includedCalls, false, false, true);
+  // 合并五小时/周/月请求为一行多指标，防止换行撑高卡片
+  const fiveHourText = optionalDetailText(plan.fiveHoursRequests);
+  const weeklyText = optionalDetailText(plan.weeklyRequests);
+  const monthlyText = quotaField === 'monthlyRequests' ? '' : optionalDetailText(plan.monthlyRequests);
+  if (fiveHourText || weeklyText || monthlyText) {
+    rows.push({
+      label: '',
+      value: '',
+      keepInline: false,
+      wide: false,
+      compactInline: false,
+      nowrapValue: false,
+      isRequestsRow: true,
+      fiveHourText,
+      weeklyText,
+      monthlyText
+    });
   }
-  if (quotaField !== 'monthlyRequests') addPlanExtraRow(rows, '月请求', plan.monthlyRequests);
   addPlanExtraRow(rows, '5小时实测 Tokens', plan.measuredFiveHoursTokens);
   addPlanExtraRow(rows, '周实测 Tokens', plan.measuredWeeklyTokens);
   addPlanExtraRow(rows, '月实测 Tokens', plan.measuredMonthlyTokens);
   if (quotaField !== 'tokenLimit' && !tokenLimitDuplicated) addPlanExtraRow(rows, 'Token上限', plan.tokenLimit);
-  addPlanExtraRow(rows, '权益', plan.benefits);
+  addPlanExtraRow(rows, '权益', plan.benefits ? plan.benefits.replace(/\n/g, '；') : undefined);
   addPlanExtraRow(rows, '输入价格', plan.modelInputPrice);
   addPlanExtraRow(rows, '输出价格', plan.modelOutputPrice);
   if (plan.monthlyCurrency === 'USD') {
-    addPlanExtraRow(rows, '支付币种', plan.monthlyCurrencyLabel || '美元');
+    addPlanExtraRow(rows, '支付币种', plan.monthlyCurrencyLabel || '美元', true);
   } else if (hasRmb) {
     addPlanExtraRow(rows, '人民币充值', plan.rmbRecharge);
   }
-  if (hasInvoice) addPlanExtraRow(rows, '发票支持', plan.invoice);
+  if (hasInvoice) addPlanExtraRow(rows, '发票支持', plan.invoice, true);
   addPlanExtraRow(rows, 'Credits限制', plan.creditsLimit, true);
   addPlanExtraRow(rows, '并发限制', plan.concurrencyLimit);
-  addPlanExtraRow(rows, '刷新规则', plan.resetRule);
+  addPlanExtraRow(rows, '刷新规则', plan.resetRule, false, true);
   addPlanExtraRow(rows, '退款政策', plan.refundPolicy);
   addPlanExtraRow(rows, '评分', plan.rating);
   addPlanExtraRow(rows, '标签', plan.tags);
   addPlanExtraRow(rows, '适用场景', plan.suitableFor);
-  addPlanExtraRow(rows, '适合', plan.recommendationText);
-  addPlanExtraRow(rows, '注意', getRiskDisplayText(plan));
+  addPlanExtraRow(rows, '适合', plan.recommendationText, false, true);
+  addPlanExtraRow(rows, '注意', getRiskDisplayText(plan), false, true);
   if (privacy.training) {
     const trainingLabel = DATA_TRAINING_LABELS[privacy.training] || privacy.training;
     const privacyFresh = privacyFreshness(privacy.verifiedAt);
@@ -215,15 +235,33 @@ export function renderSelectedPlanDetail(plan, providerInfo = {}) {
   }
   addPlanExtraRow(rows, '训练关闭', privacy.optOut);
   addPlanExtraRow(rows, '数据保留', privacy.retention);
-  addPlanExtraRow(rows, '备注', notesWithoutTableDuplicates(plan));
+  addPlanExtraRow(rows, '备注', notesWithoutTableDuplicates(plan), false, true);
 
   const rowsHtml = rows.length ? rows.map(row => {
-    const isLong = row.value.length > 40 || row.label === '刷新规则' || row.label === '备注' || row.label === '注意' || row.label === '适合';
+    if (row.isRequestsRow) {
+      return `
+      <div class="plan-extra-item plan-extra-requests-row">
+        ${row.fiveHourText ? `<div class="plan-requests-metric">
+          <span class="plan-extra-label">5小时请求</span>
+          <span class="plan-extra-value">${escapeHtml(row.fiveHourText)}</span>
+        </div>` : ''}
+        ${row.weeklyText ? `<div class="plan-requests-metric">
+          <span class="plan-extra-label">周请求</span>
+          <span class="plan-extra-value">${escapeHtml(row.weeklyText)}</span>
+        </div>` : ''}
+        ${row.monthlyText ? `<div class="plan-requests-metric">
+          <span class="plan-extra-label">月请求</span>
+          <span class="plan-extra-value">${escapeHtml(row.monthlyText)}</span>
+        </div>` : ''}
+      </div>`;
+    }
+    const isLong = row.value.length > 40 || row.wide;
     const itemClass = row.keepInline
       ? 'plan-extra-item plan-extra-inline'
-      : (isLong ? 'plan-extra-item plan-extra-wide' : 'plan-extra-item plan-extra-inline');
+      : (isLong ? 'plan-extra-item plan-extra-wide' : `plan-extra-item ${row.compactInline ? 'plan-extra-compact-inline' : 'plan-extra-inline'}`);
+    const nowrapClass = row.nowrapValue ? ' plan-extra-nowrap' : '';
     return `
-    <div class="${itemClass}">
+    <div class="${itemClass}${nowrapClass}">
       <span class="plan-extra-label">${escapeHtml(row.label)}</span>
       <span class="plan-extra-value">${escapeHtml(row.value)}</span>
     </div>`;

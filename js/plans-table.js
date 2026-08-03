@@ -87,22 +87,21 @@ export function renderBrandIcon(iconUrl, label, className = 'brand-icon') {
 }
 
 function groupPlansByProvider(plans, providerInfo) {
-  const map = new Map();
+  const groupMap = new Map();
   for (const plan of plans) {
-    let current = map.get(plan.provider);
-    if (!current) {
-      current = {
+    const key = PROVIDER_NAME_MAP[plan.provider] || plan.provider;
+    if (!groupMap.has(key)) {
+      groupMap.set(key, {
         provider: plan.provider,
         label: displayNameForProvider(plan.provider, providerInfo, PROVIDER_NAME_MAP),
         iconUrl: planIconUrl(plan, providerInfo),
         brandHref: brandDetailHref(plan.provider, providerInfo),
         plans: []
-      };
-      map.set(plan.provider, current);
+      });
     }
-    current.plans.push(plan);
+    groupMap.get(key).plans.push(plan);
   }
-  const groups = [...map.values()];
+  const groups = [...groupMap.values()];
   for (const group of groups) {
     group.plans = sortPlansBySortOrder(group.plans);
   }
@@ -399,19 +398,19 @@ function renderAllPlansTable(plans, visiblePlans, selectedPlanKey, providerInfo,
       <table class="w-full table-fixed text-sm">
         <caption class="sr-only">国内 AI Coding 套餐对比</caption>
         <colgroup>
-          <col style="width: 9%">
-          <col style="width: 12%">
-          <col style="width: 8%">
-          <col style="width: 8%">
-          <col style="width: 8%">
-          <col style="width: 6%">
+          <col style="width: 7%">
           <col style="width: 10%">
-          <col style="width: 7%">
-          <col style="width: 9%">
+          <col style="width: 8%">
+          <col style="width: 8%">
+          <col style="width: 8%">
+          <col style="width: 8%">
+          <col style="width: 8%">
+          <col style="width: 8%">
+          <col style="width: 8%">
+          <col style="width: 5%">
+          <col style="width: 8%">
+          <col style="width: 8%">
           <col style="width: 6%">
-          <col style="width: 7%">
-          <col style="width: 5%">
-          <col style="width: 5%">
         </colgroup>
         <thead>
           <tr>
