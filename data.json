@@ -674,9 +674,9 @@
     {
       "id": "hunyuan-turbos",
       "name": "Hunyuan-TurboS",
-      "provider": "腾讯混元",
+      "provider": "腾讯云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-hunyuan-20260726.svg",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
       "logo_url": null,
       "input_price": 0.8,
       "output_price": 2,
@@ -701,35 +701,6 @@
       "rmb_recharge_support": "支持",
       "invoice_support": "支持",
       "suitable_for": "企业 API、中文场景、腾讯云生态",
-      "package_plans": []
-    },
-    {
-      "id": "siliconflow-models",
-      "name": "SiliconFlow 托管模型",
-      "provider": "硅基流动",
-      "lifecycle_status": "active",
-      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/siliconflow.ico",
-      "logo_url": null,
-      "input_price": null,
-      "output_price": null,
-      "currency": "CNY",
-      "cache_read_price": null,
-      "cache_write_price": null,
-      "context_length": null,
-      "max_output": null,
-      "capabilities": [],
-      "release_date": null,
-      "docs_url": "https://siliconflow.cn/pricing",
-      "notes": "硅基流动是聚合 API 平台，托管 DeepSeek、Qwen、GLM、MiniMax、Kimi 等主流开源模型。各模型价格不同，请以 siliconflow.cn/pricing 为准。",
-      "plan_url": "https://siliconflow.cn/pricing",
-      "plan_summary": "硅基流动以模型调用量计费，按量付费、开箱即用，兼容 OpenAI 标准接口。",
-      "access_level": "easy",
-      "access_notes": "注册即用，支持人民币充值。不同模型价格差异较大，请以平台实时展示为准。",
-      "market_region": "domestic",
-      "market_region_label": "国内",
-      "rmb_recharge_support": "支持",
-      "invoice_support": "待确认",
-      "suitable_for": "聚合 API、开源模型调用、成本敏感型应用",
       "package_plans": []
     },
     {
@@ -799,9 +770,9 @@
     {
       "id": "hunyuan-t1",
       "name": "Hunyuan-T1",
-      "provider": "腾讯混元",
+      "provider": "腾讯云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-hunyuan-20260726.svg",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
       "logo_url": null,
       "input_price": 1,
       "output_price": 4,
@@ -831,9 +802,9 @@
     {
       "id": "hunyuan-think",
       "name": "HY 2.0 Think",
-      "provider": "腾讯混元",
+      "provider": "腾讯云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-hunyuan-20260726.svg",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
       "logo_url": null,
       "input_price": 3.98,
       "output_price": 15.9,
@@ -1215,9 +1186,9 @@
     {
       "id": "hy3",
       "name": "Hy3",
-      "provider": "腾讯混元",
+      "provider": "腾讯云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-hunyuan-20260726.svg",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
       "logo_url": null,
       "input_price": 1,
       "output_price": 4,
@@ -9615,9 +9586,9 @@
     {
       "id": "hunyuan-think",
       "name": "HY 2.0 Think",
-      "provider": "腾讯混元",
+      "provider": "腾讯云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-hunyuan-20260726.svg",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
       "logo_url": null,
       "sort_order": 99,
       "market_region": "domestic"
@@ -9625,9 +9596,9 @@
     {
       "id": "hunyuan-t1",
       "name": "Hunyuan-T1",
-      "provider": "腾讯混元",
+      "provider": "腾讯云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-hunyuan-20260726.svg",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
       "logo_url": null,
       "sort_order": 99,
       "market_region": "domestic"
@@ -9635,9 +9606,9 @@
     {
       "id": "hunyuan-turbos",
       "name": "Hunyuan-TurboS",
-      "provider": "腾讯混元",
+      "provider": "腾讯云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-hunyuan-20260726.svg",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
       "logo_url": null,
       "sort_order": 99,
       "market_region": "domestic"
@@ -9645,9 +9616,9 @@
     {
       "id": "hy3",
       "name": "Hy3",
-      "provider": "腾讯混元",
+      "provider": "腾讯云",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-hunyuan-20260726.svg",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/tencent-cloud.ico",
       "logo_url": null,
       "sort_order": 99,
       "market_region": "domestic"
@@ -9848,16 +9819,6 @@
       "provider": "阿里云百炼",
       "lifecycle_status": "active",
       "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/aliyun-bailian.svg",
-      "logo_url": null,
-      "sort_order": 99,
-      "market_region": "domestic"
-    },
-    {
-      "id": "siliconflow-models",
-      "name": "SiliconFlow 托管模型",
-      "provider": "硅基流动",
-      "lifecycle_status": "active",
-      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/siliconflow.ico",
       "logo_url": null,
       "sort_order": 99,
       "market_region": "domestic"

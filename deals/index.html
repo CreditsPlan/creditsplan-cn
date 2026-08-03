@@ -16,7 +16,7 @@
   <meta name="twitter:description" content="汇总各 AI 平台官方限时活动，第一时间发现新用户礼包、充值返现与折扣。">
   <link rel="icon" href="https://creditsplan.oss-cn-hangzhou.aliyuncs.com/favicon-sharp.ico" type="image/x-icon">
   <link rel="alternate" type="application/rss+xml" title="CreditsPlan 官方活动" href="https://creditsplan.cn/deals.xml">
-  <link rel="stylesheet" href="/styles.tailwind.506e4a1c2d86.css">
+  <link rel="stylesheet" href="/styles.tailwind.e32efcc678ac.css">
   <script src="/js/theme-init.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"CreditsPlan 官方活动","itemListElement":[{"@type":"ListItem","position":1,"name":"Qoder：Qoder 一周年：领最高 2800 次 Qwen3.8-Max 免费调用，错峰时段 5 折","description":"新老用户端内「用量」面板领 800 次 Qwen3.8-Max 免费调用，活动期间下单再送 2000 次（可叠加，9 月 30 日前用完）；每日 22:00–08:00（UTC+8）错峰时段 5 折自动生效。仅个人版用户。","url":"https://docs.qoder.com/zh/events/qwen-max"}]}</script>
 </head>
@@ -74,22 +74,37 @@
       </header>
     </div>
     <main class="pb-16">
-      <section class="changelog-shell" aria-labelledby="dealsTitle">
-        <header class="changelog-hero">
-          <p class="changelog-kicker"><span aria-hidden="true"></span>Deals / 官方活动</p>
-          <h1 id="dealsTitle">别错过平台的官方活动。</h1>
-          <p class="changelog-lead">当前有 <strong class="text-slate-900 dark:text-white">1 个平台活动进行中</strong>，均来自各平台官方公告，点击"去参与"直达官方活动页。</p>
-          <dl class="changelog-overview" aria-label="活动摘要" aria-live="polite">
-            <div><dt>进行中</dt><dd><strong>1</strong> 个</dd></div>
-            <div><dt>即将开始</dt><dd><strong>0</strong> 个</dd></div>
-            <div><dt>最近更新</dt><dd><time>2026-08-03</time></dd></div>
-          </dl>
-          <p class="mt-4 text-sm"><a class="focus-ring text-brand-600 hover:text-brand-800 dark:text-brand-400" href="https://creditsplan.cn/deals.xml">订阅活动 RSS →</a></p>
-        </header>
+      <div class="deals-layout">
         
-      <section class="deal-group mt-8" data-status="active" aria-labelledby="deals-active-title">
+    <aside class="deals-sidebar" aria-label="活动导航">
+      <div class="deals-sidebar-inner">
+        <div class="deals-sidebar-brand"><span class="deals-logo-dot" aria-hidden="true"></span><span>官方活动</span></div>
+        <nav class="deals-sidebar-nav">
+      <a class="deals-nav-item" href="#deals-active">
+        <span class="deal-group-dot" data-status="active" aria-hidden="true"></span>
+        <span>进行中</span>
+        <span class="deals-nav-count">1</span>
+      </a></nav>
+        <a class="deals-rss-link" href="https://creditsplan.cn/deals.xml"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/></svg>订阅活动 RSS</a>
+        <p class="deals-sidebar-note">活动信息均来自各平台官方公告，参与资格与细则以官方活动页为准。</p>
+        <p class="deals-sidebar-note">最后更新：<time>2026-08-03</time></p>
+      </div>
+    </aside>
+        <section class="deals-main" aria-labelledby="dealsTitle">
+          <header class="deals-hero">
+            <p class="changelog-kicker"><span aria-hidden="true"></span>Deals / 官方活动</p>
+            <h1 id="dealsTitle">别错过平台的官方活动。</h1>
+            <p class="changelog-lead">当前有 <strong class="text-slate-900 dark:text-white">1 个平台活动进行中</strong>，均来自各平台官方公告，点击"去参与"直达官方活动页。</p>
+            <dl class="changelog-overview" aria-label="活动摘要" aria-live="polite">
+              <div><dt>进行中</dt><dd><strong>1</strong> 个</dd></div>
+              <div><dt>即将开始</dt><dd><strong>0</strong> 个</dd></div>
+              <div><dt>最近更新</dt><dd><time>2026-08-03</time></dd></div>
+            </dl>
+          </header>
+          
+      <section id="deals-active" class="deal-group" data-status="active" aria-labelledby="deals-active-title">
         <h2 id="deals-active-title" class="deal-group-title"><span class="deal-group-dot" aria-hidden="true"></span>进行中<span class="deal-group-count">1</span></h2>
-        <ul class="deal-list mt-4">
+        <ul class="deal-list">
         <li class="deal-card" data-status="active" data-type="gift">
           <div class="deal-card-body">
             <div class="deal-card-head">
@@ -105,13 +120,12 @@
             </div>
           </div>
         </li></ul>
-      </section>
         
-        
-        <aside class="changelog-note">
-          <p>活动信息均来自各平台官方公告，参与资格与细则以官方活动页为准；本站持续追踪套餐价格变化，可通过 <a class="focus-ring" href="/price-changes.xml">价格变动 RSS</a> 订阅。</p>
-        </aside>
       </section>
+          
+          
+        </section>
+      </div>
     </main>
     
     <footer>
@@ -130,7 +144,7 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="/js/app.5db52d582b68.js"></script>
+    <script type="module" src="/js/app.abc13db27863.js"></script>
   </div>
 </body>
 </html>
