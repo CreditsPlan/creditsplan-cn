@@ -17,6 +17,7 @@
 
 - [DeepSeek](https://creditsplan.cn/brands/deepseek/)：DeepSeek-V4 拥有百万字超长上下文，在 Agent 能力、世界知识和推理性能上均实现国内与开源领域的领先。「不诱于誉，不恐于诽，率道而行，端然正己。」（1 个套餐）
 - [Qoder CN](https://creditsplan.cn/brands/qoder-cn/)：Qoder CN 是 Qoder 在国内的独立发行版本，提供人民币计价的专业版 / 高级版 / 旗舰版 / 团队版 / 企业版 / Pro 会员卡等档位，支持…（8 个套餐）
+- [千问办公](https://creditsplan.cn/brands/qwenwork/)：千问办公是面向个人与企业的 AI 办公平台，支持内容创作、数据分析、专业研究、文件处理与网页交付。（5 个套餐）
 - [阿里云百炼](https://creditsplan.cn/brands/benefit/)：阿里云百炼Token Plan：AI 生产力模型订阅计划。支持多模型灵活切换，兼容主流 AI 工具，提供多档位套餐，包月预算可控，承诺数据隐私安全，告别排队降…（7 个套餐）
 - [KIMI](https://creditsplan.cn/brands/kimi/)：Kimi Code面向代码开发的权益，轻松兼容各类开发流程， 更快更稳响应请求，高效完成编程任务。 Kimi 面向个人开发者提供 Andante / Mode…（4 个套餐）
 - [智谱 BigModel](https://creditsplan.cn/brands/bigmodel/)：智谱 GLM 面向国内开发者提供 Coding Plan 订阅套餐，覆盖 Lite、Pro、Max 三个个人档位与团队标准版/高级版，代表模型为 GLM-5.…（5 个套餐）
@@ -36,11 +37,10 @@
 - [摩尔线程](https://creditsplan.cn/brands/mthreads/)：摩尔线程面向开发者提供 Lite、Pro、Max 三档 Coding Plan 订阅套餐，依托自研全功能 GPU 算力运行 GLM-4.7 等模型，适用于 A…（3 个套餐）
 - [UCloud优云智算](https://creditsplan.cn/brands/ucloud/)：优云智算 Coding/Agent Plan 提供面向 AI 编程、Agent的高性价比模型 API 套餐，覆盖 DeepSeek、MiniMax、Kimi、…（6 个套餐）
 - [快手StreamLake](https://creditsplan.cn/brands/streamlake/)：StreamLake溪流湖是快手toB视频云平台，提供领先的音视频AI解决方案。包含KAT-Coder智能编程助手、万擎大模型平台、视频云服务、直播云、点播云…（4 个套餐）
-- [千问办公](https://creditsplan.cn/brands/qwenwork/)：千问办公是面向个人与企业的 AI 办公平台，支持内容创作、数据分析、专业研究、文件处理与网页交付。（5 个套餐）
 
 ## 月报
 
-- [2026 年 8 月月报](https://creditsplan.cn/reports/2026-08/)：8 条价格记录
+- [2026 年 8 月月报](https://creditsplan.cn/reports/2026-08/)：12 条价格记录
 - [2026 年 7 月月报](https://creditsplan.cn/reports/2026-07/)：126 条价格记录
 
 ## 数据订阅

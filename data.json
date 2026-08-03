@@ -5797,7 +5797,7 @@
       "name": "免费版",
       "provider": "千问办公",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://img.alicdn.com/imgextra/i2/O1CN01825rqS1WWcYV9XzP0_!!6000000002796-2-tps-32-32.png",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/qwenwork.svg",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -5805,23 +5805,23 @@
       "capabilities": [],
       "release_date": null,
       "docs_url": "https://qwenwork.cn/pricing",
-      "notes": null,
+      "notes": "年付 = 连续包月价×12，官网无额外折扣",
       "plan_url": "https://qwenwork.cn/pricing",
-      "plan_summary": null,
+      "plan_summary": "年付 = 连续包月价×12，官网无额外折扣",
       "access_level": null,
       "access_notes": null,
       "market_region": "domestic",
       "market_region_label": "国内",
       "rmb_recharge_support": null,
       "invoice_support": null,
-      "suitable_for": "请以官网为准",
+      "suitable_for": "年付 = 连续包月价×12，官网无额外折扣",
       "last_updated": "2026-08-03",
       "package_plans": [
         {
           "id": "qwenwork.2229a42f",
           "name": "免费版",
           "provider": "千问办公",
-          "provider_icon_url": "https://img.alicdn.com/imgextra/i2/O1CN01825rqS1WWcYV9XzP0_!!6000000002796-2-tps-32-32.png",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/qwenwork.svg",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5832,11 +5832,11 @@
           "monthly_price": 0,
           "monthly_currency": "CNY",
           "included_calls": null,
-          "notes": null,
+          "notes": "年付 = 连续包月价×12，官网无额外折扣",
           "first_month_price": null,
           "quarterly_price": null,
           "yearly_price": 0,
-          "annual_price": null,
+          "annual_price": 0,
           "five_hours_requests": null,
           "weekly_requests": null,
           "monthly_requests": null,
@@ -5885,7 +5885,7 @@
       "name": "个人标准版",
       "provider": "千问办公",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://img.alicdn.com/imgextra/i2/O1CN01825rqS1WWcYV9XzP0_!!6000000002796-2-tps-32-32.png",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/qwenwork.svg",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -5893,23 +5893,23 @@
       "capabilities": [],
       "release_date": null,
       "docs_url": "https://qwenwork.cn/pricing",
-      "notes": "官网划线价 98元/月（8折）\n官网划线价 1,176元/年（7折）",
+      "notes": "官网划线价 98元/月（8折）\n官网划线价 1,176元/年（7折）\n年付 = 连续包月价×12，官网无额外折扣",
       "plan_url": "https://qwenwork.cn/pricing",
-      "plan_summary": "官网划线价 98元/月（8折）\n官网划线价 1,176元/年（7折）",
+      "plan_summary": "官网划线价 98元/月（8折）\n官网划线价 1,176元/年（7折）\n年付 = 连续包月价×12，官网无额外折扣",
       "access_level": null,
       "access_notes": null,
       "market_region": "domestic",
       "market_region_label": "国内",
       "rmb_recharge_support": null,
       "invoice_support": null,
-      "suitable_for": "官网划线价 98元/月（8折）\n官网划线价 1,176元/年（7折）",
+      "suitable_for": "官网划线价 98元/月（8折）\n官网划线价 1,176元/年（7折）\n年付 = 连续包月价×12，官网无额外折扣",
       "last_updated": "2026-08-03",
       "package_plans": [
         {
           "id": "qwenwork.b9be6a80",
           "name": "个人标准版",
           "provider": "千问办公",
-          "provider_icon_url": "https://img.alicdn.com/imgextra/i2/O1CN01825rqS1WWcYV9XzP0_!!6000000002796-2-tps-32-32.png",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/qwenwork.svg",
           "model_id": null,
           "regions": [
             "domestic"
@@ -5920,11 +5920,11 @@
           "monthly_price": 78,
           "monthly_currency": "CNY",
           "included_calls": null,
-          "notes": "官网划线价 98元/月（8折）\n官网划线价 1,176元/年（7折）",
+          "notes": "官网划线价 98元/月（8折）\n官网划线价 1,176元/年（7折）\n年付 = 连续包月价×12，官网无额外折扣",
           "first_month_price": null,
           "quarterly_price": null,
           "yearly_price": 823,
-          "annual_price": null,
+          "annual_price": 823,
           "five_hours_requests": null,
           "weekly_requests": null,
           "monthly_requests": null,
@@ -5973,7 +5973,7 @@
       "name": "个人高级版",
       "provider": "千问办公",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://img.alicdn.com/imgextra/i2/O1CN01825rqS1WWcYV9XzP0_!!6000000002796-2-tps-32-32.png",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/qwenwork.svg",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -5981,23 +5981,23 @@
       "capabilities": [],
       "release_date": null,
       "docs_url": "https://qwenwork.cn/pricing",
-      "notes": "官网划线价 198元/月（8折）\n官网划线价 2,376元/年（7折）",
+      "notes": "官网划线价 198元/月（8折）\n官网划线价 2,376元/年（7折）\n年付 = 连续包月价×12，官网无额外折扣",
       "plan_url": "https://qwenwork.cn/pricing",
-      "plan_summary": "官网划线价 198元/月（8折）\n官网划线价 2,376元/年（7折）",
+      "plan_summary": "官网划线价 198元/月（8折）\n官网划线价 2,376元/年（7折）\n年付 = 连续包月价×12，官网无额外折扣",
       "access_level": null,
       "access_notes": null,
       "market_region": "domestic",
       "market_region_label": "国内",
       "rmb_recharge_support": null,
       "invoice_support": null,
-      "suitable_for": "官网划线价 198元/月（8折）\n官网划线价 2,376元/年（7折）",
+      "suitable_for": "官网划线价 198元/月（8折）\n官网划线价 2,376元/年（7折）\n年付 = 连续包月价×12，官网无额外折扣",
       "last_updated": "2026-08-03",
       "package_plans": [
         {
           "id": "qwenwork.51bd5e03",
           "name": "个人高级版",
           "provider": "千问办公",
-          "provider_icon_url": "https://img.alicdn.com/imgextra/i2/O1CN01825rqS1WWcYV9XzP0_!!6000000002796-2-tps-32-32.png",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/qwenwork.svg",
           "model_id": null,
           "regions": [
             "domestic"
@@ -6008,11 +6008,11 @@
           "monthly_price": 158,
           "monthly_currency": "CNY",
           "included_calls": null,
-          "notes": "官网划线价 198元/月（8折）\n官网划线价 2,376元/年（7折）",
+          "notes": "官网划线价 198元/月（8折）\n官网划线价 2,376元/年（7折）\n年付 = 连续包月价×12，官网无额外折扣",
           "first_month_price": null,
           "quarterly_price": null,
           "yearly_price": 1663,
-          "annual_price": null,
+          "annual_price": 1663,
           "five_hours_requests": null,
           "weekly_requests": null,
           "monthly_requests": null,
@@ -6061,7 +6061,7 @@
       "name": "企业标准版",
       "provider": "千问办公",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://img.alicdn.com/imgextra/i2/O1CN01825rqS1WWcYV9XzP0_!!6000000002796-2-tps-32-32.png",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/qwenwork.svg",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -6069,23 +6069,23 @@
       "capabilities": [],
       "release_date": null,
       "docs_url": "https://qwenwork.cn/pricing",
-      "notes": "按席位计费",
+      "notes": "按席位计费\n年付 = 连续包月价×12，官网无额外折扣",
       "plan_url": "https://qwenwork.cn/pricing",
-      "plan_summary": "按席位计费",
+      "plan_summary": "按席位计费\n年付 = 连续包月价×12，官网无额外折扣",
       "access_level": null,
       "access_notes": null,
       "market_region": "domestic",
       "market_region_label": "国内",
       "rmb_recharge_support": null,
       "invoice_support": null,
-      "suitable_for": "按席位计费",
+      "suitable_for": "按席位计费\n年付 = 连续包月价×12，官网无额外折扣",
       "last_updated": "2026-08-03",
       "package_plans": [
         {
           "id": "qwenwork.28ea4855",
           "name": "企业标准版",
           "provider": "千问办公",
-          "provider_icon_url": "https://img.alicdn.com/imgextra/i2/O1CN01825rqS1WWcYV9XzP0_!!6000000002796-2-tps-32-32.png",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/qwenwork.svg",
           "model_id": null,
           "regions": [
             "domestic"
@@ -6096,11 +6096,11 @@
           "monthly_price": 198,
           "monthly_currency": "CNY",
           "included_calls": null,
-          "notes": "按席位计费",
+          "notes": "按席位计费\n年付 = 连续包月价×12，官网无额外折扣",
           "first_month_price": null,
           "quarterly_price": null,
           "yearly_price": 2376,
-          "annual_price": null,
+          "annual_price": 2376,
           "five_hours_requests": null,
           "weekly_requests": null,
           "monthly_requests": null,
@@ -6149,7 +6149,7 @@
       "name": "企业旗舰版",
       "provider": "千问办公",
       "lifecycle_status": "active",
-      "provider_icon_url": "https://img.alicdn.com/imgextra/i2/O1CN01825rqS1WWcYV9XzP0_!!6000000002796-2-tps-32-32.png",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/qwenwork.svg",
       "input_price": null,
       "output_price": null,
       "currency": null,
@@ -6173,7 +6173,7 @@
           "id": "qwenwork.93a23409",
           "name": "企业旗舰版",
           "provider": "千问办公",
-          "provider_icon_url": "https://img.alicdn.com/imgextra/i2/O1CN01825rqS1WWcYV9XzP0_!!6000000002796-2-tps-32-32.png",
+          "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/qwenwork.svg",
           "model_id": null,
           "regions": [
             "domestic"
@@ -10651,6 +10651,19 @@
       "privacy_policy_url": "https://qoder.com/privacy-policy",
       "privacy_verified_at": "2026-07-27"
     },
+    "千问办公": {
+      "name": "千问办公",
+      "icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/qwenwork.svg",
+      "sort_order": 21,
+      "region": "domestic",
+      "seo_slug": "qwenwork",
+      "seo_intro": "千问办公是面向个人与企业的 AI 办公平台，支持内容创作、数据分析、专业研究、文件处理与网页交付。",
+      "data_training": null,
+      "training_opt_out": "",
+      "data_retention": "",
+      "privacy_policy_url": "",
+      "privacy_verified_at": ""
+    },
     "阿里云百炼": {
       "name": "阿里云百炼",
       "icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/aliyun-bailian.svg",
@@ -10671,11 +10684,11 @@
       "region": "all",
       "seo_slug": "kimi",
       "seo_intro": "Kimi Code面向代码开发的权益，轻松兼容各类开发流程，\n更快更稳响应请求，高效完成编程任务。 Kimi 面向个人开发者提供 Andante / Moderato / Allegretto / Allegro 四档 Coding 订阅套餐，代表模型 kimi-K3，主打长上下文与高质量代码生成。",
-      "data_training": null,
-      "training_opt_out": "",
+      "data_training": "yes",
+      "training_opt_out": "可邮件联系 support 申请退出（社区反馈执行不便）",
       "data_retention": "",
-      "privacy_policy_url": "",
-      "privacy_verified_at": ""
+      "privacy_policy_url": "https://platform.moonshot.cn/docs/agreement/userprivacy",
+      "privacy_verified_at": "2026-08-03"
     },
     "智谱 BigModel": {
       "name": "智谱 BigModel",
@@ -10684,11 +10697,11 @@
       "region": "domestic",
       "seo_slug": "bigmodel",
       "seo_intro": "智谱 GLM 面向国内开发者提供 Coding Plan 订阅套餐，覆盖 Lite、Pro、Max 三个个人档位与团队标准版/高级版，代表模型为 GLM-5.2。",
-      "data_training": "unclear",
-      "training_opt_out": "未明确提供",
+      "data_training": "yes",
+      "training_opt_out": "协议未提供退出选项",
       "data_retention": "法定保存期限",
-      "privacy_policy_url": "https://chatglm.cn/privacypolicy",
-      "privacy_verified_at": "2026-07-27"
+      "privacy_policy_url": "https://docs.bigmodel.cn/cn/terms/privacy-policy",
+      "privacy_verified_at": "2026-08-03"
     },
     "Trae": {
       "name": "Trae",
@@ -10697,11 +10710,11 @@
       "region": "domestic",
       "seo_slug": "trae",
       "seo_intro": "智能 IDE，将 AI 融入你的工作流。TRAE 旗下的 AI IDE 产品，以智能生产力为核心，灵活适配你的开发节奏，与你默契协作，共同实现高效、高质的项目交付。",
-      "data_training": null,
-      "training_opt_out": "",
+      "data_training": "unclear",
+      "training_opt_out": "TRAE SOLO 支持隐私模式，开启后聊天内容不用于模型训练",
       "data_retention": "",
-      "privacy_policy_url": "",
-      "privacy_verified_at": ""
+      "privacy_policy_url": "https://www.trae.ai/privacy-policy",
+      "privacy_verified_at": "2026-08-03"
     },
     "火山引擎": {
       "name": "火山引擎",
@@ -10710,11 +10723,11 @@
       "region": "domestic",
       "seo_slug": "volcengine",
       "seo_intro": "火山方舟控制台将个人版订阅拆分为 Coding Plan（面向国产编程模型与工具链）与 Agent Plan（面向多模态与 Harness 场景），代表模型 Doubao-Seed-2.1-Pro，支持国内支付与发票。",
-      "data_training": "unclear",
-      "training_opt_out": "未明确提供",
+      "data_training": "yes",
+      "training_opt_out": "可联系客服终止数据授权，但终止后无法继续使用 Coding Plan 服务",
       "data_retention": "未披露",
-      "privacy_policy_url": "https://www.volcengine.com/docs/82379/1142195",
-      "privacy_verified_at": "2026-07-27"
+      "privacy_policy_url": "https://www.volcengine.com/docs/82379/1928265",
+      "privacy_verified_at": "2026-08-03"
     },
     "CodeBuddy": {
       "name": "CodeBuddy",
@@ -10723,11 +10736,11 @@
       "region": "domestic",
       "seo_slug": "codebuddy",
       "seo_intro": "Codebuddy 现已实现插件、IDE、CLI三端全开发场景覆盖。提供覆盖编码、扩展与协作的全栈开发生态。无论你身处何种开发环境, Codebuddy 都能助你心无旁骛,释放创造潜能,实现效率的极致飞跃。",
-      "data_training": null,
-      "training_opt_out": "",
+      "data_training": "no",
+      "training_opt_out": "个人免费版可联系客服拒绝输入输出用于模型优化的授权",
       "data_retention": "",
-      "privacy_policy_url": "",
-      "privacy_verified_at": ""
+      "privacy_policy_url": "https://www.codebuddy.cn/agreement/",
+      "privacy_verified_at": "2026-08-03"
     },
     "腾讯云": {
       "name": "腾讯云",
@@ -10736,11 +10749,11 @@
       "region": "domestic",
       "seo_slug": "tencent-cloud",
       "seo_intro": "腾讯云大模型 Token Plan 面向个人开发者提供体验、基础、进阶、专业四档包月套餐，统一额度调用 DeepSeek、GLM、MiniMax 等主流国产模型，适配 AI 编程与 Agent 场景，按月订阅、预算可控，具体权益以腾讯云官方活动页为准。",
-      "data_training": null,
-      "training_opt_out": "",
+      "data_training": "no",
+      "training_opt_out": "默认不训练，无需关闭",
       "data_retention": "",
-      "privacy_policy_url": "",
-      "privacy_verified_at": ""
+      "privacy_policy_url": "https://cloud.tencent.com/document/product/301/97822",
+      "privacy_verified_at": "2026-08-03"
     },
     "百度千帆": {
       "name": "百度千帆",
@@ -10749,11 +10762,11 @@
       "region": "domestic",
       "seo_slug": "qianfan",
       "seo_intro": "百度千帆·大模型服务及Agent开发平台。全新的“百度千帆”以Agent为核心，为企业提供模型、Agent开发及数据智能服务等一站式服务。百度千帆基于百度智能云的全栈AI云布局，围绕Agent引擎、工具及MCP、模型服务与企业级服务等四大关键要素，为Agent的应用落地构建了坚实的能力底座。支持个人版与企业版购买，满足个人开发与企业团队多场景用量需求。",
-      "data_training": "unclear",
-      "training_opt_out": "未明确提供",
+      "data_training": "no",
+      "training_opt_out": "默认不训练，无需关闭",
       "data_retention": "未披露",
-      "privacy_policy_url": null,
-      "privacy_verified_at": "2026-07-27"
+      "privacy_policy_url": "https://cloud.baidu.com/doc/qianfan/s/emh4stmvj",
+      "privacy_verified_at": "2026-08-03"
     },
     "MiniMax": {
       "name": "MiniMax",
@@ -10778,8 +10791,8 @@
       "data_training": "unclear",
       "training_opt_out": "未明确提供",
       "data_retention": "未披露",
-      "privacy_policy_url": null,
-      "privacy_verified_at": "2026-07-27"
+      "privacy_policy_url": "https://platform.stepfun.com/docs/zh/agreement/userprivacy",
+      "privacy_verified_at": "2026-08-03"
     },
     "Xiaomi MiMo": {
       "name": "Xiaomi MiMo",
@@ -10791,8 +10804,8 @@
       "data_training": "unclear",
       "training_opt_out": "未明确提供",
       "data_retention": "未披露",
-      "privacy_policy_url": null,
-      "privacy_verified_at": "2026-07-27"
+      "privacy_policy_url": "https://privacy.mi.com/XiaomiMiMoPlatform/zh_CN/",
+      "privacy_verified_at": "2026-08-03"
     },
     "七牛云": {
       "name": "七牛云",
@@ -10805,7 +10818,7 @@
       "training_opt_out": "未明确提供",
       "data_retention": "未披露",
       "privacy_policy_url": "https://www.qiniu.com/agreements/privacy-right",
-      "privacy_verified_at": "2026-07-27"
+      "privacy_verified_at": "2026-08-03"
     },
     "讯飞星火": {
       "name": "讯飞星火",
@@ -10814,11 +10827,11 @@
       "region": "domestic",
       "seo_slug": "iflytek-spark",
       "seo_intro": "讯飞星辰 MaaS 平台是科大讯飞面向开发者打造的智能化模型精调服务平台，构建起贯穿 “数据 - 模型 - 服务” 全链路的工程化解决方案。平台提供数据增强处理、模型精调优化、效果量化评估及一键部署的的端到端开发能力；同时兼容主流开源模型生态，支持第三方模型托管。基于自研分布式训练架构与智能算力调度系统，结合 LoRA 等高效参数优化技术，平台实现大模型定制化开发的标准化、工程化，有效降低企业大模型相关业务开发成本与技术门槛，加速推动各行业智能化升级进程。",
-      "data_training": "unclear",
-      "training_opt_out": "未明确提供",
+      "data_training": "yes",
+      "training_opt_out": "可向官方反馈意见拒绝授权",
       "data_retention": "未披露",
-      "privacy_policy_url": null,
-      "privacy_verified_at": "2026-07-27"
+      "privacy_policy_url": "https://www.xfyun.cn/doc/spark/MaaS/user_instructions.html",
+      "privacy_verified_at": "2026-08-03"
     },
     "京东云": {
       "name": "京东云",
@@ -10831,7 +10844,7 @@
       "training_opt_out": "未明确提供",
       "data_retention": "未披露",
       "privacy_policy_url": null,
-      "privacy_verified_at": "2026-07-27"
+      "privacy_verified_at": "2026-08-03"
     },
     "联通云": {
       "name": "联通云",
@@ -10844,7 +10857,7 @@
       "training_opt_out": "未明确提供",
       "data_retention": "未披露",
       "privacy_policy_url": null,
-      "privacy_verified_at": "2026-07-27"
+      "privacy_verified_at": "2026-08-03"
     },
     "华为云": {
       "name": "华为云",
@@ -10853,11 +10866,11 @@
       "region": "domestic",
       "seo_slug": "huaweicloud",
       "seo_intro": "maas,model as a service,模型服务,模型即服务,模型即服务平台",
-      "data_training": "unclear",
-      "training_opt_out": "未明确提供",
+      "data_training": "no",
+      "training_opt_out": "默认不训练，无需关闭",
       "data_retention": "未披露",
-      "privacy_policy_url": "https://www.huaweicloud.com/declaration/tsa-pglm.html",
-      "privacy_verified_at": "2026-07-27"
+      "privacy_policy_url": "https://www.huaweicloud.com/declaration/maas.html",
+      "privacy_verified_at": "2026-08-03"
     },
     "摩尔线程": {
       "name": "摩尔线程",
@@ -10870,7 +10883,7 @@
       "training_opt_out": "未明确提供",
       "data_retention": "未披露",
       "privacy_policy_url": "https://www.mthreads.com/privacy",
-      "privacy_verified_at": "2026-07-29"
+      "privacy_verified_at": "2026-08-03"
     },
     "UCloud优云智算": {
       "name": "UCloud优云智算",
@@ -10883,7 +10896,7 @@
       "training_opt_out": "未明确提供",
       "data_retention": "未披露",
       "privacy_policy_url": "",
-      "privacy_verified_at": "2026-07-29"
+      "privacy_verified_at": "2026-08-03"
     },
     "快手StreamLake": {
       "name": "快手StreamLake",
@@ -10896,20 +10909,7 @@
       "training_opt_out": "未明确提供",
       "data_retention": "仅在必要期限及法定期限内保留，超期删除或匿名化",
       "privacy_policy_url": "https://www.streamlake.com/document/POL/me16yzjnvq2ssojcjz",
-      "privacy_verified_at": "2026-07-29"
-    },
-    "千问办公": {
-      "name": "千问办公",
-      "icon_url": "https://img.alicdn.com/imgextra/i2/O1CN01825rqS1WWcYV9XzP0_!!6000000002796-2-tps-32-32.png",
-      "sort_order": 240,
-      "region": "domestic",
-      "seo_slug": "qwenwork",
-      "seo_intro": "千问办公是面向个人与企业的 AI 办公平台，支持内容创作、数据分析、专业研究、文件处理与网页交付。",
-      "data_training": null,
-      "training_opt_out": null,
-      "data_retention": null,
-      "privacy_policy_url": "",
-      "privacy_verified_at": null
+      "privacy_verified_at": "2026-08-03"
     }
   }
 }
