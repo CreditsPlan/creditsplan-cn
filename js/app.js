@@ -1,6 +1,7 @@
 import { renderHeader } from './header.js';
 import { renderFooter } from './footer.js';
 import { initTheme } from './theme.js';
+import { initDealsToolbar } from './deals-toolbar.js';
 import { installOutboundTracker, trackPageView } from './shared/outbound-tracker.js';
 
 installOutboundTracker();
@@ -11,6 +12,7 @@ export function initAppShell() {
   renderHeader(currentPage);
   renderFooter();
   initTheme();
+  initDealsToolbar();
   initPageNav();
   initScrollAnimations();
   initImageFallbacks();

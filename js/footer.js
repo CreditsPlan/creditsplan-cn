@@ -9,7 +9,7 @@ export function renderFooter() {
           <a class="focus-ring rounded hover:text-slate-900 dark:hover:text-white" href="/methodology.html">数据校对方法</a>
           <a class="focus-ring rounded hover:text-slate-900 dark:hover:text-white" href="/developers.html">开发者 API</a>
           <a class="focus-ring rounded hover:text-slate-900 dark:hover:text-white" href="mailto:feedback@creditsplan.cn">反馈邮箱：feedback@creditsplan.cn</a>
-          <span>通过本站链接购买，部分平台可享专属优惠；本站可能获得推广收益，不影响价格数据与排序的中立性。</span>
+          <span>通过本站链接购买，部分品牌可享专属优惠；本站可能获得推广收益，不影响价格数据与排序的中立性。</span>
         </nav>
         <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
           <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer" class="focus-ring rounded hover:text-slate-900 dark:hover:text-white">湘ICP备2026019664号-1</a>

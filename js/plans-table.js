@@ -2,6 +2,7 @@ import { escapeHtml, safeExternalUrl } from './render.js';
 import { PROVIDER_NAME_MAP, brandForProvider } from './shared/brands.js';
 import {
   DATA_TRAINING_LABELS,
+  SOURCE_TYPE_LABELS,
   displayNameForProvider,
   filterPlansByProviderInfo,
   formatPriceNumber,
@@ -15,6 +16,7 @@ import {
   safeIconUrl,
   seoBrandSlugForProvider,
   sortPlansBySortOrder,
+  sourceTypeKind,
   supportedModelDisplay,
   verifiedFreshness
 } from './shared/plan-utils.js';
@@ -52,6 +54,26 @@ function verifiedBadgeHtml(plan) {
     return `<span class="whitespace-nowrap rounded-md bg-amber-50 px-1.5 py-0.5 text-[10px] font-medium text-amber-600 dark:bg-amber-950/40 dark:text-amber-300" title="上次核实 ${escapeHtml(fresh.date)}，已超过 30 天">待复核</span>`;
   }
   return '';
+}
+
+// 来源徽章：把采集管线能力外显——每条价格的采集渠道对用户可见
+const SOURCE_BADGE_STYLES = {
+  official: 'bg-sky-50 text-sky-600 dark:bg-sky-950/40 dark:text-sky-300',
+  api: 'bg-violet-50 text-violet-600 dark:bg-violet-950/40 dark:text-violet-300',
+  structured: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-950/40 dark:text-indigo-300',
+  page: 'bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400'
+};
+const SOURCE_BADGE_TITLES = {
+  official: '数据采集自厂商官方定价页，由自动化管线逐轮核验',
+  api: '数据来自厂商官方接口，由自动化管线逐轮核验',
+  structured: '数据来自官方页面结构化解析，由自动化管线逐轮核验',
+  page: '数据来自页面抓取，下单前请以官网为准'
+};
+export function sourceBadgeHtml(plan) {
+  const kind = sourceTypeKind(plan.sourceType);
+  const label = SOURCE_TYPE_LABELS[kind];
+  if (!label) return '';
+  return `<span class="whitespace-nowrap rounded-md px-1.5 py-0.5 text-[10px] font-medium ${SOURCE_BADGE_STYLES[kind]}" title="${escapeHtml(SOURCE_BADGE_TITLES[kind])}">${escapeHtml(label)}</span>`;
 }
 
 function planDetailHref(plan, providerInfo) {
@@ -213,6 +235,7 @@ function planPriceCard(plan, trustHtml = '', domesticHtml = '', isExpanded = fal
             ${domesticHtml}
             ${typeLabel ? `<span class="whitespace-nowrap rounded-md bg-brand-50 px-1.5 py-0.5 text-[10px] font-medium text-brand-600 dark:bg-brand-950/40 dark:text-brand-300">${escapeHtml(typeLabel)}</span>` : ''}
             ${verifiedBadgeHtml(plan)}
+            ${sourceBadgeHtml(plan)}
           </div>
           <span class="plan-card-disclosure" aria-hidden="true">
             <span>${isExpanded ? '收起详情' : '查看详情'}</span>
@@ -352,7 +375,7 @@ function renderPlanRows(group, selectedPlanKey, isGroupExpanded, providerInfo, p
         <td class="break-words px-3 py-3 text-slate-600 dark:text-slate-300">${escapeHtml(supportedModelDisplay(plan) || '—')}</td>
         <td class="plan-table-nowrap px-3 py-3"><span class="rounded-md px-2 py-0.5 text-xs font-medium ${statusColor}">${escapeHtml(plan.statusLabel)}</span></td>
         <td class="plan-table-nowrap px-3 py-3">${dataTrainingHtml}</td>
-        <td class="plan-table-nowrap px-3 py-3">${verifiedDisplay}</td>
+        <td class="plan-table-nowrap px-3 py-3">${verifiedDisplay}${sourceBadgeHtml(plan) ? `<div class="mt-1">${sourceBadgeHtml(plan)}</div>` : ''}</td>
         <td class="plan-table-nowrap px-3 py-3">${sourceHtml}</td>
       </tr>
       ${detailRow}`;

@@ -3,6 +3,7 @@ import { PROVIDER_NAME_MAP } from './shared/brands.js';
 import {
   currencySymbol,
   DATA_TRAINING_LABELS,
+  SOURCE_TYPE_LABELS,
   displayNameForProvider,
   formatPriceNumber,
   getRiskDisplayText,
@@ -10,6 +11,7 @@ import {
   optionalDetailText,
   privacyFreshness,
   resolvePlanPrivacy,
+  sourceTypeKind,
   supportedModelDisplay,
   verifiedFreshness
 } from './shared/plan-utils.js';
@@ -274,9 +276,8 @@ export function renderSelectedPlanDetail(plan, providerInfo = {}) {
     : verifiedFresh.state === 'stale'
       ? `上次核实 ${escapeHtml(verifiedFresh.date)} · 超过 30 天，待复核`
       : '';
-  const sourceMeta = verifiedText
-    ? `数据来源：${escapeHtml(plan.sourceType || '后台维护')} · ${verifiedText}`
-    : '';
+  const sourceLabel = SOURCE_TYPE_LABELS[sourceTypeKind(plan.sourceType)] || plan.sourceType || '后台维护';
+  const sourceMeta = `数据来源：${escapeHtml(sourceLabel)}${verifiedText ? ` · ${verifiedText}` : ''}`;
   const privacyPolicyLink = privacy.policyUrl
     ? `<a href="${escapeHtml(privacy.policyUrl)}" target="_blank" rel="noopener noreferrer nofollow">隐私政策来源</a>`
     : '';
