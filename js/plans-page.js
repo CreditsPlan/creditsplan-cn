@@ -249,11 +249,15 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
     .sort((a, b) => (a.sortOrder - b.sortOrder) || a.label.localeCompare(b.label, 'zh-CN'));
   const counts = { all: displayablePlans.length, free: filterFreePlans(displayablePlans).length };
   const avgMonthly = averageMonthlyPrice(displayablePlans);
+  // 统计条视觉层级：平均月付作为主指标（大号数字+品牌色卡片），计数徽章为次级（数字加重）
   const statsHtml = `
-            <span>${displayablePlans.length} 条记录</span>
-            <span>${visibleBrands.length} 个品牌</span>
-            <span>${visibleModels.length} 个模型</span>
-            ${avgMonthly != null ? `<span>平均月付 ¥${Math.round(avgMonthly)}</span>` : ''}`;
+            ${avgMonthly != null ? `<span class="workbench-stat workbench-stat--primary" title="人民币计价且有月价的套餐均值">
+              <span class="workbench-stat-value">¥${Math.round(avgMonthly)}</span>
+              <span class="workbench-stat-label">平均月付</span>
+            </span>` : ''}
+            <span class="workbench-stat"><strong>${displayablePlans.length}</strong> 条记录</span>
+            <span class="workbench-stat"><strong>${visibleBrands.length}</strong> 个品牌</span>
+            <span class="workbench-stat"><strong>${visibleModels.length}</strong> 个模型</span>`;
 
   els.codingPlanOverview.innerHTML = `
     <section class="plans-workbench" aria-labelledby="codingPlanTitle">
@@ -435,7 +439,7 @@ function renderCodingPlanOverview(plans, providerInfo = {}, modelCatalog = [], m
     if (mode === 'pricing') {
       const priced = models.filter(modelHasPrice);
       const vendorCount = new Set(priced.map(m => PROVIDER_NAME_MAP[m.vendor] || m.vendor)).size;
-      stats.innerHTML = `<span>${priced.length} 个模型</span><span>${vendorCount} 个厂商</span>`;
+      stats.innerHTML = `<span><strong>${priced.length}</strong> 个模型</span><span><strong>${vendorCount}</strong> 个厂商</span>`;
     } else {
       stats.innerHTML = statsHtml;
     }
