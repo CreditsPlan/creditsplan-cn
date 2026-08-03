@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CreditsPlan 官方活动</title>
+    <link>https://creditsplan.cn/deals/</link>
+    <description>各 AI 平台官方活动汇总：限时折扣、充值返现、新用户礼包与邀请奖励。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 03 Aug 2026 04:00:00 GMT</lastBuildDate>
+    <atom:link href="https://creditsplan.cn/deals.xml" rel="self" type="application/rss+xml"/>
+  </channel>
+</rss>
