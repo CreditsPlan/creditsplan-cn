@@ -1,6 +1,6 @@
 # CreditsPlan 国内站
 
-> 国内 AI Coding 订阅套餐价格对比站：已核对 21 个品牌、105 个套餐的价格、额度与代表模型，全部对照厂商官方定价页人工核对，并保留完整调价历史。国际站（美元套餐）见 https://www.creditsplan.com/。
+> 国内 AI Coding 订阅套餐价格对比站：已核对 22 个品牌、110 个套餐的价格、额度与代表模型，全部对照厂商官方定价页人工核对，并保留完整调价历史。国际站（美元套餐）见 https://www.creditsplan.com/。
 
 ## 核心页面
 
@@ -36,9 +36,11 @@
 - [摩尔线程](https://creditsplan.cn/brands/mthreads/)：摩尔线程面向开发者提供 Lite、Pro、Max 三档 Coding Plan 订阅套餐，依托自研全功能 GPU 算力运行 GLM-4.7 等模型，适用于 A…（3 个套餐）
 - [UCloud优云智算](https://creditsplan.cn/brands/ucloud/)：优云智算 Coding/Agent Plan 提供面向 AI 编程、Agent的高性价比模型 API 套餐，覆盖 DeepSeek、MiniMax、Kimi、…（6 个套餐）
 - [快手StreamLake](https://creditsplan.cn/brands/streamlake/)：StreamLake溪流湖是快手toB视频云平台，提供领先的音视频AI解决方案。包含KAT-Coder智能编程助手、万擎大模型平台、视频云服务、直播云、点播云…（4 个套餐）
+- [千问办公](https://creditsplan.cn/brands/qwenwork/)：千问办公是面向个人与企业的 AI 办公平台，支持内容创作、数据分析、专业研究、文件处理与网页交付。（5 个套餐）
 
 ## 月报
 
+- [2026 年 8 月月报](https://creditsplan.cn/reports/2026-08/)：8 条价格记录
 - [2026 年 7 月月报](https://creditsplan.cn/reports/2026-07/)：126 条价格记录
 
 ## 数据订阅

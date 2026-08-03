@@ -479,6 +479,46 @@
         }
       ]
     },
+    "qwenwork.2229a42f": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-08-03",
+          "monthly_price": 0
+        }
+      ]
+    },
+    "qwenwork.b9be6a80": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-08-03",
+          "monthly_price": 78
+        }
+      ]
+    },
+    "qwenwork.51bd5e03": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-08-03",
+          "monthly_price": 158
+        }
+      ]
+    },
+    "qwenwork.28ea4855": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-08-03",
+          "monthly_price": 198
+        }
+      ]
+    },
+    "qwenwork.93a23409": {
+      "currency": "CNY",
+      "points": []
+    },
     "volcengine-coding-lite": {
       "currency": "CNY",
       "points": [
