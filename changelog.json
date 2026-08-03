@@ -1,6 +1,73 @@
 {
-  "last_updated": "2026-07-31",
+  "last_updated": "2026-08-03",
   "entries": [
+    {
+      "id": "changelog-1785725318759",
+      "date": "2026-08-03",
+      "edition": "2026.08.03",
+      "kind": "data",
+      "title": "阿里云百炼：更新 1 项模型价格",
+      "summary": "Qwen3.8-Max 已于 2026 年 8 月 3 日正式上线，阿里云百炼模型目录补充发布日期。",
+      "items": [
+        "阿里云百炼 · qwen3.8-max：发布日期 ∅ → 2026-08-03"
+      ],
+      "change_items": [
+        {
+          "scope": "model",
+          "action": "update",
+          "provider": "阿里云百炼",
+          "brand_slug": "bailian",
+          "canonical_id": "qwen3-8-max",
+          "model_name": "qwen3.8-max",
+          "changes": {
+            "release_date": {
+              "from": null,
+              "to": "2026-08-03"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "changelog-1785722711659",
+      "date": "2026-08-03",
+      "edition": "2026.08.03",
+      "kind": "catalog",
+      "title": "阿里云百炼、MiniMax：新增 1 项、更新 1 项模型价格",
+      "summary": "新增阿里云百炼 Qwen3.8-Max 与 MiniMax 模型价格：Qwen3.8-Max 每百万 tokens 输入 ¥12、输出 ¥36；MiniMax 每百万 tokens 输入 ¥5.8、输出 ¥23。",
+      "items": [
+        "阿里云百炼 · qwen3.8-max：输入价 ∅ → 12；输出价 ∅ → 36",
+        "MiniMax · MiniMax：新增模型"
+      ],
+      "change_items": [
+        {
+          "scope": "model",
+          "action": "update",
+          "provider": "阿里云百炼",
+          "brand_slug": "bailian",
+          "canonical_id": "qwen3-8-max",
+          "model_name": "qwen3.8-max",
+          "changes": {
+            "input_price": {
+              "from": null,
+              "to": 12
+            },
+            "output_price": {
+              "from": null,
+              "to": 36
+            }
+          }
+        },
+        {
+          "scope": "model",
+          "action": "create",
+          "provider": "MiniMax",
+          "brand_slug": "minimax",
+          "canonical_id": "minimax",
+          "model_name": "MiniMax"
+        }
+      ]
+    },
     {
       "id": "changelog-1785481618702",
       "date": "2026-07-31",

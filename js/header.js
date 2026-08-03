@@ -1,4 +1,5 @@
 import { bindThemeToggle } from './theme.js';
+import { renderDealsBanner } from './deals-banner.js';
 
 const pages = [
   ['index.html', '/', '套餐'],
@@ -6,6 +7,7 @@ const pages = [
   ['model', '/model', '模型'],
   ['advisor/', '/advisor/', '选购助手'],
   ['news.html', '/news.html', 'AI动态'],
+  ['deals/', '/deals/', '活动'],
   ['changelog.html', '/changelog.html', '更新日志']
 ];
 
@@ -73,6 +75,7 @@ export function renderHeader(currentPage = 'index.html') {
   const nav = navItems.join('');
 
   root.innerHTML = `
+    <div id="deals-banner-root"></div>
     <header>
       <nav class="nav-bar" id="navbar" aria-label="主导航">
         <a href="/" class="nav-logo">
@@ -95,6 +98,9 @@ export function renderHeader(currentPage = 'index.html') {
 
   // 渲染完成后绑定主题切换事件
   bindThemeToggle();
+
+  // 公告条：展示进行中官方活动（无活动/加载失败时静默隐藏）
+  renderDealsBanner(root.querySelector('#deals-banner-root'));
 
   const navbar = root.querySelector('#navbar');
   if (navbar) {
@@ -142,7 +148,7 @@ function injectSpeculationRules() {
   script.textContent = JSON.stringify({
     prerender: [{
       source: 'list',
-      urls: ['/', '/brands/', '/model', '/advisor/', '/rankings/cheapest/', '/reports/', '/news.html', '/changelog.html'],
+      urls: ['/', '/brands/', '/model', '/advisor/', '/rankings/cheapest/', '/reports/', '/news.html', '/deals/', '/changelog.html'],
       eagerness: 'immediate'
     }]
   });
