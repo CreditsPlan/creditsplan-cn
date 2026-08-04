@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-03",
+  "last_updated": "2026-08-04",
   "models": [
     {
       "id": "qwen3.6-plus",
@@ -3628,6 +3628,35 @@
     {
       "id": "minimax",
       "name": "MiniMax",
+      "provider": "MiniMax",
+      "lifecycle_status": "active",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/minimax.ico",
+      "logo_url": null,
+      "input_price": 5.8,
+      "output_price": 23,
+      "currency": "CNY",
+      "cache_read_price": null,
+      "cache_write_price": null,
+      "context_length": null,
+      "max_output": null,
+      "capabilities": [],
+      "release_date": null,
+      "docs_url": null,
+      "notes": null,
+      "plan_url": null,
+      "plan_summary": null,
+      "access_level": null,
+      "access_notes": null,
+      "market_region": "domestic",
+      "market_region_label": "国内",
+      "rmb_recharge_support": null,
+      "invoice_support": null,
+      "suitable_for": null,
+      "package_plans": []
+    },
+    {
+      "id": "minimax-h3-context-ir",
+      "name": "MiniMax-H3-Context-IR",
       "provider": "MiniMax",
       "lifecycle_status": "active",
       "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/minimax.ico",
@@ -10134,6 +10163,16 @@
       "market_region": "domestic"
     },
     {
+      "id": "minimax-h3-context-ir",
+      "name": "MiniMax-H3-Context-IR",
+      "provider": "MiniMax",
+      "lifecycle_status": "active",
+      "provider_icon_url": "https://creditsplan.oss-cn-hangzhou.aliyuncs.com/brands/minimax.ico",
+      "logo_url": null,
+      "sort_order": 99,
+      "market_region": "domestic"
+    },
+    {
       "id": "minimax-m2",
       "name": "MiniMax-M2",
       "provider": "MiniMax",
@@ -10658,11 +10697,11 @@
       "region": "domestic",
       "seo_slug": "qwenwork",
       "seo_intro": "千问办公是面向个人与企业的 AI 办公平台，支持内容创作、数据分析、专业研究、文件处理与网页交付。",
-      "data_training": null,
+      "data_training": "unclear",
       "training_opt_out": "",
       "data_retention": "",
-      "privacy_policy_url": "",
-      "privacy_verified_at": ""
+      "privacy_policy_url": "https://help.aliyun.com/zh/qwenwork/qw-privacy-security",
+      "privacy_verified_at": "2026-08-03"
     },
     "阿里云百炼": {
       "name": "阿里云百炼",
