@@ -1,19 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-04T02:05:50.255Z",
+  "generated_at": "2026-08-04T05:49:58.907Z",
   "site": "cn",
   "docs": "https://www.creditsplan.cn/developers.html",
-  "plan_count": 110,
+  "plan_count": 109,
   "plans": {
-    "deepseek-api-paygo": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-04",
-          "monthly_price": null
-        }
-      ]
-    },
     "kimi-k2.6-code-andante": {
       "currency": "CNY",
       "points": [
@@ -167,12 +158,30 @@
         }
       ]
     },
+    "volcengine-coding-lite": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 40
+        }
+      ]
+    },
     "trae-cn-free": {
       "currency": "CNY",
       "points": [
         {
           "date": "2026-07-16",
           "monthly_price": 0
+        }
+      ]
+    },
+    "volcengine-coding-pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 200
         }
       ]
     },
@@ -185,12 +194,30 @@
         }
       ]
     },
+    "volcengine-agent-small": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 40
+        }
+      ]
+    },
     "trae-cn-speed-pro-plus": {
       "currency": "CNY",
       "points": [
         {
           "date": "2026-07-16",
           "monthly_price": 239
+        }
+      ]
+    },
+    "volcengine-agent-medium": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 200
         }
       ]
     },
@@ -203,12 +230,66 @@
         }
       ]
     },
+    "volcengine-agent-large": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 500
+        }
+      ]
+    },
     "trae-cn-express": {
       "currency": "CNY",
       "points": [
         {
           "date": "2026-07-16",
           "monthly_price": 1999
+        }
+      ]
+    },
+    "volcengine-agent-max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-07",
+          "monthly_price": 1000
+        }
+      ]
+    },
+    "streamlake.mini": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 29
+        }
+      ]
+    },
+    "streamlake.starter": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 70
+        }
+      ]
+    },
+    "streamlake.pro": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 140
+        }
+      ]
+    },
+    "streamlake.max": {
+      "currency": "CNY",
+      "points": [
+        {
+          "date": "2026-07-29",
+          "monthly_price": 350
         }
       ]
     },
@@ -522,60 +603,6 @@
       "currency": "CNY",
       "points": []
     },
-    "volcengine-coding-lite": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 40
-        }
-      ]
-    },
-    "volcengine-coding-pro": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 200
-        }
-      ]
-    },
-    "volcengine-agent-small": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 40
-        }
-      ]
-    },
-    "volcengine-agent-medium": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 200
-        }
-      ]
-    },
-    "volcengine-agent-large": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 500
-        }
-      ]
-    },
-    "volcengine-agent-max": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-07",
-          "monthly_price": 1000
-        }
-      ]
-    },
     "qoder-cn-community": {
       "currency": "CNY",
       "points": [
@@ -841,30 +868,15 @@
     },
     "mthreads.lite-plan": {
       "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-29",
-          "monthly_price": null
-        }
-      ]
+      "points": []
     },
     "mthreads.pro-plan": {
       "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-29",
-          "monthly_price": null
-        }
-      ]
+      "points": []
     },
     "mthreads.max-plan": {
       "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-29",
-          "monthly_price": null
-        }
-      ]
+      "points": []
     },
     "ucloud.mini": {
       "currency": "CNY",
@@ -917,42 +929,6 @@
         {
           "date": "2026-07-29",
           "monthly_price": 999
-        }
-      ]
-    },
-    "streamlake.mini": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-29",
-          "monthly_price": 29
-        }
-      ]
-    },
-    "streamlake.starter": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-29",
-          "monthly_price": 70
-        }
-      ]
-    },
-    "streamlake.pro": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-29",
-          "monthly_price": 140
-        }
-      ]
-    },
-    "streamlake.max": {
-      "currency": "CNY",
-      "points": [
-        {
-          "date": "2026-07-29",
-          "monthly_price": 350
         }
       ]
     },
