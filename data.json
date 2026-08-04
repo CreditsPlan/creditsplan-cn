@@ -6867,7 +6867,7 @@
       "rmb_recharge_support": null,
       "invoice_support": null,
       "suitable_for": "适合需要国产模型 API 且不希望绑定月度套餐的调用场景。",
-      "last_updated": "2026-07-04",
+      "last_updated": "2026-08-04",
       "package_plans": [
         {
           "id": "deepseek-api-paygo",
@@ -6901,7 +6901,7 @@
           "rating": null,
           "tags": null,
           "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
-          "last_verified_at": "2026-07-04",
+          "last_verified_at": "2026-08-04",
           "plan_type": "api_package",
           "refund_policy": null,
           "billing_cycle": "prepaid",
