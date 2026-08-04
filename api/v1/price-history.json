@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-04T05:49:58.907Z",
+  "generated_at": "2026-08-04T06:18:53.452Z",
   "site": "cn",
   "docs": "https://www.creditsplan.cn/developers.html",
-  "plan_count": 109,
+  "plan_count": 110,
   "plans": {
     "kimi-k2.6-code-andante": {
       "currency": "CNY",
@@ -600,6 +600,10 @@
       ]
     },
     "qwenwork.93a23409": {
+      "currency": "CNY",
+      "points": []
+    },
+    "deepseek-api-paygo": {
       "currency": "CNY",
       "points": []
     },

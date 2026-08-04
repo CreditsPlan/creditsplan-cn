@@ -1,6 +1,6 @@
 # CreditsPlan 国内站
 
-> 国内 AI Coding 订阅套餐价格对比站：已核对 21 个品牌、109 个套餐的价格、额度与代表模型，全部对照厂商官方定价页人工核对，并保留完整调价历史。国际站（美元套餐）见 https://www.creditsplan.com/。
+> 国内 AI Coding 订阅套餐价格对比站：已核对 22 个品牌、110 个套餐的价格、额度与代表模型，全部对照厂商官方定价页人工核对，并保留完整调价历史。国际站（美元套餐）见 https://www.creditsplan.com/。
 
 ## 核心页面
 
@@ -15,6 +15,7 @@
 
 ## 品牌
 
+- [DeepSeek](https://creditsplan.cn/brands/deepseek/)：DeepSeek-V4 拥有百万字超长上下文，在 Agent 能力、世界知识和推理性能上均实现国内与开源领域的领先。「不诱于誉，不恐于诽，率道而行，端然正己。」（1 个套餐）
 - [Qoder CN](https://creditsplan.cn/brands/qoder-cn/)：Qoder CN 是 Qoder 在国内的独立发行版本，提供人民币计价的专业版 / 高级版 / 旗舰版 / 团队版 / 企业版 / Pro 会员卡等档位，支持…（8 个套餐）
 - [千问办公](https://creditsplan.cn/brands/qwenwork/)：千问办公是面向个人与企业的 AI 办公平台，支持内容创作、数据分析、专业研究、文件处理与网页交付。（5 个套餐）
 - [阿里云百炼](https://creditsplan.cn/brands/benefit/)：阿里云百炼Token Plan：AI 生产力模型订阅计划。支持多模型灵活切换，兼容主流 AI 工具，提供多档位套餐，包月预算可控，承诺数据隐私安全，告别排队降…（7 个套餐）

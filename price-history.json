@@ -600,6 +600,10 @@
       "currency": "CNY",
       "points": []
     },
+    "deepseek-api-paygo": {
+      "currency": "CNY",
+      "points": []
+    },
     "qoder-cn-community": {
       "currency": "CNY",
       "points": [
