@@ -1,6 +1,927 @@
 {
-  "last_updated": "2026-08-03",
+  "last_updated": "2026-08-06",
   "entries": [
+    {
+      "id": "changelog-1785988493889",
+      "date": "2026-08-06",
+      "edition": "2026.08.06",
+      "kind": "data",
+      "title": "联通云：更新 6 项套餐",
+      "summary": "",
+      "items": [
+        "联通云 · Token Plan 个人版 Lite：name 个人 Lite → Token Plan 个人版 Lite",
+        "联通云 · Token Plan 个人版 Pro：name 个人 Pro → Token Plan 个人版 Pro",
+        "联通云 · Token Plan 个人版 Max：name 个人 Max → Token Plan 个人版 Max",
+        "联通云 · Token Plan 团队版 Standard：name 团队 Lite → Token Plan 团队版 Standard",
+        "联通云 · Token Plan 团队版 Pro：name 团队 Pro → Token Plan 团队版 Pro",
+        "联通云 · Token Plan 团队版 Max：name 团队 Max → Token Plan 团队版 Max"
+      ],
+      "change_items": [
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "联通云",
+          "brand_slug": "cucloud",
+          "plan_id": "cucloud.personal-lite",
+          "plan_name": "Token Plan 个人版 Lite",
+          "changes": {
+            "name": {
+              "from": "个人 Lite",
+              "to": "Token Plan 个人版 Lite"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "联通云",
+          "brand_slug": "cucloud",
+          "plan_id": "cucloud.personal-pro",
+          "plan_name": "Token Plan 个人版 Pro",
+          "changes": {
+            "name": {
+              "from": "个人 Pro",
+              "to": "Token Plan 个人版 Pro"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "联通云",
+          "brand_slug": "cucloud",
+          "plan_id": "cucloud.personal-max",
+          "plan_name": "Token Plan 个人版 Max",
+          "changes": {
+            "name": {
+              "from": "个人 Max",
+              "to": "Token Plan 个人版 Max"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "联通云",
+          "brand_slug": "cucloud",
+          "plan_id": "cucloud.team-lite",
+          "plan_name": "Token Plan 团队版 Standard",
+          "changes": {
+            "name": {
+              "from": "团队 Lite",
+              "to": "Token Plan 团队版 Standard"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "联通云",
+          "brand_slug": "cucloud",
+          "plan_id": "cucloud.team-pro",
+          "plan_name": "Token Plan 团队版 Pro",
+          "changes": {
+            "name": {
+              "from": "团队 Pro",
+              "to": "Token Plan 团队版 Pro"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "联通云",
+          "brand_slug": "cucloud",
+          "plan_id": "cucloud.team-max",
+          "plan_name": "Token Plan 团队版 Max",
+          "changes": {
+            "name": {
+              "from": "团队 Max",
+              "to": "Token Plan 团队版 Max"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "changelog-1785988473794",
+      "date": "2026-08-06",
+      "edition": "2026.08.06",
+      "kind": "data",
+      "title": "百度千帆：更新 4 项套餐",
+      "summary": "",
+      "items": [
+        "百度千帆 · Mini 尝鲜版：name Mini → Mini 尝鲜版",
+        "百度千帆 · Lite 标准版：name Lite → Lite 标准版",
+        "百度千帆 · Pro 进阶版：name Pro → Pro 进阶版",
+        "百度千帆 · Max 专业版：name Max → Max 专业版"
+      ],
+      "change_items": [
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "百度千帆",
+          "brand_slug": "baidu-qianfan",
+          "plan_id": "baidu-qianfan-token-mini",
+          "plan_name": "Mini 尝鲜版",
+          "changes": {
+            "name": {
+              "from": "Mini",
+              "to": "Mini 尝鲜版"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "百度千帆",
+          "brand_slug": "baidu-qianfan",
+          "plan_id": "baidu-qianfan-token-lite",
+          "plan_name": "Lite 标准版",
+          "changes": {
+            "name": {
+              "from": "Lite",
+              "to": "Lite 标准版"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "百度千帆",
+          "brand_slug": "baidu-qianfan",
+          "plan_id": "baidu-qianfan-token-pro",
+          "plan_name": "Pro 进阶版",
+          "changes": {
+            "name": {
+              "from": "Pro",
+              "to": "Pro 进阶版"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "百度千帆",
+          "brand_slug": "baidu-qianfan",
+          "plan_id": "baidu-qianfan-token-max",
+          "plan_name": "Max 专业版",
+          "changes": {
+            "name": {
+              "from": "Max",
+              "to": "Max 专业版"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "changelog-1785986990446",
+      "date": "2026-08-06",
+      "edition": "2026.08.06",
+      "kind": "data",
+      "title": "华为云：更新 4 项套餐",
+      "summary": "",
+      "items": [
+        "华为云 · Lite：Credits 上限 ∅ → 每订阅月：5000万 Tokens。；备注 套餐有效期以自然月为单位，自购买成功当日开始计算。 → 限个人用户限购 1 套；购买链接 https://support.huaweicloud.com/Token-pl… → https://www.huaweicloud.com/product/mode…",
+        "华为云 · Standard：Credits 上限 ∅ → 每订阅月：1.3亿 Tokens。；备注 套餐有效期以自然月为单位，自购买成功当日开始计算。 → 限个人用户限购 1 套；购买链接 https://support.huaweicloud.com/Token-pl… → https://www.huaweicloud.com/product/mode…",
+        "华为云 · Pro：Credits 上限 ∅ → 每订阅月：3.8亿 Tokens。；备注 套餐有效期以自然月为单位，自购买成功当日开始计算。 → 限个人用户限购 1 套；购买链接 https://support.huaweicloud.com/Token-pl… → https://www.huaweicloud.com/product/mode…",
+        "华为云 · Max：Credits 上限 ∅ → 每订阅月：8.8亿 Tokens。；备注 套餐有效期以自然月为单位，自购买成功当日开始计算。 → 限个人用户限购 1 套；购买链接 https://support.huaweicloud.com/Token-pl… → https://www.huaweicloud.com/product/mode…"
+      ],
+      "change_items": [
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "华为云",
+          "brand_slug": "huaweicloud",
+          "plan_id": "huaweicloud.lite",
+          "plan_name": "Lite",
+          "changes": {
+            "credits_limit": {
+              "from": "",
+              "to": "每订阅月：5000万 Tokens。"
+            },
+            "notes": {
+              "from": "套餐有效期以自然月为单位，自购买成功当日开始计算。",
+              "to": "限个人用户限购 1 套"
+            },
+            "url": {
+              "from": "https://support.huaweicloud.com/Token-plan-maas/tokenplan-maas-0001.html",
+              "to": "https://www.huaweicloud.com/product/modelarts/studio.html"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "华为云",
+          "brand_slug": "huaweicloud",
+          "plan_id": "huaweicloud.standard",
+          "plan_name": "Standard",
+          "changes": {
+            "credits_limit": {
+              "from": "",
+              "to": "每订阅月：1.3亿 Tokens。"
+            },
+            "notes": {
+              "from": "套餐有效期以自然月为单位，自购买成功当日开始计算。",
+              "to": "限个人用户限购 1 套"
+            },
+            "url": {
+              "from": "https://support.huaweicloud.com/Token-plan-maas/tokenplan-maas-0001.html",
+              "to": "https://www.huaweicloud.com/product/modelarts/studio.html"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "华为云",
+          "brand_slug": "huaweicloud",
+          "plan_id": "huaweicloud.pro",
+          "plan_name": "Pro",
+          "changes": {
+            "credits_limit": {
+              "from": "",
+              "to": "每订阅月：3.8亿 Tokens。"
+            },
+            "notes": {
+              "from": "套餐有效期以自然月为单位，自购买成功当日开始计算。",
+              "to": "限个人用户限购 1 套"
+            },
+            "url": {
+              "from": "https://support.huaweicloud.com/Token-plan-maas/tokenplan-maas-0001.html",
+              "to": "https://www.huaweicloud.com/product/modelarts/studio.html"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "华为云",
+          "brand_slug": "huaweicloud",
+          "plan_id": "huaweicloud.max",
+          "plan_name": "Max",
+          "changes": {
+            "credits_limit": {
+              "from": "",
+              "to": "每订阅月：8.8亿 Tokens。"
+            },
+            "notes": {
+              "from": "套餐有效期以自然月为单位，自购买成功当日开始计算。",
+              "to": "限个人用户限购 1 套"
+            },
+            "url": {
+              "from": "https://support.huaweicloud.com/Token-plan-maas/tokenplan-maas-0001.html",
+              "to": "https://www.huaweicloud.com/product/modelarts/studio.html"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "changelog-1785986965268",
+      "date": "2026-08-06",
+      "edition": "2026.08.06",
+      "kind": "data",
+      "title": "腾讯云：更新 4 项套餐",
+      "summary": "",
+      "items": [
+        "腾讯云 · 体验套餐 （Lite）：name 体验套餐 (Lite) → 体验套餐 （Lite）；首月价 ∅ → 28；备注 注意：实际轮次受单轮输入输出内容长度、任务复杂度、代码量等因素影响，具体以实际使… → 限时折扣价；购买链接 https://console.cloud.tencent.com/tokenh… → https://cloud.tencent.com/act/pro/tokenp…",
+        "腾讯云 · 基础套餐 （Standard）：name 基础套餐 (Standard) → 基础套餐 （Standard）；首月价 ∅ → 78；备注 注意：实际轮次受单轮输入输出内容长度、任务复杂度、代码量等因素影响，具体以实际使… → 限时折扣价；购买链接 https://console.cloud.tencent.com/tokenh… → https://cloud.tencent.com/act/pro/tokenp…",
+        "腾讯云 · 进阶套餐 （Pro）：name 进阶套餐 (Pro) → 进阶套餐 （Pro）；首月价 ∅ → 238；备注 ∅ → 限时折扣价；购买链接 https://console.cloud.tencent.com/tokenh… → https://cloud.tencent.com/act/pro/tokenp…",
+        "腾讯云 · 专业套餐 （Max）：name 专业套餐 (Max) → 专业套餐 （Max）；首月价 ∅ → 468；备注 ∅ → 限时折扣价；购买链接 https://console.cloud.tencent.com/tokenh… → https://cloud.tencent.com/act/pro/tokenp…"
+      ],
+      "change_items": [
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "腾讯云",
+          "brand_slug": "tencent-cloud",
+          "plan_id": "tencent-cloud.lite",
+          "plan_name": "体验套餐 （Lite）",
+          "changes": {
+            "name": {
+              "from": "体验套餐 (Lite)",
+              "to": "体验套餐 （Lite）"
+            },
+            "first_month_price": {
+              "from": null,
+              "to": 28
+            },
+            "notes": {
+              "from": "注意：实际轮次受单轮输入输出内容长度、任务复杂度、代码量等因素影响，具体以实际使用为准。",
+              "to": "限时折扣价"
+            },
+            "url": {
+              "from": "https://console.cloud.tencent.com/tokenhub/tokenplan/common",
+              "to": "https://cloud.tencent.com/act/pro/tokenplan"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "腾讯云",
+          "brand_slug": "tencent-cloud",
+          "plan_id": "tencent-cloud.standard",
+          "plan_name": "基础套餐 （Standard）",
+          "changes": {
+            "name": {
+              "from": "基础套餐 (Standard)",
+              "to": "基础套餐 （Standard）"
+            },
+            "first_month_price": {
+              "from": null,
+              "to": 78
+            },
+            "notes": {
+              "from": "注意：实际轮次受单轮输入输出内容长度、任务复杂度、代码量等因素影响，具体以实际使用为准。",
+              "to": "限时折扣价"
+            },
+            "url": {
+              "from": "https://console.cloud.tencent.com/tokenhub/tokenplan/common",
+              "to": "https://cloud.tencent.com/act/pro/tokenplan"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "腾讯云",
+          "brand_slug": "tencent-cloud",
+          "plan_id": "tencent-cloud.pro",
+          "plan_name": "进阶套餐 （Pro）",
+          "changes": {
+            "name": {
+              "from": "进阶套餐 (Pro)",
+              "to": "进阶套餐 （Pro）"
+            },
+            "first_month_price": {
+              "from": null,
+              "to": 238
+            },
+            "notes": {
+              "from": "",
+              "to": "限时折扣价"
+            },
+            "url": {
+              "from": "https://console.cloud.tencent.com/tokenhub/tokenplan/common",
+              "to": "https://cloud.tencent.com/act/pro/tokenplan"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "腾讯云",
+          "brand_slug": "tencent-cloud",
+          "plan_id": "tencent-cloud.max",
+          "plan_name": "专业套餐 （Max）",
+          "changes": {
+            "name": {
+              "from": "专业套餐 (Max)",
+              "to": "专业套餐 （Max）"
+            },
+            "first_month_price": {
+              "from": null,
+              "to": 468
+            },
+            "notes": {
+              "from": "",
+              "to": "限时折扣价"
+            },
+            "url": {
+              "from": "https://console.cloud.tencent.com/tokenhub/tokenplan/common",
+              "to": "https://cloud.tencent.com/act/pro/tokenplan"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "changelog-1785986936287",
+      "date": "2026-08-06",
+      "edition": "2026.08.06",
+      "kind": "data",
+      "title": "MiniMax：更新 3 项套餐",
+      "summary": "",
+      "items": [
+        "MiniMax · Plus：权益 支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐… → 支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐…；Credits 上限 ∅ → 月度约 6 亿+ token M3 用量；备注 官方 MiniMax Token Plan Plus：连续包月 ¥49/月；连续… → 包年原价¥588",
+        "MiniMax · Max：权益 支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐… → 支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐…；Credits 上限 ∅ → 月度约 18 亿+ token M3 用量；备注 官方 MiniMax Token Plan Max：连续包月 ¥119/月；连续… → 包年原价¥1490",
+        "MiniMax · Ultra：权益 支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐… → 支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐…；Credits 上限 ∅ → 月度约 71 亿+ token M3 用量；备注 官方 MiniMax Token Plan Ultra：连续包月 ¥469/月；… → 包年原价¥5628"
+      ],
+      "change_items": [
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "MiniMax",
+          "brand_slug": "minimax",
+          "plan_id": "minimax-m3-token-plus",
+          "plan_name": "Plus",
+          "changes": {
+            "benefits": {
+              "from": "支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐）；支持主流编程工具；1M 长上下文；M3 原生多模态理解（图像 / 视频输入）；文本 / 图像 / 语音 / 音乐共享同一额度；包含 MiniMax Code 桌面端和网页版。",
+              "to": "支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐）\n可同时支持 3-4 个 Agent 并发运行\n支持主流的编程工具，并持续扩展中\n1M 长上下文，适合处理长文档 / 大型代码库\nM3 原生多模态理解：图像 / 视频输入\n文本 / 图像 / 语音 / 音乐 共享同一额度"
+            },
+            "credits_limit": {
+              "from": "",
+              "to": "月度约 6 亿+ token M3 用量"
+            },
+            "notes": {
+              "from": "官方 MiniMax Token Plan Plus：连续包月 ¥49/月；连续包年 ¥490/年。支持 MiniMax 全系模型和共享多模态额度。",
+              "to": "包年原价¥588"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "MiniMax",
+          "brand_slug": "minimax",
+          "plan_id": "minimax-m3-token-max",
+          "plan_name": "Max",
+          "changes": {
+            "benefits": {
+              "from": "支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐）；支持主流编程工具；1M 长上下文；M3 原生多模态理解（图像 / 视频输入）；文本 / 图像 / 语音 / 音乐共享同一额度；支持视频生成 3 条/日；包含 MiniMax Code 桌面端和网页版。",
+              "to": "支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐）\n可同时支持 4-5 个 Agent 并发运行\n支持主流的编程工具，并持续扩展中\n1M 长上下文，适合处理长文档 / 大型代码库\nM3 原生多模态理解：图像 / 视频输入\n文本 / 图像 / 语音 / 音乐 共享同一额度\n支持视频生成，3 条 / 日"
+            },
+            "credits_limit": {
+              "from": "",
+              "to": "月度约 18 亿+ token M3 用量"
+            },
+            "notes": {
+              "from": "官方 MiniMax Token Plan Max：连续包月 ¥119/月；连续包年 ¥1190/年。",
+              "to": "包年原价¥1490"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "MiniMax",
+          "brand_slug": "minimax",
+          "plan_id": "minimax-m3-token-ultra",
+          "plan_name": "Ultra",
+          "changes": {
+            "benefits": {
+              "from": "支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐）；支持主流编程工具；1M 长上下文；M3 原生多模态理解（图像 / 视频输入）；文本 / 图像 / 语音 / 音乐共享同一额度；支持视频生成 5 条/日；包含 MiniMax Code 桌面端和网页版。",
+              "to": "支持 MiniMax 全系模型（M3 / M2.7 / 图像 / 语音 / 音乐）\n可同时支持 6-7 个 Agent 并发运行\n支持主流的编程工具，并持续扩展中\n1M 长上下文，适合处理长文档 / 大型代码库\nM3 原生多模态理解：图像 / 视频输入\n文本 / 图像 / 语音 / 音乐 共享同一额度\n支持视频生成，5 条 / 日"
+            },
+            "credits_limit": {
+              "from": "",
+              "to": "月度约 71 亿+ token M3 用量"
+            },
+            "notes": {
+              "from": "官方 MiniMax Token Plan Ultra：连续包月 ¥469/月；连续包年 ¥4690/年。",
+              "to": "包年原价¥5628"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "changelog-1785986905038",
+      "date": "2026-08-06",
+      "edition": "2026.08.06",
+      "kind": "data",
+      "title": "阶跃星辰：更新 4 项套餐",
+      "summary": "",
+      "items": [
+        "阶跃星辰 · Flash Mini：权益 支持所有旗舰模型；支持智能路由；400M Credits 月使用量；多设备登录；… → 月度用量：400M Credits/月 / 支持模型：step-3.5-flas…；benefits_en ∅ → Monthly usage: 400M Credits/month / Supp…；排序 1 → 10",
+        "阶跃星辰 · Flash Plus：权益 支持所有旗舰模型；支持智能路由；1600M Credits 月使用量；覆盖多款 … → 月度用量：1600M Credits/月 / 支持模型：step-3.5-fla…；benefits_en ∅ → Monthly usage: 1600M Credits/month / Sup…；排序 2 → 20",
+        "阶跃星辰 · Flash Pro：权益 支持所有旗舰模型；支持智能路由；8000M Credits 月使用量；覆盖多款 … → 月度用量：8000M Credits/月 / 支持模型：step-3.5-fla…；benefits_en ∅ → Monthly usage: 8000M Credits/month / Sup…；排序 3 → 30",
+        "阶跃星辰 · Flash Max：权益 支持所有旗舰模型；支持智能路由；40000M Credits 月使用量；覆盖多款… → 月度用量：40000M Credits/月 / 支持模型：step-3.5-fl…；benefits_en ∅ → Monthly usage: 40000M Credits/month / Su…；排序 4 → 40"
+      ],
+      "change_items": [
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "阶跃星辰",
+          "brand_slug": "stepfun",
+          "plan_id": "step-flash-mini",
+          "plan_name": "Flash Mini",
+          "changes": {
+            "benefits": {
+              "from": "支持所有旗舰模型；支持智能路由；400M Credits 月使用量；多设备登录；2 倍 OpenAI Go 套餐用量；覆盖多款 MCP 工具。",
+              "to": "月度用量：400M Credits/月\n支持模型：step-3.5-flash、step-3.5-flash-2603、stepaudio-2.5-tts、stepaudio-2.5-asr、step-router-v1、step-image-edit-2、stepaudio-2.5-chat、stepaudio-2.5-realtime、step-3.7-flash、step-v2-ultra、step-explore"
+            },
+            "benefits_en": {
+              "from": null,
+              "to": "Monthly usage: 400M Credits/month\nSupported models: step-3.5-flash, step-3.5-flash-2603, stepaudio-2.5-tts, stepaudio-2.5-asr, step-router-v1, step-image-edit-2, stepaudio-2.5-chat, stepaudio-2.5-realtime, step-3.7-flash, step-v2-ultra, step-explore"
+            },
+            "sort_order": {
+              "from": 1,
+              "to": 10
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "阶跃星辰",
+          "brand_slug": "stepfun",
+          "plan_id": "step-flash-plus",
+          "plan_name": "Flash Plus",
+          "changes": {
+            "benefits": {
+              "from": "支持所有旗舰模型；支持智能路由；1600M Credits 月使用量；覆盖多款 MCP 工具；多设备登录；优先 API 速率；优先技术支持。",
+              "to": "月度用量：1600M Credits/月\n支持模型：step-3.5-flash、step-3.5-flash-2603、stepaudio-2.5-tts、stepaudio-2.5-asr、step-router-v1、step-image-edit-2、stepaudio-2.5-chat、stepaudio-2.5-realtime、step-3.7-flash、step-v2-ultra、step-explore"
+            },
+            "benefits_en": {
+              "from": null,
+              "to": "Monthly usage: 1600M Credits/month\nSupported models: step-3.5-flash, step-3.5-flash-2603, stepaudio-2.5-tts, stepaudio-2.5-asr, step-router-v1, step-image-edit-2, stepaudio-2.5-chat, stepaudio-2.5-realtime, step-3.7-flash, step-v2-ultra, step-explore"
+            },
+            "sort_order": {
+              "from": 2,
+              "to": 20
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "阶跃星辰",
+          "brand_slug": "stepfun",
+          "plan_id": "step-flash-pro",
+          "plan_name": "Flash Pro",
+          "changes": {
+            "benefits": {
+              "from": "支持所有旗舰模型；支持智能路由；8000M Credits 月使用量；覆盖多款 MCP 工具；多设备登录；优先 API 速率；优先技术支持。",
+              "to": "月度用量：8000M Credits/月\n支持模型：step-3.5-flash、step-3.5-flash-2603、stepaudio-2.5-tts、stepaudio-2.5-asr、step-router-v1、step-image-edit-2、stepaudio-2.5-chat、stepaudio-2.5-realtime、step-3.7-flash、step-v2-ultra、step-explore"
+            },
+            "benefits_en": {
+              "from": null,
+              "to": "Monthly usage: 8000M Credits/month\nSupported models: step-3.5-flash, step-3.5-flash-2603, stepaudio-2.5-tts, stepaudio-2.5-asr, step-router-v1, step-image-edit-2, stepaudio-2.5-chat, stepaudio-2.5-realtime, step-3.7-flash, step-v2-ultra, step-explore"
+            },
+            "sort_order": {
+              "from": 3,
+              "to": 30
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "阶跃星辰",
+          "brand_slug": "stepfun",
+          "plan_id": "step-flash-max",
+          "plan_name": "Flash Max",
+          "changes": {
+            "benefits": {
+              "from": "支持所有旗舰模型；支持智能路由；40000M Credits 月使用量；覆盖多款 MCP 工具；多设备登录；优先 API 速率；优先技术支持。",
+              "to": "月度用量：40000M Credits/月\n支持模型：step-3.5-flash、step-3.5-flash-2603、stepaudio-2.5-tts、stepaudio-2.5-asr、step-router-v1、step-image-edit-2、stepaudio-2.5-chat、stepaudio-2.5-realtime、step-3.7-flash、step-v2-ultra、step-explore"
+            },
+            "benefits_en": {
+              "from": null,
+              "to": "Monthly usage: 40000M Credits/month\nSupported models: step-3.5-flash, step-3.5-flash-2603, stepaudio-2.5-tts, stepaudio-2.5-asr, step-router-v1, step-image-edit-2, stepaudio-2.5-chat, stepaudio-2.5-realtime, step-3.7-flash, step-v2-ultra, step-explore"
+            },
+            "sort_order": {
+              "from": 4,
+              "to": 40
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "changelog-1785986877484",
+      "date": "2026-08-06",
+      "edition": "2026.08.06",
+      "kind": "data",
+      "title": "Xiaomi MiMo：更新 4 项套餐",
+      "summary": "",
+      "items": [
+        "Xiaomi MiMo · Lite：权益 尝鲜入门 / 支持 V2.5 全系列模型（文本旗舰/全模态/语音） / 支持 O… → 支持 V2.5 全系列模型（文本旗舰 / 全模态 / 语音） / 4,100,0…；benefits_en ∅ → Supports the full V2.5 model lineup (tex…；Credits 上限 41亿 Credits/月（连续包月）；492亿 Credits/年（连续包年） → 41 亿 Credits；备注 连续包月首购优惠¥34.32/月（原价¥39/月，立减4.68元）；连续包年88… → 尝鲜入门 / 月付限时折扣价 ¥34.32 / 年付原价 ¥468.00；notes_en ∅ → Starter Pack",
+        "Xiaomi MiMo · Standard：权益 适合进阶用户 / 支持 V2.5 全系列模型（文本旗舰/全模态/语音） / 支持… → 支持 V2.5 全系列模型（文本旗舰 / 全模态 / 语音） / 11,000,…；benefits_en ∅ → Supports the full V2.5 model lineup (tex…；Credits 上限 110亿 Credits/月（连续包月）；1320亿 Credits/年（连续包… → 110 亿 Credits；备注 连续包月首购优惠¥87.12/月（原价¥99/月，立减11.88元）；连续包年8… → 适合进阶用户 / 月付限时折扣价 ¥87.12 / 年付原价 ¥1188.00；notes_en ∅ → For Advanced Users",
+        "Xiaomi MiMo · Pro：权益 适合专业开发者 / 支持 V2.5 全系列模型（文本旗舰/全模态/语音） / 支… → 支持 V2.5 全系列模型（文本旗舰 / 全模态 / 语音） / 38,000,…；benefits_en ∅ → Supports the full V2.5 model lineup (tex…；Credits 上限 380亿 Credits/月（连续包月）；4560亿 Credits/年（连续包… → 380 亿 Credits；备注 连续包月首购优惠¥289.52/月（原价¥329/月，立减39.48元）；连续包… → 适合专业开发者 / 月付限时折扣价 ¥289.52 / 年付原价 ¥3948.0…；notes_en ∅ → For Professionals",
+        "Xiaomi MiMo · Max：权益 适合编程开发发烧友 / 支持 V2.5 全系列模型（文本旗舰/全模态/语音） /… → 支持 V2.5 全系列模型（文本旗舰 / 全模态 / 语音） / 82,000,…；benefits_en ∅ → Supports the full V2.5 model lineup (tex…；Credits 上限 820亿 Credits/月（连续包月）；9840亿 Credits/年（连续包… → 820 亿 Credits；备注 连续包月首购优惠¥579.92/月（原价¥659/月，立减79.08元）；连续包… → 适合编程开发发烧友 / 月付限时折扣价 ¥579.92 / 年付原价 ¥7908…；notes_en ∅ → For Coding Enthusiasts"
+      ],
+      "change_items": [
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "Xiaomi MiMo",
+          "brand_slug": "xiaomi-mimo",
+          "plan_id": "xiaomi-mimo.lite",
+          "plan_name": "Lite",
+          "changes": {
+            "benefits": {
+              "from": "尝鲜入门\n支持 V2.5 全系列模型（文本旗舰/全模态/语音）\n支持 OpenClaw、Codex、ClaudeCode、MiMoCode 等主流编程工具\n非高峰期（北京时间每日00:00-08:00）0.8x 系数消耗\nTTS 系列模型限时免费使用\n基础用量",
+              "to": "支持 V2.5 全系列模型（文本旗舰 / 全模态 / 语音）\n4,100,000,000 Credits 套餐月总量\n支持 OpenClaw、Codex、ClaudeCode、MiMoCode 等主流编程工具\n非高峰期(北京时间每日00:00-08:00) 0.8x 系数消耗\nTTS 系列模型限时免费使用"
+            },
+            "benefits_en": {
+              "from": null,
+              "to": "Supports the full V2.5 model lineup (text flagship / multimodal / speech)\n4,100,000,000 Credits monthly package total\nWorks with popular coding tools like OpenClaw、Codex、ClaudeCode、MiMoCode\n20% off during off-peak hours(9:00 AM-5:00 PM PDT)\nFree access to TTS models for a limited time"
+            },
+            "credits_limit": {
+              "from": "41亿 Credits/月（连续包月）；492亿 Credits/年（连续包年）",
+              "to": "41 亿 Credits"
+            },
+            "notes": {
+              "from": "连续包月首购优惠¥34.32/月（原价¥39/月，立减4.68元）；连续包年88折¥411.84/年（原价¥468/年，立减56.16元）",
+              "to": "尝鲜入门\n月付限时折扣价 ¥34.32\n年付原价 ¥468.00"
+            },
+            "notes_en": {
+              "from": null,
+              "to": "Starter Pack"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "Xiaomi MiMo",
+          "brand_slug": "xiaomi-mimo",
+          "plan_id": "xiaomi-mimo.standard",
+          "plan_name": "Standard",
+          "changes": {
+            "benefits": {
+              "from": "适合进阶用户\n支持 V2.5 全系列模型（文本旗舰/全模态/语音）\n支持 OpenClaw、Codex、ClaudeCode、MiMoCode 等主流编程工具\n非高峰期（北京时间每日00:00-08:00）0.8x 系数消耗\nTTS 系列模型限时免费使用\n2.7倍 Lite 套餐用量",
+              "to": "支持 V2.5 全系列模型（文本旗舰 / 全模态 / 语音）\n11,000,000,000 Credits 套餐月总量\n2.7倍 Lite 套餐用量\n支持 OpenClaw、Codex、ClaudeCode、MiMoCode 等主流编程工具\n非高峰期(北京时间每日00:00-08:00) 0.8x 系数消耗\nTTS 系列模型限时免费使用"
+            },
+            "benefits_en": {
+              "from": null,
+              "to": "Supports the full V2.5 model lineup (text flagship / multimodal / speech)\n11,000,000,000 Credits monthly package total\n2.7x Lite Usage\nWorks with popular coding tools like OpenClaw、Codex、ClaudeCode、MiMoCode\n20% off during off-peak hours(9:00 AM-5:00 PM PDT)\nFree access to TTS models for a limited time"
+            },
+            "credits_limit": {
+              "from": "110亿 Credits/月（连续包月）；1320亿 Credits/年（连续包年）",
+              "to": "110 亿 Credits"
+            },
+            "notes": {
+              "from": "连续包月首购优惠¥87.12/月（原价¥99/月，立减11.88元）；连续包年88折¥1045.44/年（原价¥1188/年，立减142.56元）",
+              "to": "适合进阶用户\n月付限时折扣价 ¥87.12\n年付原价 ¥1188.00"
+            },
+            "notes_en": {
+              "from": null,
+              "to": "For Advanced Users"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "Xiaomi MiMo",
+          "brand_slug": "xiaomi-mimo",
+          "plan_id": "xiaomi-mimo.pro",
+          "plan_name": "Pro",
+          "changes": {
+            "benefits": {
+              "from": "适合专业开发者\n支持 V2.5 全系列模型（文本旗舰/全模态/语音）\n支持 OpenClaw、Codex、ClaudeCode、MiMoCode 等主流编程工具\n非高峰期（北京时间每日00:00-08:00）0.8x 系数消耗\nTTS 系列模型限时免费使用\n9.3倍 Lite 套餐用量",
+              "to": "支持 V2.5 全系列模型（文本旗舰 / 全模态 / 语音）\n38,000,000,000 Credits 套餐月总量\n9.3倍 Lite 套餐用量\n支持 OpenClaw、Codex、ClaudeCode、MiMoCode 等主流编程工具\n非高峰期(北京时间每日00:00-08:00) 0.8x 系数消耗\nTTS 系列模型限时免费使用"
+            },
+            "benefits_en": {
+              "from": null,
+              "to": "Supports the full V2.5 model lineup (text flagship / multimodal / speech)\n38,000,000,000 Credits monthly package total\n9.3x Lite Usage\nWorks with popular coding tools like OpenClaw、Codex、ClaudeCode、MiMoCode\n20% off during off-peak hours(9:00 AM-5:00 PM PDT)\nFree access to TTS models for a limited time"
+            },
+            "credits_limit": {
+              "from": "380亿 Credits/月（连续包月）；4560亿 Credits/年（连续包年）",
+              "to": "380 亿 Credits"
+            },
+            "notes": {
+              "from": "连续包月首购优惠¥289.52/月（原价¥329/月，立减39.48元）；连续包年88折¥3474.24/年（原价¥3948/年，立减473.76元）",
+              "to": "适合专业开发者\n月付限时折扣价 ¥289.52\n年付原价 ¥3948.00"
+            },
+            "notes_en": {
+              "from": null,
+              "to": "For Professionals"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "Xiaomi MiMo",
+          "brand_slug": "xiaomi-mimo",
+          "plan_id": "xiaomi-mimo.max",
+          "plan_name": "Max",
+          "changes": {
+            "benefits": {
+              "from": "适合编程开发发烧友\n支持 V2.5 全系列模型（文本旗舰/全模态/语音）\n支持 OpenClaw、Codex、ClaudeCode、MiMoCode 等主流编程工具\n非高峰期（北京时间每日00:00-08:00）0.8x 系数消耗\nTTS 系列模型限时免费使用\n20倍 Lite 套餐用量",
+              "to": "支持 V2.5 全系列模型（文本旗舰 / 全模态 / 语音）\n82,000,000,000 Credits 套餐月总量\n20倍 Lite 套餐用量\n支持 OpenClaw、Codex、ClaudeCode、MiMoCode 等主流编程工具\n非高峰期(北京时间每日00:00-08:00) 0.8x 系数消耗\nTTS 系列模型限时免费使用"
+            },
+            "benefits_en": {
+              "from": null,
+              "to": "Supports the full V2.5 model lineup (text flagship / multimodal / speech)\n82,000,000,000 Credits monthly package total\n20x Lite Usage\nWorks with popular coding tools like OpenClaw、Codex、ClaudeCode、MiMoCode\n20% off during off-peak hours(9:00 AM-5:00 PM PDT)\nFree access to TTS models for a limited time"
+            },
+            "credits_limit": {
+              "from": "820亿 Credits/月（连续包月）；9840亿 Credits/年（连续包年）",
+              "to": "820 亿 Credits"
+            },
+            "notes": {
+              "from": "连续包月首购优惠¥579.92/月（原价¥659/月，立减79.08元）；连续包年88折¥6959.04/年（原价¥7908/年，立减948.96元）",
+              "to": "适合编程开发发烧友\n月付限时折扣价 ¥579.92\n年付原价 ¥7908.00"
+            },
+            "notes_en": {
+              "from": null,
+              "to": "For Coding Enthusiasts"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "changelog-1785986844573",
+      "date": "2026-08-06",
+      "edition": "2026.08.06",
+      "kind": "data",
+      "title": "七牛云：更新 3 项套餐",
+      "summary": "",
+      "items": [
+        "七牛云 · Enterprise S：每周限额 ∅ → 约 24,717 万积分 / 周；权益 包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型 / 兼… → 包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型 / 兼…；Credits 上限 ∅ → 约 10.7 亿积分 / 月；备注 企业轻量集成 / 内部工具 / 原价¥4,284/月，包月7折 / 包季原价¥1… → 企业轻量集成 / 内部工具 / 包月原价¥4,284，7折 / 包季原价¥12,…",
+        "七牛云 · Enterprise M：每周限额 ∅ → 约 48,067 万积分 / 周；权益 包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型 / 兼… → 包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型 / 兼…；Credits 上限 ∅ → 约 20.8 亿积分 / 月；备注 企业中频业务 / SaaS 辅助功能（最受欢迎） / 原价¥8,332/月，包月… → 企业中频业务 / SaaS 辅助功能（最受欢迎） / 包月原价¥8,332，6折…",
+        "七牛云 · Enterprise B：每周限额 ∅ → 约 115,373 万积分 / 周；权益 包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型 / 兼… → 包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型 / 兼…；Credits 上限 ∅ → 约 50.0 亿积分 / 月；备注 企业高频业务 / 多部门协同 / 原价¥19,998/月，包月5折 / 包季原价… → 企业高频业务 / 多部门协同 / 包月原价¥19,998，5折 / 包季原价¥5…"
+      ],
+      "change_items": [
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "七牛云",
+          "brand_slug": "qiniu",
+          "plan_id": "qiniu.enterprise-s",
+          "plan_name": "Enterprise S",
+          "changes": {
+            "weekly_requests": {
+              "from": null,
+              "to": "约 24,717 万积分 / 周"
+            },
+            "benefits": {
+              "from": "包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型\n兼容 OpenAI 与 Anthropic 接口\n新模型持续更新加入",
+              "to": "包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型\n兼容 OpenAI 与Anthropic 接口\n新模型持续更新加入"
+            },
+            "credits_limit": {
+              "from": null,
+              "to": "约 10.7 亿积分 / 月"
+            },
+            "notes": {
+              "from": "企业轻量集成 / 内部工具\n原价¥4,284/月，包月7折\n包季原价¥12,852，6.5折，较按月省¥643\n包年原价¥51,408，6折，较按月省¥5,143\n积分按模型实际消耗扣减，不同模型单次消耗不同\n未用完的积分不结转至下一周期",
+              "to": "企业轻量集成 / 内部工具\n包月原价¥4,284，7折\n包季原价¥12,852，6.5折，较按月省¥643\n包年原价¥51,408，6折，较按月省¥5,143\n积分按模型实际消耗扣减，不同模型单次消耗不同\n未用完的积分不结转至下一周期"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "七牛云",
+          "brand_slug": "qiniu",
+          "plan_id": "qiniu.enterprise-m",
+          "plan_name": "Enterprise M",
+          "changes": {
+            "weekly_requests": {
+              "from": null,
+              "to": "约 48,067 万积分 / 周"
+            },
+            "benefits": {
+              "from": "包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型\n兼容 OpenAI 与 Anthropic 接口\n新模型持续更新加入",
+              "to": "包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型\n兼容 OpenAI 与Anthropic 接口\n新模型持续更新加入"
+            },
+            "credits_limit": {
+              "from": null,
+              "to": "约 20.8 亿积分 / 月"
+            },
+            "notes": {
+              "from": "企业中频业务 / SaaS 辅助功能（最受欢迎）\n原价¥8,332/月，包月6折\n包季原价¥24,996，5.5折，较按月省¥1,249\n包年原价¥99,984，5折，较按月省¥9,996\n积分按模型实际消耗扣减，不同模型单次消耗不同\n未用完的积分不结转至下一周期",
+              "to": "企业中频业务 / SaaS 辅助功能（最受欢迎）\n包月原价¥8,332，6折\n包季原价¥24,996，5.5折，较按月省¥1249\n包年原价¥99,984，5折，较按月省¥9,996\n积分按模型实际消耗扣减，不同模型单次消耗不同\n未用完的积分不结转至下一周期"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "七牛云",
+          "brand_slug": "qiniu",
+          "plan_id": "qiniu.enterprise-b",
+          "plan_name": "Enterprise B",
+          "changes": {
+            "weekly_requests": {
+              "from": null,
+              "to": "约 115,373 万积分 / 周"
+            },
+            "benefits": {
+              "from": "包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型\n兼容 OpenAI 与 Anthropic 接口\n新模型持续更新加入",
+              "to": "包含 Minimax、Kimi、GLM、Deepseek 等顶级国产模型\n兼容 OpenAI 与Anthropic 接口\n新模型持续更新加入"
+            },
+            "credits_limit": {
+              "from": null,
+              "to": "约 50.0 亿积分 / 月"
+            },
+            "notes": {
+              "from": "企业高频业务 / 多部门协同\n原价¥19,998/月，包月5折\n包季原价¥59,993，4.5折，较按月省¥3,000\n包年原价¥239,975，4折，较按月省¥23,998\n积分按模型实际消耗扣减，不同模型单次消耗不同\n未用完的积分不结转至下一周期",
+              "to": "企业高频业务 / 多部门协同\n包月原价¥19,998，5折\n包季原价¥59,993，4.5折，较按月省¥3000\n包年原价¥239,975，4折，较按月省¥23,998\n积分按模型实际消耗扣减，不同模型单次消耗不同\n未用完的积分不结转至下一周期"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "changelog-1785809145578",
+      "date": "2026-08-04",
+      "edition": "2026.08.04",
+      "kind": "catalog",
+      "title": "MiniMax：新增 1 项模型价格",
+      "summary": "",
+      "items": [
+        "MiniMax · MiniMax-H3-Context-IR：新增模型"
+      ],
+      "change_items": [
+        {
+          "scope": "model",
+          "action": "create",
+          "provider": "MiniMax",
+          "brand_slug": "minimax",
+          "canonical_id": "minimax-h3-context-ir",
+          "model_name": "MiniMax-H3-Context-IR"
+        }
+      ]
+    },
+    {
+      "id": "changelog-1785744687578",
+      "date": "2026-08-03",
+      "edition": "2026.08.03",
+      "kind": "data",
+      "title": "千问办公：更新 4 项套餐",
+      "summary": "",
+      "items": [
+        "千问办公 · 免费版：按年价 ∅ → 0；备注 ∅ → 年付 = 连续包月价×12，官网无额外折扣",
+        "千问办公 · 个人标准版：按年价 ∅ → 823；备注 官网划线价 98元/月（8折） / 官网划线价 1,176元/年（7折） → 官网划线价 98元/月（8折） / 官网划线价 1,176元/年（7折） / 年…",
+        "千问办公 · 个人高级版：按年价 ∅ → 1663；备注 官网划线价 198元/月（8折） / 官网划线价 2,376元/年（7折） → 官网划线价 198元/月（8折） / 官网划线价 2,376元/年（7折） / …",
+        "千问办公 · 企业标准版：按年价 ∅ → 2376；备注 按席位计费 → 按席位计费 / 年付 = 连续包月价×12，官网无额外折扣"
+      ],
+      "change_items": [
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "千问办公",
+          "brand_slug": "qwenwork",
+          "plan_id": "qwenwork.2229a42f",
+          "plan_name": "免费版",
+          "changes": {
+            "annual_price": {
+              "from": null,
+              "to": 0
+            },
+            "notes": {
+              "from": null,
+              "to": "年付 = 连续包月价×12，官网无额外折扣"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "千问办公",
+          "brand_slug": "qwenwork",
+          "plan_id": "qwenwork.b9be6a80",
+          "plan_name": "个人标准版",
+          "changes": {
+            "annual_price": {
+              "from": null,
+              "to": 823
+            },
+            "notes": {
+              "from": "官网划线价 98元/月（8折）\n官网划线价 1,176元/年（7折）",
+              "to": "官网划线价 98元/月（8折）\n官网划线价 1,176元/年（7折）\n年付 = 连续包月价×12，官网无额外折扣"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "千问办公",
+          "brand_slug": "qwenwork",
+          "plan_id": "qwenwork.51bd5e03",
+          "plan_name": "个人高级版",
+          "changes": {
+            "annual_price": {
+              "from": null,
+              "to": 1663
+            },
+            "notes": {
+              "from": "官网划线价 198元/月（8折）\n官网划线价 2,376元/年（7折）",
+              "to": "官网划线价 198元/月（8折）\n官网划线价 2,376元/年（7折）\n年付 = 连续包月价×12，官网无额外折扣"
+            }
+          }
+        },
+        {
+          "scope": "plan",
+          "action": "update",
+          "provider": "千问办公",
+          "brand_slug": "qwenwork",
+          "plan_id": "qwenwork.28ea4855",
+          "plan_name": "企业标准版",
+          "changes": {
+            "annual_price": {
+              "from": null,
+              "to": 2376
+            },
+            "notes": {
+              "from": "按席位计费",
+              "to": "按席位计费\n年付 = 连续包月价×12，官网无额外折扣"
+            }
+          }
+        }
+      ]
+    },
     {
       "id": "changelog-1785725318759",
       "date": "2026-08-03",
