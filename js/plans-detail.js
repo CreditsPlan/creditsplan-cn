@@ -15,7 +15,7 @@ import {
   supportedModelDisplay,
   verifiedFreshness
 } from './shared/plan-utils.js';
-import { planQuotaDisplay } from './shared/quota-utils.js';
+import { planQuotaDisplay, planUnitPriceDisplay } from './shared/quota-utils.js';
 
 export const PLAN_TYPE_LABELS = {
   coding_plan: 'Coding Plan',
@@ -163,10 +163,18 @@ export function renderPlanPriceBlock(plan) {
     </div>`;
 }
 
-export function renderSelectedPlanDetail(plan, providerInfo = {}) {
+// 表格列 → 详情已覆盖：价格块/明细行/footer 已展示这些列的信息，列隐藏时不在详情中重复展示
+const DETAIL_COVERED_COLUMN_KEYS = new Set([
+  'monthlyPrice', 'quarterlyPrice', 'annualPrice', 'quota', 'model',
+  'dataTraining', 'verifiedAt'
+]);
+
+export function renderSelectedPlanDetail(plan, providerInfo = {}, hiddenTableColumns = [], visibleColumnKeys = null) {
   if (!plan) return '';
   const typeLabel = PLAN_TYPE_LABELS[plan.planType] || plan.planType || '';
   const rows = [];
+  // 列可见时表格已展示该字段，详情不再重复展示；visibleColumnKeys 为空（卡片视图等）时不裁剪
+  const columnVisible = key => visibleColumnKeys ? visibleColumnKeys.has(key) : false;
   const hasRmb = plan.rmbRecharge && plan.rmbRecharge !== '待确认' && plan.rmbRecharge !== '请以官网为准';
   const hasInvoice = plan.invoice && plan.invoice !== '待确认' && plan.invoice !== '请以官网为准';
   const privacy = resolvePlanPrivacy(plan, providerInfo, PROVIDER_NAME_MAP);
@@ -177,7 +185,7 @@ export function renderSelectedPlanDetail(plan, providerInfo = {}) {
     && optionalDetailText(plan.includedCalls).replace(/\s+/g, '').includes(compactTokenLimit);
 
   addPlanExtraRow(rows, '套餐类型', typeLabel, false, false, true);
-  addPlanExtraRow(rows, '支持模型', (plan.supportedModelNames || []).join('、'), false, true);
+  if (!columnVisible('model')) addPlanExtraRow(rows, '支持模型', (plan.supportedModelNames || []).join('、'), false, true);
   if (plan.firstMonthPrice != null) {
     const firstMonthPrice = Number(plan.firstMonthPrice);
     addPlanExtraRow(rows, '首月价格', Number.isFinite(firstMonthPrice)
@@ -185,12 +193,12 @@ export function renderSelectedPlanDetail(plan, providerInfo = {}) {
       : plan.firstMonthPrice);
   }
   if (plan.domesticPayment) addPlanExtraRow(rows, '国内支付', '支持', false, false, true);
-  if (quotaField !== 'includedCalls') addPlanExtraRow(rows, '包含调用量', plan.includedCalls, false, false, true);
+  if (!columnVisible('quota') && quotaField !== 'includedCalls') addPlanExtraRow(rows, '包含调用量', plan.includedCalls, false, false, true);
   // 合并五小时/周/月请求为一行多指标，防止换行撑高卡片
   const fiveHourText = optionalDetailText(plan.fiveHoursRequests);
   const weeklyText = optionalDetailText(plan.weeklyRequests);
   const monthlyText = quotaField === 'monthlyRequests' ? '' : optionalDetailText(plan.monthlyRequests);
-  if (fiveHourText || weeklyText || monthlyText) {
+  if (!columnVisible('quota') && (fiveHourText || weeklyText || monthlyText)) {
     rows.push({
       label: '',
       value: '',
@@ -204,10 +212,23 @@ export function renderSelectedPlanDetail(plan, providerInfo = {}) {
       monthlyText
     });
   }
+  // 等效单价由额度列与月价推导，未展示在表格中，仅在展开详情中呈现
+  const unitPrice = planUnitPriceDisplay(plan);
+  if (unitPrice) {
+    rows.push({
+      label: '等效单价',
+      value: unitPrice.text,
+      keepInline: false,
+      wide: false,
+      compactInline: true,
+      nowrapValue: true,
+      title: `${unitPrice.basis}折算${unitPrice.estimated ? '（估算）' : ''}`
+    });
+  }
   addPlanExtraRow(rows, '5小时实测 Tokens', plan.measuredFiveHoursTokens);
   addPlanExtraRow(rows, '周实测 Tokens', plan.measuredWeeklyTokens);
   addPlanExtraRow(rows, '月实测 Tokens', plan.measuredMonthlyTokens);
-  if (quotaField !== 'tokenLimit' && !tokenLimitDuplicated) addPlanExtraRow(rows, 'Token上限', plan.tokenLimit);
+  if (!columnVisible('quota') && quotaField !== 'tokenLimit' && !tokenLimitDuplicated) addPlanExtraRow(rows, 'Token上限', plan.tokenLimit);
   addPlanExtraRow(rows, '权益', plan.benefits ? plan.benefits.replace(/\n/g, '；') : undefined);
   addPlanExtraRow(rows, '输入价格', plan.modelInputPrice);
   addPlanExtraRow(rows, '输出价格', plan.modelOutputPrice);
@@ -226,7 +247,7 @@ export function renderSelectedPlanDetail(plan, providerInfo = {}) {
   addPlanExtraRow(rows, '适用场景', plan.suitableFor);
   addPlanExtraRow(rows, '适合', plan.recommendationText, false, true);
   addPlanExtraRow(rows, '注意', getRiskDisplayText(plan), false, true);
-  if (privacy.training) {
+  if (!columnVisible('dataTraining') && privacy.training) {
     const trainingLabel = DATA_TRAINING_LABELS[privacy.training] || privacy.training;
     const privacyFresh = privacyFreshness(privacy.verifiedAt);
     const freshnessNote = privacyFresh.state === 'stale'
@@ -263,19 +284,30 @@ export function renderSelectedPlanDetail(plan, providerInfo = {}) {
       : (isLong ? 'plan-extra-item plan-extra-wide' : `plan-extra-item ${row.compactInline ? 'plan-extra-compact-inline' : 'plan-extra-inline'}`);
     const nowrapClass = row.nowrapValue ? ' plan-extra-nowrap' : '';
     return `
-    <div class="${itemClass}${nowrapClass}">
+    <div class="${itemClass}${nowrapClass}"${row.title ? ` title="${escapeHtml(row.title)}"` : ''}>
       <span class="plan-extra-label">${escapeHtml(row.label)}</span>
       <span class="plan-extra-value">${escapeHtml(row.value)}</span>
     </div>`;
-  }).join('') : '<p class="plan-extra-empty">暂无表格外补充信息。</p>';
+  }).join('') : '';
+  // 列设置中隐藏的表格列兜底展示（值复用表格单元格渲染，含徽标/链接等格式）
+  const hiddenRowsHtml = hiddenTableColumns
+    .filter(column => !DETAIL_COVERED_COLUMN_KEYS.has(column.key) && column.html)
+    .map(column => `
+      <div class="plan-extra-item plan-extra-inline">
+        <span class="plan-extra-label">${escapeHtml(column.label)}</span>
+        <span class="plan-extra-value">${column.html}</span>
+      </div>`)
+    .join('');
   const planUrl = safeExternalUrl(plan.url);
   const purchaseLink = purchaseLinkTarget(plan, planUrl);
   const verifiedFresh = verifiedFreshness(plan.lastVerifiedAt);
-  const verifiedText = verifiedFresh.state === 'fresh'
-    ? `官方页核实于 ${escapeHtml(verifiedFresh.date)}（${verifiedFresh.days === 0 ? '今日' : `${verifiedFresh.days} 天前`}）`
-    : verifiedFresh.state === 'stale'
-      ? `上次核实 ${escapeHtml(verifiedFresh.date)} · 超过 30 天，待复核`
-      : '';
+  const verifiedText = columnVisible('verifiedAt')
+    ? ''
+    : (verifiedFresh.state === 'fresh'
+      ? `官方页核实于 ${escapeHtml(verifiedFresh.date)}（${verifiedFresh.days === 0 ? '今日' : `${verifiedFresh.days} 天前`}）`
+      : verifiedFresh.state === 'stale'
+        ? `上次核实 ${escapeHtml(verifiedFresh.date)} · 超过 30 天，待复核`
+        : '');
   const sourceLabel = SOURCE_TYPE_LABELS[sourceTypeKind(plan.sourceType)] || plan.sourceType || '后台维护';
   const sourceMeta = `数据来源：${escapeHtml(sourceLabel)}${verifiedText ? ` · ${verifiedText}` : ''}`;
   const privacyPolicyLink = privacy.policyUrl
@@ -297,6 +329,8 @@ export function renderSelectedPlanDetail(plan, providerInfo = {}) {
       <div class="selected-plan-detail-body">
         <div class="plan-extra-list">
           ${rowsHtml}
+          ${hiddenRowsHtml}
+          ${rows.length || hiddenRowsHtml ? '' : '<p class="plan-extra-empty">暂无表格外补充信息。</p>'}
         </div>
         ${footerHtml}
       </div>

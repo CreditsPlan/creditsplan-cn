@@ -21,15 +21,17 @@ import {
   verifiedFreshness
 } from './shared/plan-utils.js';
 import {
-  PLAN_TABLE_FILTER_COLUMNS,
   applyPlanTableFilter,
   isAvailableOnlyActive,
   isPlanTableFilterActive,
+  PLAN_TABLE_FILTER_COLUMNS,
   planBillingUnitLabel,
+  planTableMinWidth,
   renderPlanTableFilterHeader,
   renderPlanTableFilterSummary,
   renderPlanTableQuickFilters,
-  setPlanTablePrivacyContext
+  setPlanTablePrivacyContext,
+  visiblePlanTableColumns
 } from './plans-filters.js';
 import {
   PLAN_TYPE_LABELS,
@@ -39,7 +41,7 @@ import {
   renderPlanPriceBlock,
   renderSelectedPlanDetail
 } from './plans-detail.js';
-import { planQuotaDisplay, planUnitPriceDisplay } from './shared/quota-utils.js';
+import { planQuotaDisplay } from './shared/quota-utils.js';
 
 const PLAN_TABLE_GROUP_PREVIEW = 2;
 
@@ -212,11 +214,9 @@ function planPriceCard(plan, trustHtml = '', domesticHtml = '', isExpanded = fal
   }
 
   const cardQuota = planQuotaDisplay(plan);
-  const cardUnitPrice = planUnitPriceDisplay(plan);
-  const quotaRowHtml = (cardQuota || cardUnitPrice)
+  const quotaRowHtml = cardQuota
     ? `<div class="plan-card-quota-row mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500 dark:text-slate-400">
-        ${cardQuota ? `<span title="${escapeHtml(cardQuota.full)}">额度：${escapeHtml(cardQuota.text)}</span>` : ''}
-        ${cardUnitPrice ? `<span class="font-medium text-brand-700 dark:text-brand-300" title="按${escapeHtml(cardUnitPrice.basis)}折算${cardUnitPrice.estimated ? '（估算）' : ''}">${escapeHtml(cardUnitPrice.text)}</span>` : ''}
+        <span title="${escapeHtml(cardQuota.full)}">额度：${escapeHtml(cardQuota.text)}</span>
       </div>`
     : '';
 
@@ -327,10 +327,6 @@ function renderPlanRows(group, selectedPlanKey, isGroupExpanded, providerInfo, p
     const billingUnitHtml = billingUnitLabel === '未公开'
       ? '<span class="text-slate-400">—</span>'
       : `<span class="billing-unit-badge billing-unit-badge--${escapeHtml(plan.limitType || 'undisclosed')}">${escapeHtml(billingUnitLabel)}</span>`;
-    const unitPrice = planUnitPriceDisplay(plan);
-    const unitPriceHtml = unitPrice
-      ? `<span class="whitespace-nowrap font-medium text-brand-700 dark:text-brand-300" title="按${escapeHtml(unitPrice.basis)}折算${unitPrice.estimated ? '（估算）' : ''}">${escapeHtml(unitPrice.text)}</span>`
-      : '<span class="text-slate-400">—</span>';
     const verifiedFresh = verifiedFreshness(plan.lastVerifiedAt);
     const verifiedDisplay = verifiedFresh.state === 'fresh'
       ? `<span class="text-xs font-medium text-emerald-600 dark:text-emerald-400" title="官方页核实于 ${escapeHtml(verifiedFresh.date)}">✓ ${verifiedFresh.days === 0 ? '今日' : `${verifiedFresh.days} 天前`}</span>`
@@ -339,50 +335,63 @@ function renderPlanRows(group, selectedPlanKey, isGroupExpanded, providerInfo, p
         : '<span class="text-xs text-slate-400">待核对</span>';
     const planUrl = safeExternalUrl(plan.url);
     const purchaseLink = purchaseLinkTarget(plan, planUrl);
-    const sourceHtml = planUrl
-      ? `<a href="${escapeHtml(purchaseLink.href)}" target="_blank" rel="${purchaseLink.rel}" ${outboundTrackingAttributes(plan)} class="text-sm font-medium text-brand-600 hover:text-brand-800 dark:text-brand-400 dark:hover:text-brand-300">官网 →</a>`
-      : '<span class="text-slate-400">—</span>';
+    // 状态列：可购买（含抢购中）且有官网链接时，状态徽标本身作为官网跳转入口（文字 + 右箭头）
+    const statusCanBuy = plan.status === 'available' || plan.status === 'rush_sale' || plan.statusLabel === '可用' || plan.statusLabel === '可购买';
+    const statusCellHtml = planUrl && statusCanBuy
+      ? `<a href="${escapeHtml(purchaseLink.href)}" target="_blank" rel="${purchaseLink.rel}" ${outboundTrackingAttributes(plan)} title="前往官网" class="plan-status-link inline-flex items-center gap-1 whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium ${statusColor}">${escapeHtml(plan.statusLabel)}<svg class="h-3 w-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m7 4 6 6-6 6" /></svg></a>`
+      : `<span class="whitespace-nowrap rounded-md px-2 py-0.5 text-xs font-medium ${statusColor}">${escapeHtml(plan.statusLabel)}</span>`;
     const dataTrainingHtml = renderDataTrainingCell(plan, providerInfo);
-    const detailRow = isSelected
-      ? `<tr class="plan-detail-row">
-          <td colspan="13" class="plan-inline-detail-cell">
-            ${renderSelectedPlanDetail(plan, providerInfo)}
-          </td>
-        </tr>`
-      : '';
     const href = planDetailHref(plan, providerInfo);
     const label = escapeHtml(plan.name);
     const intlBadge = planIsInternational(plan)
       ? ` <span class="plan-intl-tag" title="国际站套餐，以美元结算，请跳转 creditsplan.com 查看">国际 · ${escapeHtml(String(plan.monthlyCurrency || 'USD').toUpperCase())}</span>`
       : '';
     const nameHtml = (href
-      ? `<a href="${escapeHtml(href)}" class="font-medium text-brand-700 hover:text-brand-900 hover:underline dark:text-brand-300 dark:hover:text-brand-200">${label}</a>`
+      ? `<a href="${escapeHtml(href)}" class="font-medium text-brand-700 hover:text-brand-900 dark:text-brand-300 dark:hover:text-brand-200">${label}</a>`
       : label) + intlBadge;
     const providerInner = `${renderBrandIcon(group.iconUrl, group.label, 'brand-icon brand-icon--table')}<span>${escapeHtml(group.label)}</span>`;
     const providerCell = group.brandHref
       ? `<a href="${escapeHtml(group.brandHref)}" class="plan-provider-cell plan-provider-cell--link">${providerInner}</a>`
       : `<div class="plan-provider-cell">${providerInner}</div>`;
+    // 单元格按列 key 汇集，随「列设置」的可见列集合渲染（与表头/colgroup 同口径）
+    const cells = {
+      provider: { class: 'px-3 py-3 font-medium text-slate-900 dark:text-white', html: providerCell },
+      name: { class: 'break-words px-3 py-3 text-slate-900 dark:text-white', html: nameHtml },
+      monthlyPrice: { class: 'break-words px-3 py-3 text-slate-900 dark:text-white', html: monthlyDisplay },
+      quarterlyPrice: { class: 'break-words px-3 py-3 text-slate-900 dark:text-white', html: quarterlyDisplay },
+      annualPrice: { class: 'break-words px-3 py-3 text-slate-900 dark:text-white', html: annualDisplay },
+      billingUnit: { class: 'plan-table-nowrap px-3 py-3', html: billingUnitHtml },
+      quota: { class: 'break-words px-3 py-3', html: quotaHtml },
+      model: { class: 'break-words px-3 py-3 text-slate-600 dark:text-slate-300', html: escapeHtml(supportedModelDisplay(plan) || '—') },
+      status: { class: 'break-words px-3 py-3', html: statusCellHtml },
+      dataTraining: { class: 'plan-table-nowrap px-3 py-3', html: dataTrainingHtml },
+      verifiedAt: { class: 'plan-table-nowrap px-3 py-3', html: verifiedDisplay }
+    };
+    const columns = visiblePlanTableColumns();
+    const colSpan = columns.length;
+    // 列设置中隐藏的列在详情行兜底展示（详情已有字段对应的列不重复），表格列隐藏不丢信息
+    const visibleColumnKeys = new Set(columns.map(column => column.key));
+    const hiddenTableColumns = PLAN_TABLE_FILTER_COLUMNS
+      .filter(column => !visibleColumnKeys.has(column.key))
+      .map(column => ({ key: column.key, label: column.label, html: cells[column.key]?.html || '' }));
+    const detailRow = isSelected
+      ? `<tr class="plan-detail-row">
+          <td colspan="${colSpan}" class="plan-inline-detail-cell">
+            ${renderSelectedPlanDetail(plan, providerInfo, hiddenTableColumns, visibleColumnKeys)}
+          </td>
+        </tr>`
+      : '';
     return `
       <tr class="plan-select-row${isSelected ? ' is-selected' : ''}" data-plan-key="${escapeHtml(key)}" tabindex="0" aria-selected="${isSelected ? 'true' : 'false'}">
-        <td class="px-3 py-3 font-medium text-slate-900 dark:text-white">${providerCell}</td>
-        <td class="break-words px-3 py-3 text-slate-900 dark:text-white">${nameHtml}</td>
-        <td class="break-words px-3 py-3 text-slate-900 dark:text-white">${monthlyDisplay}</td>
-        <td class="break-words px-3 py-3 text-slate-900 dark:text-white">${quarterlyDisplay}</td>
-        <td class="break-words px-3 py-3 text-slate-900 dark:text-white">${annualDisplay}</td>
-        <td class="plan-table-nowrap px-3 py-3">${billingUnitHtml}</td>
-        <td class="break-words px-3 py-3">${quotaHtml}</td>
-        <td class="plan-table-nowrap px-3 py-3">${unitPriceHtml}</td>
-        <td class="break-words px-3 py-3 text-slate-600 dark:text-slate-300">${escapeHtml(supportedModelDisplay(plan) || '—')}</td>
-        <td class="plan-table-nowrap px-3 py-3"><span class="rounded-md px-2 py-0.5 text-xs font-medium ${statusColor}">${escapeHtml(plan.statusLabel)}</span></td>
-        <td class="plan-table-nowrap px-3 py-3">${dataTrainingHtml}</td>
-        <td class="plan-table-nowrap px-3 py-3">${verifiedDisplay}${sourceBadgeHtml(plan) ? `<div class="mt-1">${sourceBadgeHtml(plan)}</div>` : ''}</td>
-        <td class="plan-table-nowrap px-3 py-3">${sourceHtml}</td>
+        ${columns.map(column => `<td class="${cells[column.key].class}">${cells[column.key].html}</td>`).join('')}
       </tr>
       ${detailRow}`;
   }).join('');
 }
 
 function renderAllPlansTable(plans, visiblePlans, selectedPlanKey, providerInfo, expandedProviders, showAllGroups) {
+  const columns = visiblePlanTableColumns();
+  const colSpan = columns.length;
   const body = visiblePlans.length
     ? groupPlansByProvider(visiblePlans, providerInfo).map(group => {
       if (group.plans.length === 1) {
@@ -406,38 +415,26 @@ function renderAllPlansTable(plans, visiblePlans, selectedPlanKey, providerInfo,
         : `<div class="plan-table-group-toggle plan-table-group-toggle--static">${headerInner}</div>`;
       return `
         <tr class="border-y border-slate-200 dark:border-slate-700">
-          <td colspan="13" class="bg-brand-50/70 p-0 dark:bg-brand-950/20">
+          <td colspan="${colSpan}" class="bg-brand-50/70 p-0 dark:bg-brand-950/20">
             ${header}
           </td>
         </tr>
         ${renderPlanRows(group, selectedPlanKey, isGroupExpanded, providerInfo)}`;
     }).join('')
     : `<tr>
-        <td colspan="13" class="px-3 py-10 text-center text-sm text-slate-500 dark:text-slate-400">暂无匹配套餐记录</td>
+        <td colspan="${colSpan}" class="px-3 py-10 text-center text-sm text-slate-500 dark:text-slate-400">暂无匹配套餐记录</td>
       </tr>`;
 
   return `
     <div class="plan-table-wrap">
-      <table class="w-full table-fixed text-sm">
+      <table class="w-full table-fixed text-sm" style="min-width: ${planTableMinWidth()}px">
         <caption class="sr-only">国内 AI Coding 套餐对比</caption>
         <colgroup>
-          <col style="width: 7%">
-          <col style="width: 10%">
-          <col style="width: 8%">
-          <col style="width: 8%">
-          <col style="width: 8%">
-          <col style="width: 8%">
-          <col style="width: 8%">
-          <col style="width: 8%">
-          <col style="width: 8%">
-          <col style="width: 5%">
-          <col style="width: 8%">
-          <col style="width: 8%">
-          <col style="width: 6%">
+          ${columns.map(column => `<col style="width: ${column.width}%${column.minWidth ? `; min-width: ${column.minWidth}px` : ''}">`).join('')}
         </colgroup>
         <thead>
           <tr>
-            ${PLAN_TABLE_FILTER_COLUMNS.map(column => renderPlanTableFilterHeader(column, plans)).join('')}
+            ${columns.map(column => renderPlanTableFilterHeader(column, plans)).join('')}
           </tr>
         </thead>
         <tbody>

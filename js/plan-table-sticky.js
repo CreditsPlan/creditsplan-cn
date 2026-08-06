@@ -79,6 +79,11 @@ export function initPlanTableSticky(detail) {
     const viewTable = detail.querySelector('.plan-view-table');
     const wrap = WRAP_SELECTORS.map(selector => detail.querySelector(selector)).find(Boolean);
     const table = wrap?.querySelector('table');
+    // 横向滚动遮罩状态：可滚动时显示右缘渐隐提示，滚到最右淡出（CSS 类驱动，复用本函数 scroll 链路，无额外监听器）
+    if (wrap) {
+      wrap.classList.toggle('can-scroll', wrap.scrollWidth > wrap.clientWidth + 1);
+      wrap.classList.toggle('is-scrolled-end', wrap.scrollLeft >= wrap.scrollWidth - wrap.clientWidth - 1);
+    }
     // 移动端卡片视图 / 表格未渲染时不吸顶（模型价格视图无 .plan-view-table，不受卡片判断限制）
     if (!wrap || !table || (viewTable && window.getComputedStyle(viewTable).display === 'none')) {
       hideBar();

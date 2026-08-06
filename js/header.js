@@ -94,6 +94,7 @@ export function renderHeader(currentPage = 'index.html') {
           <button class="nav-toggle" id="navToggle" type="button" aria-label="打开主菜单" aria-controls="primaryNav" aria-expanded="false">菜单</button>
         </div>
       </nav>
+      <div id="navOverlay" class="nav-overlay" aria-hidden="true"></div>
     </header>`;
 
   // 渲染完成后绑定主题切换事件
@@ -111,25 +112,32 @@ export function renderHeader(currentPage = 'index.html') {
 
   const navToggle = root.querySelector('#navToggle');
   const navLinks = root.querySelector('.nav-links');
+  const navOverlay = root.querySelector('#navOverlay');
   if (navToggle && navLinks) {
+    // 打开/关闭菜单的统一入口：同步 aria 状态、背景滚动锁定、焦点管理
+    const setMenuOpen = (open, { restoreFocus = false } = {}) => {
+      navLinks.classList.toggle('is-open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+      navToggle.setAttribute('aria-label', open ? '关闭主菜单' : '打开主菜单');
+      document.body.classList.toggle('nav-open', open);
+      if (open) {
+        // 焦点移入菜单，避免 Tab 直接跳入页面内容（菜单在 DOM 中位于按钮之前）
+        const firstLink = navLinks.querySelector('a');
+        firstLink?.focus({ preventScroll: true });
+      } else if (restoreFocus) {
+        navToggle.focus({ preventScroll: true });
+      }
+    };
     navToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('is-open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-      navToggle.setAttribute('aria-label', isOpen ? '关闭主菜单' : '打开主菜单');
+      setMenuOpen(!navLinks.classList.contains('is-open'), { restoreFocus: true });
     });
+    navOverlay?.addEventListener('click', () => setMenuOpen(false));
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.setAttribute('aria-label', '打开主菜单');
-      });
+      link.addEventListener('click', () => setMenuOpen(false));
     });
     document.addEventListener('keydown', event => {
       if (event.key !== 'Escape' || !navLinks.classList.contains('is-open')) return;
-      navLinks.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', '打开主菜单');
-      navToggle.focus();
+      setMenuOpen(false, { restoreFocus: true });
     });
   }
 
