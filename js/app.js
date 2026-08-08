@@ -3,6 +3,7 @@ import { renderFooter } from './footer.js';
 import { initTheme } from './theme.js';
 import { initDealsToolbar } from './deals-toolbar.js';
 import { initPriceChangesFilter } from './price-changes-filter.js';
+import { initFitDescription } from './fit-description.js';
 import { installOutboundTracker, trackPageView } from './shared/outbound-tracker.js';
 
 installOutboundTracker();
@@ -15,6 +16,8 @@ export function initAppShell() {
   initTheme();
   initDealsToolbar();
   initPriceChangesFilter();
+  // 活动描述能容纳就单行（SSR 卡片已在 DOM 中，直接测量）
+  initFitDescription();
   initPageNav();
   initScrollAnimations();
   initImageFallbacks();
